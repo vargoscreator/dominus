@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Текст по кругу (Исправлено)</title>
+    <style>
+        body {
+            /* Темный фон, как на изображении */
+            background-color: #0d1a22; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .hero__discover {
+            display: block;
+            width: 300px; /* Размер всей области круга */
+            height: 300px;
+            position: relative;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 1. Стили для SVG */
+        .circular-text {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 2. Стили для текста */
+        .circular-text path {
+            fill: none; /* Путь невидимый */
+        }
+        
+        .circular-text text {
+            /* Золотистый цвет текста */
+            fill: #c5a47e; 
+            /* Стиль шрифта для имитации */
+            font-size: 18px; 
+            font-weight: bold;
+            /* Интервал между буквами */
+            letter-spacing: 2px;
+            /* Текст в верхнем регистре (можно также в HTML) */
+            text-transform: uppercase; 
+        }
+
+        /* 3. Стрелка в центре */
+        .arrow-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px; /* Размер стрелки */
+            height: 50px;
+        }
+
+        .arrow-down {
+            stroke: #c5a47e; /* Золотистый цвет стрелки */
+            stroke-width: 2;
+            fill: none;
+        }
+    </style>
+</head>
+<body>
+
+    <a class="hero__discover" href="#">
+        <svg class="circular-text" viewBox="0 0 300 300">
+            
+            <path id="text-path" d="M 150, 150 m -120, 0 a 120, 120 0 1, 1 240, 0 a 120, 120 0 1, 1 -240, 0" />
+            
+            <text>
+                <textPath href="#text-path" startOffset="0%">
+                    DISCOVER PLANS DISCOVER PLANS
+                </textPath>
+            </text>
+        </svg>
+
+        <div class="arrow-container">
+            <svg viewBox="0 0 50 50" class="arrow-down">
+                <line x1="25" y1="5" x2="25" y2="45" />
+                <polyline points="15,35 25,45 35,35" />
+            </svg>
+        </div>
+    </a>
+
+</body>
+</html>
