@@ -119,6 +119,29 @@ textarea{
 mark{
     color: #C09E63;
 }
+.swiper-pagination-lock{
+    display: none !important;
+}
+.swiper-pagination-horizontal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.406vw;
+    gap: 1.146vw;
+}
+.swiper-pagination-horizontal .swiper-pagination-bullet{
+    margin: 0 !important;
+    width: 0.833vw;
+    height: 0.833vw;
+    min-width: 0.833vw;
+    opacity: 1;
+    background-color: transparent;
+    border: 0.052vw solid #C09E63;
+}
+.swiper-pagination-horizontal .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background-color: #C09E63;
+}
 main.main{
     overflow: hidden;
 }
@@ -496,6 +519,16 @@ main.main{
     100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 @media (max-width: 1440px) {
+    .swiper-pagination-horizontal{
+        margin-top: 1.875vw;
+        gap: 1.528vw;
+    }
+    .swiper-pagination-horizontal .swiper-pagination-bullet{
+        width: 1.111vw;
+        height: 1.111vw;
+        min-width: 1.111vw;
+        border: 0.069vw solid #C09E63;
+    }
     html,body{
         font-size: 1.667vw;
     }
@@ -601,6 +634,16 @@ main.main{
     }
 }
 @media (max-width: 768px) {
+    .swiper-pagination-horizontal{
+        margin-top: 3.516vw;
+        gap: 2.865vw;
+    }
+    .swiper-pagination-horizontal .swiper-pagination-bullet{
+        width: 2.083vw;
+        height: 2.083vw;
+        min-width: 2.083vw;
+        border: 0.13vw solid #C09E63;
+    }
     html,body{
         font-size: 2.083vw;
     }
@@ -715,6 +758,16 @@ main.main{
     }
 }
 @media (max-width: 480px) {
+    .swiper-pagination-horizontal{
+        margin-top: 7.2vw;
+        gap: 5.867vw;
+    }
+    .swiper-pagination-horizontal .swiper-pagination-bullet{
+        width: 4.267vw;
+        height: 4.267vw;
+        min-width: 4.267vw;
+        border: 0.267vw solid #C09E63;
+    }
     html,body{
         font-size: 4.266vw;
     }
@@ -2724,6 +2777,12 @@ main.main{
     line-height: 125%;
     letter-spacing: 0.044vw;
 }
+.membership__descr + .membership__descr{
+    margin-top: 2.292vw;
+}
+.membership-mark{
+    color: #C09E63;
+}
 @media (max-width: 1440px) {
     .membership{
         margin-top: 12.153vw;
@@ -2808,6 +2867,9 @@ main.main{
         max-width: 62.292vw;
         letter-spacing: 0.058vw;
     }
+    .membership__descr + .membership__descr{
+        margin-top: 3.056vw;
+    }
 }
 @media (min-width: 769px) {
     .membership__item:hover .membership__item-inner {
@@ -2815,6 +2877,9 @@ main.main{
     }
 }
 @media (max-width: 768px) {
+    .membership__descr + .membership__descr{
+        margin-top: 5.729vw;
+    }
     .membership__item.active .membership__item-inner {
         transform: rotateY(180deg);
     }
@@ -2904,6 +2969,9 @@ main.main{
     }
 }
 @media (max-width: 480px) {
+    .membership__descr + .membership__descr{
+        margin-top: 3.2vw;
+    }
     .membership{
         margin-top: 16vw;
     }
@@ -2991,6 +3059,9 @@ main.main{
     position: relative;
     z-index: 1;
     padding-bottom: 9.479vw;
+}
+.stories-reset{
+    padding-bottom: 0;
 }
 .stories__top{
     margin-left: auto;
@@ -5127,5 +5198,250 @@ a.footer__about-descr:hover{
     }
     .applyfor__form .form-bottom{
         margin-top: 13.333vw;
+    }
+}
+
+/* service */
+.service{
+    position: relative;
+    z-index: 1;
+    margin-top: 4.688vw;
+    overflow: hidden;
+    cursor: none;
+}
+.service__bg{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+}
+.service__bg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.service__inner{
+    min-height: 114.219vw;
+}
+.service__inner > *{
+    position: absolute;
+}
+.service__title{
+    font-size: 5.104vw;
+    font-weight: 900;
+    line-height: 4.349vw; /* 85.212% */
+    text-transform: uppercase;
+    width: 100%;
+}
+.service__descr{
+    color: #FFF;
+    font-size: 1.667vw;
+    font-weight: 400;
+    line-height: 2.031vw;
+    text-transform: uppercase;
+    width: 100%;
+}
+.service__name{
+    font-size: 1.667vw;
+    font-weight: 400;
+    line-height: 2.031vw;
+    text-transform: uppercase;
+    width: 100%;
+}
+.service__info{
+    text-align: center;
+    font-size: 1.667vw;
+    font-weight: 400;
+    line-height: 2.031vw;
+    text-transform: uppercase;
+    width: 100%;
+    max-width: max-content;
+}
+.service-first .service__title{
+    right: 5.156vw;
+    max-width: 67.969vw;
+    top: 5.208vw;
+}
+.service-first .service__descr{
+    top: 15.938vw;
+    right: 11.771vw;
+    max-width: 36.667vw;
+}
+.service-first .service__name{
+    top: 49.896vw;
+    left: 2.344vw;
+    max-width: 47.76vw;
+}
+.service-first .service__info-1{
+    top: 79.427vw;
+    left: 6.615vw;
+}
+.service-first .service__info-2{
+    bottom: 12.135vw;
+    right: 3.125vw;
+}
+.service-first .service__apply{
+    top: 58.385vw;
+    right: 30.781vw;
+}
+@media (max-width: 1440px){
+    .service{
+        margin-top: 6.25vw;
+    }
+    .service__inner{
+        min-height: 114.444vw;
+    }
+    .service__title{
+        font-size: 6.806vw;
+        line-height: 5.799vw;
+    }
+    .service__descr{
+        font-size: 2.222vw;
+        line-height: 2.708vw;
+    }
+    .service__name{
+        font-size: 2.222vw;
+        line-height: 2.708vw;
+    }
+    .service__info{
+        font-size: 2.222vw;
+        line-height: 2.708vw;
+    }
+
+    .service-first .service__title{
+        right: initial;
+        left: 3.333vw;
+        max-width: 90.625vw;
+        top: 7.917vw;
+    }
+    .service-first .service__descr{
+        top: 22.292vw;
+        right: 2.153vw;
+        max-width: 48.889vw;
+    }
+    .service-first .service__name{
+        top: 67.569vw;
+        left: 3.125vw;
+        max-width: 60.681vw;
+    }
+    .service-first .service__info-1{
+        top: initial;
+        bottom: 4.444vw;
+        left: 8.819vw;
+    }
+    .service-first .service__info-2{
+        bottom: 10vw;
+        right: 2.639vw;
+    }
+    .service-first .service__apply{
+        top: 48.958vw;
+        right: 27.5vw;
+    }
+}
+@media (max-width: 768px){
+    .service{
+        margin-top: 9.635vw;
+    }
+    .service__inner{
+        min-height: 114.193vw;
+    }
+    .service__title{
+        font-size: 6.25vw;
+        line-height: 115%;
+    }
+    .service__descr{
+        font-size: 2.604vw;
+        line-height: 115%;
+    }
+    .service__name{
+        font-size: 2.083vw;
+        line-height: 115%;
+    }
+    .service__info{
+        font-size: 2.083vw;
+        line-height: 5.078vw;
+        font-weight: 300;
+    }
+    .service__info br{
+        display: none;
+    }
+    .service-first .service__title{
+        right: initial;
+        left: 4.557vw;
+        max-width: 73.568vw;
+        top: 10.417vw;
+    }
+    .service-first .service__descr{
+        top: 27.474vw;
+        right: 4.688vw;
+        max-width: 41.146vw;
+    }
+    .service-first .service__name{
+        top: initial;
+        left: 4.688vw;
+        bottom: 30.859vw;
+        max-width: 58.594vw;
+    }
+    .service-first .service__info-1{
+        top: initial;
+        bottom: 11.068vw;
+        left: 2.604vw;
+    }
+    .service-first .service__info-2{
+        bottom: 11.068vw;
+        right: 4.297vw;
+    }
+    .service-first .service__apply{
+        top: 47.917vw;
+        left: 5.208vw;
+        right: initial;
+    }
+}
+@media (max-width: 480px){
+    .service{
+        margin-top: 13.333vw;
+        overflow: initial;
+    }
+    .service__inner{
+        min-height: 133.333vw;
+    }
+    .service__title{
+        font-size: 6.4vw;
+    }
+    .service__descr{
+        font-size: 3.2vw;
+    }
+    .service__name{
+        font-size: 3.2vw;
+    }
+    .service__info{
+        font-size: 3.2vw;
+    }
+
+    .service-first .service__title{
+        right: 6.667vw;
+        max-width: 75.467vw;
+        top: 5.333vw;
+    }
+    .service-first .service__descr{
+        top: 41.867vw;
+        right: 6.667vw;
+        max-width: 41.867vw;
+    }
+    .service-first .service__name{
+        bottom: 11.467vw;
+        left: 6.4vw;
+        max-width: 64vw;
+    }
+    .service-first .service__info-1,
+    .service-first .service__info-2{
+        bottom: -13.333vw;
+        right: 2.667vw;
+        max-width: 48vw;
+    }
+    .service-first .service__apply{
+        display: none;
     }
 }

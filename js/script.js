@@ -53,6 +53,10 @@ let membershipSlider = new Swiper(".membership__slider", {
 	  navigation: {
         nextEl: ".membership__next",
     },
+    pagination: {
+        el: ".membership__pagination",
+        clickable: true,
+    },
     breakpoints: {
         480: {
             spaceBetween: 59,
@@ -296,7 +300,7 @@ if (heroName) {
 
 
 const mouse = document.querySelector('.mouse-btn-hover');
-const blocks = document.querySelectorAll('.hero');
+const blocks = document.querySelectorAll('.hero, .service');
 if (blocks.length > 0 && mouse) {
     let mouseX = 0;
     let mouseY = 0;
@@ -747,3 +751,52 @@ if(document.querySelector('.contactpopup')){
     }
   }); 
 }
+
+
+
+
+
+
+function splitTextAnimation(selector, delay = 0, speed = 0.05) {
+  const el = document.querySelector(selector);
+  if (!el) return;
+  const text = el.textContent;
+  el.textContent = '';
+  const chars = text.split('');
+  chars.forEach(char => {
+    const span = document.createElement('span');
+    span.textContent = char;
+    span.style.opacity = 0;
+    el.appendChild(span);
+  });
+
+  gsap.to(el.querySelectorAll('span'), {
+    opacity: 1,
+    duration: 0.05,
+    stagger: speed,
+    scrollTrigger: {
+      trigger: el,
+      start: 'top 80%',
+      toggleActions: 'play reverse play reverse'
+    },
+    delay: delay
+  });
+}
+splitTextAnimation('.service__title', 0, 0.05);
+splitTextAnimation('.service__descr', 0.2, 0.03);
+splitTextAnimation('.service__name', 0.4, 0.02);
+gsap.utils.toArray('.service__info, .service__apply').forEach(el => {
+  gsap.fromTo(el, 
+    {opacity: 0, y: 30}, 
+    {
+      opacity: 1, 
+      y: 0, 
+      duration: 0.8, 
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 90%',
+        toggleActions: 'play reverse play reverse'
+      }
+    });
+});
