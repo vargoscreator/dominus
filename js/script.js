@@ -1,15 +1,42 @@
+const headerButtons = document.querySelector('.header__buttons');
+const headerMenu = document.querySelector('.header__menu');
+const headerInner = document.querySelector('.header__inner');
+function moveHeaderButtons() {
+  if (window.innerWidth < 769) {
+    headerMenu.appendChild(headerButtons);
+  } else {
+    headerInner.appendChild(headerButtons);
+  }
+}
+moveHeaderButtons();
+window.addEventListener('resize', moveHeaderButtons);
+
+const headerBurger = document.querySelector('.header__burger');
+const header = document.querySelector('.header');
+headerBurger.addEventListener('click', () => {
+  header.classList.toggle('menu-show');
+});
+
+
+
 let wedoSlider = new Swiper(".wedo__slider", {
     loop: false,
     spaceBetween: 82,
     slidesPerView: 'auto',
-	navigation: {
+    autoHeight: true,
+	  navigation: {
         nextEl: ".wedo__next",
     },
     breakpoints: {
         769: {
             spaceBetween: 57,
             slidesPerView: 'auto',
-			initialSlide: 1,
+			      initialSlide: 0,
+            autoHeight: false,
+        },
+        1441: {
+          autoHeight: false,
+			      initialSlide: 1,
         },
     },
 });
@@ -18,16 +45,20 @@ let membershipSlider = new Swiper(".membership__slider", {
     loop: false,
     spaceBetween: 20,
     slidesPerView: 1,
-	navigation: {
+	  navigation: {
         nextEl: ".membership__next",
     },
     breakpoints: {
+        480: {
+            spaceBetween: 59,
+            slidesPerView: 2,
+        },
         769: {
-            spaceBetween: 109,
+            spaceBetween: 59,
             slidesPerView: 4,
         },
-		1441: {
-            spaceBetween: 59,
+		    1441: {
+            spaceBetween: 65,
             slidesPerView: 5,
         },
     },
@@ -41,9 +72,13 @@ let teaserSlider = new Swiper(".teaser__slider", {
         nextEl: ".teaser__next",
     },
     breakpoints: {
+        480: {
+            spaceBetween: 20,
+            slidesPerView: 1.02,
+        },
         769: {
             spaceBetween: 20,
-            slidesPerView: 2.1,
+            slidesPerView: 2.5,
         },
 		1441: {
             spaceBetween: 23,
@@ -186,6 +221,22 @@ if (heroImage) {
   });
 }
 
+const heroImageBottom = document.querySelector(".hero__image-bottom");
+if (heroImageBottom) {
+  document.addEventListener("mousemove", (e) => {
+    const { innerWidth, innerHeight } = window;
+    const x = (e.clientX / innerWidth - 0.5) * 20;
+    const y = (e.clientY / innerHeight - 0.5) * 20;
+
+    gsap.to(heroImageBottom, {
+      x: x,
+      y: y,
+      duration: 0.5,
+      ease: "power1.out"
+    });
+  });
+}
+
 const heroLogo = document.querySelector(".hero__block .hero__logo");
 const heroConf = document.querySelector(".hero__block .hero__conf");
 
@@ -312,7 +363,7 @@ function createScrollAnimation(selector, animationProps, trigger = null) {
             scrollTrigger: {
                 trigger: trigger || elements[0],
                 start: "top 70%",
-                end: "bottom 30%",
+                end: "bottom 10%",
                 toggleActions: "play reverse play reverse",
             }
         });
@@ -328,7 +379,7 @@ function createScrollAnimation(selector, animationProps, trigger = null) {
                 scrollTrigger: {
                     trigger: trigger || el,
                     start: "top 70%",
-                    end: "bottom 30%",
+                    end: "bottom 10%",
                     toggleActions: "play reverse play reverse",
                 }
             });
@@ -363,7 +414,10 @@ createScrollAnimation('.membership__title', {
     from: { y: 100, opacity: 0 },
     to: { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }
 }, '.membership');
-
+createScrollAnimation('.membership__next', {
+    from: { x: -100, opacity: 0 },
+    to: { x: 0, opacity: 1, duration: 0.8, ease: "power3.out" }
+}, '.membership');
 document.querySelectorAll('.membership__item').forEach((card, i) => {
     createScrollAnimation(card, {
         from: { y: 200, opacity: 0, rotation: (i - 2) * 10 },
@@ -469,7 +523,7 @@ howItTimeline.from('.howit__discover', {
     y: -100,
     opacity: 0,
     duration: 1,
-    ease: "bounce.out"
+    ease: "power3.out"
 }, "-=0.3");
 
 
@@ -552,6 +606,14 @@ createScrollAnimation('.faq__image', {
     from: { y: 50, opacity: 0 },
     to: { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
 }, '.faq');
+gsap.to('.faq__image', {
+  y: -20,         
+  duration: 2,    
+  ease: "power1.inOut", 
+  repeat: -1, 
+  yoyo: true
+});
+
 createScrollAnimation('.faq__title', {
     from: { y: 50, opacity: 0 },
     to: { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
@@ -562,4 +624,16 @@ document.querySelectorAll('.faq__item').forEach((item, i) => {
         from: { y: 50, opacity: 0 },
         to: { y: 0, opacity: 1, duration: 1, ease: "power3.out", delay: i * 0.1 }
     }, '.faq');
+});
+
+
+
+const moreButtons = document.querySelectorAll('.header__more-open');
+moreButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    if (window.innerWidth < 769) {
+      const menuLink = button.closest('.header__menu-link');
+      menuLink.classList.toggle('active-more');
+    }
+  });
 });
