@@ -101,7 +101,7 @@ input::placeholder{
     font-size: 1.042vw;
     font-style: normal;
     font-weight: 500;
-    line-height: 0.786vw;
+    line-height: normal;
 }
 textarea,
 input{
@@ -4541,10 +4541,10 @@ a.footer__about-descr:hover{
 .form-label{
     color: #C09E63;
     font-family: "Scheherazade New", sans-serif;
-    font-size: 1.25vw;
+    font-size: 0.938vw;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.25vw; /* 100% */
+    line-height: 0.938vw; /* 100% */
     text-transform: uppercase;
     display: inline-block;
     margin-bottom: 0.208vw;
@@ -4609,6 +4609,92 @@ a.footer__about-descr:hover{
     line-height: 0.938vw; /* 100% */
     text-transform: uppercase;
     text-wrap: nowrap;
+}
+.form-checkboxes{
+    display: flex;
+    flex-direction: column;
+    gap: 1.302vw;
+    margin-top: 1.302vw;
+    align-items: start;
+}
+.form-checkbox input{
+    position: absolute;
+    pointer-events: 0;
+    opacity: 0;
+}
+.form-checkbox{
+    cursor: pointer;
+    max-width: max-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.729vw;
+    color: #C09E63;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.729vw;
+    font-weight: 400;
+    line-height: 115%; /* 0.839vw */
+    letter-spacing: 0.051vw;
+}
+.form-checkbox span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.302vw;
+    height: 1.302vw;
+    border: 0.052vw solid #C09E63;
+    min-width: 1.302vw;
+    position: relative;
+}
+.form-checkbox input:checked + span::after{
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.781vw;
+    background-color: #C09E63;
+    height: 0.781vw;
+}
+.form-select{
+    align-items: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' fill='none'%3E%3Cpath d='M5.29711 0.192152C5.04079 -0.0641632 4.62522 -0.0641632 4.36891 0.192152L0.192024 4.36904C-0.0642903 4.62535 -0.0642903 5.04092 0.192024 5.29723C0.448339 5.55355 0.863907 5.55355 1.12022 5.29723L4.83301 1.58445L8.54579 5.29723C8.80211 5.55355 9.21768 5.55355 9.47399 5.29723C9.73031 5.04092 9.73031 4.62535 9.47399 4.36904L5.29711 0.192152ZM4.83301 9.65625L5.48934 9.65625L5.48934 0.65625L4.83301 0.65625L4.17667 0.65625L4.17667 9.65625L4.83301 9.65625Z' fill='%23C09E63'/%3E%3C/svg%3E");
+    background-position: right 0.104vw center;
+    background-repeat: no-repeat,repeat;
+    background-size: 0.729vw 0.521vw;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    height: 2.604vw;
+    max-width: 100%;
+    overflow: hidden;
+    padding-right: 2.083vw;
+    text-align: left;
+    width: 100%;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.729vw;
+    font-weight: 400;
+    line-height: 115%; /* 0.839vw */
+    letter-spacing: 0.051vw;
+    border-bottom: 0.104vw solid rgba(192, 158, 99, 0.48);
+}
+.form-descr{
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.729vw;
+    font-weight: 400;
+    margin-top: 0.729vw;
+    line-height: 115%; /* 0.839vw */
+    letter-spacing: 0.051vw;
+}
+.form-send:first-child{
+    margin-left: auto;
 }
 @media (max-width: 1440px) {
     .contactpopup__inner::before,
@@ -4675,6 +4761,42 @@ a.footer__about-descr:hover{
     .upload-file-icon svg{
         width: 1.736vw;
     }
+
+    .form-checkboxes{
+        gap: 1.736vw;
+        margin-top: 1.736vw;
+    }
+    .form-checkbox{
+        gap: 0.972vw;
+        font-size: 0.972vw;
+        line-height: 115%; /* 1.118vw */
+        letter-spacing: 0.068vw;
+    }
+    .form-checkbox span{
+        width: 1.736vw;
+        height: 1.736vw;
+        min-width: 1.736vw;
+    }
+    .form-checkbox input:checked + span::after{
+        width: 1.042vw;
+        height: 1.042vw;
+    }
+    .form-select{
+        background-size: 0.972vw 0.694vw;
+        height: 3.472vw;
+        padding-right: 2.778vw;
+        font-size: 0.972vw;
+        line-height: 115%; /* 1.118vw */
+        letter-spacing: 0.068vw;
+        border-bottom: 0.139vw solid rgba(192, 158, 99, 0.48);
+    }
+    .form-descr{
+        font-size: 0.972vw;
+        margin-top: 0.972vw;
+        line-height: 115%; /* 1.118vw */
+        letter-spacing: 0.068vw;
+    }
+
 }
 @media (max-width: 768px) {
     .contactpopup__inner::before,
@@ -4742,6 +4864,41 @@ a.footer__about-descr:hover{
         font-size: 2.345vw;
         line-height: 2.345vw; /* 100% */
     }
+    .form-checkboxes{
+        gap: 3.255vw;
+        margin-top: 3.255vw;
+    }
+    .form-checkbox{
+        gap: 1.823vw;
+        font-size: 1.823vw;
+        line-height: 115%; /* 2.096vw */
+        letter-spacing: 0.128vw;
+    }
+    .form-checkbox span{
+        width: 3.255vw;
+        height: 3.255vw;
+        min-width: 3.255vw;
+    }
+    .form-checkbox input:checked + span::after{
+        width: 1.953vw;
+        height: 1.953vw;
+    }
+    .form-select{
+        background-size: 1.823vw 1.302vw;
+        height: 6.51vw;
+        padding-right: 5.208vw;
+        font-size: 1.823vw;
+        line-height: 115%; /* 2.096vw */
+        letter-spacing: 0.128vw;
+        border-bottom: 0.26vw solid rgba(192, 158, 99, 0.48);
+    }
+    .form-descr{
+        font-size: 1.823vw;
+        margin-top: 1.823vw;
+        line-height: 115%; /* 2.096vw */
+        letter-spacing: 0.128vw;
+    }
+
 }
 @media (max-width: 480px) {
     .contactpopup .container{
@@ -4811,6 +4968,42 @@ a.footer__about-descr:hover{
     .upload-file-title{
         font-size: 2.667vw;
         line-height: normal; /* 100% */
+    }
+    .form-checkboxes{
+        gap: 6.667vw;
+        margin-top: 5.333vw;
+    }
+    .form-checkbox{
+        gap: 5.067vw;
+        font-size: 3.2vw;
+        line-height: 115%; /* 4.293vw */
+        letter-spacing: 0.224vw;
+    }
+    .form-checkbox span{
+        width: 6.667vw;
+        height: 6.667vw;
+        min-width: 6.667vw;
+    }
+    .form-checkbox input:checked + span::after{
+        width: 4vw;
+        height: 4vw;
+    }
+    .form-select{
+        background-size: 3.733vw 2.667vw;
+        height: 9.6vw;
+        padding-right: 10.667vw;
+        font-size: 3.2vw;
+        line-height: 115%; /* 4.293vw */
+        letter-spacing: 0.224vw;
+        border-bottom: 0.383vw solid rgba(192, 158, 99, 0.48);
+    }
+    .form-descr{
+        font-size: 3.2vw;
+        margin-top: 3.733vw;
+        letter-spacing: 0.224vw;
+    }
+    .form-send:first-child {
+        margin-top: -5.333vw;
     }
 }
 

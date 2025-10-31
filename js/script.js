@@ -295,43 +295,44 @@ if (heroName) {
 }
 
 
+const mouse = document.querySelector('.mouse-btn-hover');
 const blocks = document.querySelectorAll('.hero');
-if(blocks){
-  const mouse = document.querySelector('.mouse-btn-hover');
+if (blocks.length > 0 && mouse) {
     let mouseX = 0;
     let mouseY = 0;
-
-    function checkMousePosition() {
-        let show = false;
-
-        blocks.forEach(block => {
-            const rect = block.getBoundingClientRect();
-            if (
-                mouseX >= rect.left &&
-                mouseX <= rect.right &&
-                mouseY >= rect.top &&
-                mouseY <= rect.bottom
-            ) {
-                show = true;
-            }
-        });
-
-        if (show) {
+    let isInsideBlock = false;
+    let rAFScheduled = false;
+    function updateMousePosition() {
+        mouse.style.left = mouseX + 'px';
+        mouse.style.top = mouseY + 'px';
+        if (isInsideBlock) {
             mouse.style.display = 'block';
         } else {
             mouse.style.display = 'none';
         }
-    }
 
+        rAFScheduled = false;
+    }
+    function scheduleUpdate() {
+        if (!rAFScheduled) {
+            requestAnimationFrame(updateMousePosition);
+            rAFScheduled = true;
+        }
+    }
     document.addEventListener('mousemove', e => {
         mouseX = e.clientX;
         mouseY = e.clientY;
-        checkMousePosition();
-        mouse.style.left = mouseX + 'px';
-        mouse.style.top = mouseY + 'px';
+        scheduleUpdate();
     });
-    window.addEventListener('scroll', () => {
-        checkMousePosition();
+    blocks.forEach(block => {
+        block.addEventListener('mouseenter', () => {
+            isInsideBlock = true;
+            scheduleUpdate();
+        });
+        block.addEventListener('mouseleave', () => {
+            isInsideBlock = false;
+            scheduleUpdate();
+        });
     });
 }
 
@@ -662,31 +663,66 @@ if (window.innerWidth < 768) {
 
 
 document.querySelectorAll('.form-inner').forEach(form => {
-  const requiredInputs = form.querySelectorAll('.form-required');
+  const requiredFields = form.querySelectorAll('.form-required');
   form.addEventListener('submit', e => {
     e.preventDefault();
     let valid = true;
 
-    requiredInputs.forEach(input => {
-      const parent = input.closest('.form-block');
-      if (!input.value.trim()) {
-        parent.classList.add('error');
-        valid = false;
-      } else {
-        parent.classList.remove('error');
+    requiredFields.forEach(field => {
+      const parent = field.closest('.form-block');
+      if (field.tagName === 'INPUT' || field.tagName === 'TEXTAREA' || field.tagName === 'SELECT') {
+        if (!field.value.trim()) {
+          parent.classList.add('error');
+          valid = false;
+        } else {
+          parent.classList.remove('error');
+        }
+      }
+      else if (field.classList.contains('form-checkboxes')) {
+        const checkboxes = field.querySelectorAll('input[type="checkbox"]');
+        const isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+
+        if (!isChecked) {
+          parent.classList.add('error');
+          valid = false;
+        } else {
+          parent.classList.remove('error');
+        }
       }
     });
 
     if (valid) {
-
-
+      console.log('Form is valid and ready to submit!');
     }
   });
-  requiredInputs.forEach(input => {
-    input.addEventListener('input', () => {
-      const parent = input.closest('.form-block');
-      parent.classList.remove('error');
+
+  requiredFields.forEach(field => {
+    field.addEventListener('input', () => {
+      const parent = field.closest('.form-block');
+      if (field.tagName === 'INPUT' || field.tagName === 'TEXTAREA' || field.tagName === 'SELECT') {
+        if (field.value.trim()) {
+          parent.classList.remove('error');
+        }
+      }
+      else if (field.classList.contains('form-checkboxes')) {
+        const checkboxes = field.querySelectorAll('input[type="checkbox"]');
+        const isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+        if (isChecked) {
+          parent.classList.remove('error');
+        }
+      }
     });
+    if (field.classList.contains('form-checkboxes')) {
+      field.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+          const parent = field.closest('.form-block');
+          const isChecked = Array.from(field.querySelectorAll('input[type="checkbox"]')).some(c => c.checked);
+          if (isChecked) {
+            parent.classList.remove('error');
+          }
+        });
+      });
+    }
   });
 });
 
