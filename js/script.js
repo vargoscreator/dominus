@@ -485,12 +485,12 @@ createScrollAnimation('.wedo__descr', {
     from: { y: 50, opacity: 0 },
     to: { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }
 }, '.wedo');
-document.querySelectorAll('.wedo__slide').forEach((slide, i) => {
-    createScrollAnimation(slide, {
-        from: { y: 100, opacity: 0 },
-        to: { y: 0, opacity: 1, duration: 0.9, ease: "power3.out", delay: i * 0.2 }
-    }, '.wedo');
-});
+// document.querySelectorAll('.wedo__slide').forEach((slide, i) => {
+//     createScrollAnimation(slide, {
+//         from: { y: 100, opacity: 0 },
+//         to: { y: 0, opacity: 1, duration: 0.9, ease: "power3.out", delay: i * 0.2 }
+//     }, '.wedo');
+// });
 const howItTimeline = gsap.timeline({
     scrollTrigger: {
         trigger: '.howit',
