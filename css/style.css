@@ -740,7 +740,7 @@ main.main{
     }
     .btn-next{
         gap: 4.8vw;
-        font-size: 6.4vw;
+        font-size: 5.333vw;
         line-height: normal; /* 5.546vw */
     }
     .btn-next::after{
@@ -1850,7 +1850,7 @@ main.main{
         line-height: 14.113vw;
     }
     .hero__title > span:nth-of-type(1){
-        font-size: 12vw;
+        font-size: 11.7vw;
         line-height: 10.443vw;
     }
     .hero__title > span:nth-of-type(2){
@@ -4423,6 +4423,11 @@ a.footer__about-descr:hover{
         width: 13.334vw;
         right: 12vw;
     }
+    .footer__about-btn button span{
+        min-height: 8.999vw;
+        font-size: 3.266vw;
+        line-height: 4.867vw;
+    }
 }
 
 
@@ -4450,6 +4455,30 @@ a.footer__about-descr:hover{
     padding: 4.722vw 3.958vw 1.597vw;
     transform: translateY(-100px) scale(0.5);
     transition: all .3s ease;
+}
+.contactpopup__inner::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.691vw;
+    height: 1.718vw;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='34' viewBox='0 0 33 34' fill='none'%3E%3Cpath d='M0.15625 33.2751V0.292969H32.6156' stroke='%23C09E63' stroke-width='0.784305'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.contactpopup__inner::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 1.691vw;
+    height: 1.718vw;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='34' viewBox='0 0 33 34' fill='none'%3E%3Cpath d='M32.459 0.000255537L32.459 32.9824L-0.000377367 32.9824' stroke='%23C09E63' stroke-width='0.784305'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 .contactpopup.show .contactpopup__inner{
     transform: translateY(0) scale(1);
@@ -4520,4 +4549,130 @@ a.footer__about-descr:hover{
 }
 .form-icon img{
     width: 100%;
+}
+@media (max-width: 1440px) {
+    .contactpopup__inner::before,
+    .contactpopup__inner::after{
+        width: 2.254vw;
+        height: 2.29vw;
+    }
+    .contactpopup__inner{
+        max-width: 33.056vw;
+        padding: 4.722vw 3.958vw 1.597vw;
+    }
+    .contactpopup__close{
+        width: 4.167vw;
+        height: 4.167vw;
+        min-width: 4.167vw;
+    }
+    .btn-close{
+        background-size: 1.667vw;
+    }
+    .form-content{
+        gap: 1.111vw;
+    }
+    .form-error{
+        margin-top: 0.486vw;
+        font-size: 0.833vw;
+    }
+    .form-label{
+        font-size: 1.25vw;
+        line-height: 1.25vw;
+        margin-bottom: 0.208vw;
+    }
+    .form-input{
+        border-bottom: 0.09vw solid rgba(192, 158, 99, 0.48);
+    }
+    .form-bottom{
+        gap: 1.389vw;
+        margin-top: 2.222vw;
+    }
+    .form-icon{
+        width: 3.403vw;
+    }
+}
+@media (max-width: 768px) {
+    .contactpopup__inner::before,
+    .contactpopup__inner::after{
+        width: 4.226vw;
+        height: 4.295vw;
+    }
+    .contactpopup__inner{
+        max-width: 61.979vw;
+        padding: 8.854vw 7.422vw 2.995vw;
+    }
+    .contactpopup__close{
+        width: 7.813vw;
+        height: 7.813vw;
+        min-width: 7.813vw;
+    }
+    .btn-close{
+        background-size: 3.125vw;
+    }
+    .form-content{
+        gap: 2.083vw;
+    }
+    .form-error{
+        margin-top: 0.911vw;
+        font-size: 1.563vw;
+    }
+    .form-label{
+        font-size: 2.344vw;
+        line-height: 2.344vw;
+        margin-bottom: 0.391vw;
+    }
+    .form-input{
+        border-bottom: 0.169vw solid rgba(192, 158, 99, 0.48);
+    }
+    .form-bottom{
+        gap: 2.604vw;
+        margin-top: 4.167vw;
+    }
+    .form-icon{
+        width: 6.38vw;
+    }
+}
+@media (max-width: 480px) {
+    .contactpopup .container{
+        padding: 0 1vw;
+    }
+    .contactpopup__inner::before,
+    .contactpopup__inner::after{
+        content: none;
+    }
+    .contactpopup__inner{
+        margin-top: 10%;
+        max-width: 126.934vw;
+        padding: 14.133vw 10.667vw 9.067vw;
+    }
+    .contactpopup__close{
+        width: 12.533vw;
+        height: 12.533vw;
+        min-width: 12.533vw;
+    }
+    .btn-close{
+        background-size: 5.333vw;
+    }
+    .form-content{
+        gap: 3.2vw;
+    }
+    .form-error{
+        margin-top: 1.333vw;
+        font-size: 2.667vw;
+    }
+    .form-label{
+        font-size: 4.267vw;
+        line-height: 3.733vw;
+        margin-bottom: 0.8vw;
+    }
+    .form-input{
+        border-bottom: 0.347vw solid rgba(192, 158, 99, 0.48);
+    }
+    .form-bottom{
+        gap: 5.334vw;
+        margin-top: 6.933vw;
+    }
+    .form-icon{
+        width: 10.133vw;
+    }
 }
