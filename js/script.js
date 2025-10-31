@@ -2,10 +2,15 @@ const headerButtons = document.querySelector('.header__buttons');
 const headerMenu = document.querySelector('.header__menu');
 const headerInner = document.querySelector('.header__inner');
 function moveHeaderButtons() {
-  if (window.innerWidth < 769) {
+  const isMobile = window.innerWidth < 769;
+  const isMoved = headerMenu.contains(headerButtons);
+
+  if (isMobile && !isMoved) {
     headerMenu.appendChild(headerButtons);
-  } else {
+    ScrollTrigger.refresh(); 
+  } else if (!isMobile && isMoved) {
     headerInner.appendChild(headerButtons);
+    ScrollTrigger.refresh();
   }
 }
 moveHeaderButtons();
@@ -74,7 +79,7 @@ let teaserSlider = new Swiper(".teaser__slider", {
     breakpoints: {
         480: {
             spaceBetween: 20,
-            slidesPerView: 1.02,
+            slidesPerView: 1,
         },
         769: {
             spaceBetween: 20,
@@ -637,3 +642,18 @@ moreButtons.forEach(button => {
     }
   });
 });
+
+
+if(document.querySelector('.footer__bottom-copy')){
+  const year = new Date().getFullYear();
+  document.querySelector('.footer__bottom-copy').innerHTML = `© ${year} Dominus. All rights reserved.`;
+}
+
+const membershipItems = document.querySelectorAll('.membership__item');
+if (window.innerWidth < 768) {
+  membershipItems.forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+  });
+}
