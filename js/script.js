@@ -295,43 +295,45 @@ if (heroName) {
 }
 
 
-const blocks = document.querySelectorAll('.hero, .another-block, .third-block');
-const mouse = document.querySelector('.mouse-btn-hover');
-let mouseX = 0;
-let mouseY = 0;
+const blocks = document.querySelectorAll('.hero');
+if(blocks){
+  const mouse = document.querySelector('.mouse-btn-hover');
+    let mouseX = 0;
+    let mouseY = 0;
 
-function checkMousePosition() {
-    let show = false;
+    function checkMousePosition() {
+        let show = false;
 
-    blocks.forEach(block => {
-        const rect = block.getBoundingClientRect();
-        if (
-            mouseX >= rect.left &&
-            mouseX <= rect.right &&
-            mouseY >= rect.top &&
-            mouseY <= rect.bottom
-        ) {
-            show = true;
+        blocks.forEach(block => {
+            const rect = block.getBoundingClientRect();
+            if (
+                mouseX >= rect.left &&
+                mouseX <= rect.right &&
+                mouseY >= rect.top &&
+                mouseY <= rect.bottom
+            ) {
+                show = true;
+            }
+        });
+
+        if (show) {
+            mouse.style.display = 'block';
+        } else {
+            mouse.style.display = 'none';
         }
-    });
-
-    if (show) {
-        mouse.style.display = 'block';
-    } else {
-        mouse.style.display = 'none';
     }
-}
 
-document.addEventListener('mousemove', e => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    checkMousePosition();
-    mouse.style.left = mouseX + 'px';
-    mouse.style.top = mouseY + 'px';
-});
-window.addEventListener('scroll', () => {
-    checkMousePosition();
-});
+    document.addEventListener('mousemove', e => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        checkMousePosition();
+        mouse.style.left = mouseX + 'px';
+        mouse.style.top = mouseY + 'px';
+    });
+    window.addEventListener('scroll', () => {
+        checkMousePosition();
+    });
+}
 
 const faqItems = document.querySelectorAll('.faq__item');
 faqItems.forEach(item => {
