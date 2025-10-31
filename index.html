@@ -560,6 +560,45 @@
             </div>
         </section>
 
+        <section class="contactpopup">
+            <div class="container">
+                <div class="contactpopup__inner">
+                    <button class="contactpopup__close btn-close"></button>
+                    <h2 class="contactpopup__title title">Contact us</h2>
+                    <form class="contactpopup__form form-inner" action="#">
+                        <div class="form-content">
+                            <div class="form-block">
+                                <label class="form-label" for="name">Your name</label>
+                                <input class="form-input form-required" type="text" name="name" id="name">
+                                <p class="form-error">* Required field</p>
+                            </div>
+                            <div class="form-block">
+                                <label class="form-label" for="email">Email</label>
+                                <input class="form-input form-required" type="email" name="email" id="email">
+                                <p class="form-error">* Required field</p>
+                            </div>
+                            <div class="form-block">
+                                <label class="form-label" for="number">Phone number</label>
+                                <input class="form-input form-required" type="tel" name="number" id="number">
+                                <p class="form-error">* Required field</p>
+                            </div>
+                            <div class="form-block">
+                                <label class="form-label" for="message">Message</label>
+                                <textarea class="form-input form-required" name="message" id="message"></textarea>
+                                <p class="form-error">* Required field</p>
+                            </div>
+                        </div>
+                        <div class="form-bottom">
+                            <div class="form-icon">
+                                <img src="img/icons/icon-3.svg" alt="">
+                            </div>
+                            <button class="form-send btn-next" type="submit">SEND MESSAGE</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="footer">
@@ -661,12 +700,12 @@
                         <a class="footer__about-descr" href="tel+340902513326">+34(090)251-33-26</a>
                         <a class="footer__about-descr" href="#">Telegram</a>
                         <a class="footer__about-descr" href="mailto:support@giftdoo.io">support@giftdoo.io</a>
-                        <div class="footer__about-btn button-wrap">
-                            <a href="#">
+                        <div class="footer__about-btn button-wrap contact-open">
+                            <button>
                                 <span>
                                     Contact us
                                 </span>
-                            </a>
+                            </button>
                             <div class="button-shadow"></div>
                         </div>
                     </div>

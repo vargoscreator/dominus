@@ -96,7 +96,12 @@ textarea,
 textarea::placeholder,
 input,
 input::placeholder{
-
+    color: #FEFEFE;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.042vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 0.786vw;
 }
 textarea,
 input{
@@ -104,10 +109,12 @@ input{
     outline: none;
     background-color: transparent;
     width: 100%;
+    height: 1.667vw;
 }
 textarea{
     resize: none;
-    height: 7.813vw;
+    height: 5.469vw;
+    padding: 0.521vw 0;
 }
 mark{
     color: #C09E63;
@@ -496,9 +503,6 @@ main.main{
         font-size: 1.111vw;
         line-height: 1.528vw; /* 140.625% */
     }
-    textarea{
-        height: 10.417vw;
-    }
     .title-top{
         gap: 2.083vw;
     }
@@ -521,7 +525,7 @@ main.main{
     }
     .btn-next{
         gap: 1.528vw;
-        font-size: 2.223vw;
+        font-size: 1.923vw;
         line-height: 65%; /* 1.444vw */
     }
     .btn-next::after{
@@ -579,6 +583,22 @@ main.main{
         height: 13.889vw;
         min-width: 13.889vw;
     }
+    textarea,
+    textarea::placeholder,
+    input,
+    input::placeholder{
+        font-size: 20px;
+        line-height: normal;
+    }
+    textarea,
+    input{
+        height: 32px;
+    }
+    textarea{
+        resize: none;
+        height: 105px;
+        padding: 10px 0;
+    }
 }
 @media (max-width: 768px) {
     html,body{
@@ -588,8 +608,21 @@ main.main{
         font-size: 2.083vw;
         line-height: 2.865vw; /* 140.625% */
     }
+    textarea,
+    textarea::placeholder,
+    input,
+    input::placeholder{
+        font-size: 2.604vw;
+        line-height: normal;
+    }
+    textarea,
+    input{
+        height: 4.167vw;
+    }
     textarea{
-        height: 19.532vw;
+        resize: none;
+        height: 13.672vw;
+        padding: 1.302vw 0;
     }
     .title-top{
         gap: 8.073vw;
@@ -689,8 +722,21 @@ main.main{
         font-size: 4.266vw;
         line-height: normal;
     }
+    textarea,
+    textarea::placeholder,
+    input,
+    input::placeholder{
+        font-size: 4.167vw;
+        line-height: normal;
+    }
+    textarea,
+    input{
+        height: 6.667vw;
+    }
     textarea{
-        height: 40vw;
+        resize: none;
+        height: 21.875vw;
+        padding: 2.083vw 0;
     }
     .btn-next{
         gap: 4.8vw;
@@ -4377,4 +4423,101 @@ a.footer__about-descr:hover{
         width: 13.334vw;
         right: 12vw;
     }
+}
+
+
+/* contactpopup */
+.contactpopup{
+    position: fixed;
+    inset: 0;
+    z-index: 123;
+    background: rgba(29, 29, 29, 0.63);
+    overflow: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .2s ease;
+}
+.contactpopup.show{
+    opacity: 1;
+    pointer-events: all;
+}
+.contactpopup__inner{
+    margin: 5% auto 1%;
+    background: linear-gradient(167deg, #080A15 1.29%, #000 96.76%);
+    width: 100%;
+    max-width: 33.056vw;
+    position: relative;
+    padding: 4.722vw 3.958vw 1.597vw;
+    transform: translateY(-100px) scale(0.5);
+    transition: all .3s ease;
+}
+.contactpopup.show .contactpopup__inner{
+    transform: translateY(0) scale(1);
+}
+.contactpopup__close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4.167vw;
+    height: 4.167vw;
+    min-width: 4.167vw;
+}
+.contactpopup__title{
+    text-align: center;
+}
+.contactpopup__form{
+    margin-top: 3.472vw;
+}
+.btn-close{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.734vw;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36' fill='none'%3E%3Cpath d='M26.1717 8.52935L9.11665 26.7591' stroke='%23C09E63' stroke-linecap='round'/%3E%3Cpath d='M8.52788 9.11493L26.7576 26.17' stroke='%23C09E63' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+.form-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.111vw;
+}
+.form-error{
+    margin-top: 0.486vw;
+    color: #F00;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.833vw;
+    font-weight: 400;
+    line-height: 96%; /* 0.8vw */
+    display: none;
+}
+.error .form-error{
+    display: inline-block;
+}
+.form-label{
+    color: #C09E63;
+    font-family: "Scheherazade New", sans-serif;
+    font-size: 1.25vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25vw; /* 100% */
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 0.208vw;
+}
+.form-input{
+    border-bottom: 0.091vw solid rgba(192, 158, 99, 0.48);
+}
+.form-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.694vw;
+    margin-top: 2.222vw;
+}
+.form-icon{
+    display: flex;
+    align-items: center;
+    width: 3.403vw;
+}
+.form-icon img{
+    width: 100%;
 }
