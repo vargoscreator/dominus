@@ -103,6 +103,9 @@ input::placeholder{
     font-weight: 500;
     line-height: normal;
 }
+input::placeholder{
+    color: hsla(0, 0%, 100%, 0.3);
+}
 textarea,
 input{
     border: none;
@@ -144,6 +147,12 @@ mark{
 }
 main.main{
     overflow: hidden;
+}
+p > a{
+    color: #C09E63;
+}
+p > a:hover{
+    text-decoration: underline;
 }
 .title-top{
     display: flex;
@@ -4771,6 +4780,65 @@ a.footer__about-descr:hover{
 .form-send:first-child{
     margin-left: auto;
 }
+.applyfor-invoice{
+    display: flex;
+    flex-direction: column;
+    gap: 0.729vw;
+    align-items: start;
+    width: 100%;
+    margin-top: 0.833vw;
+}
+.applyfor-invoice{
+    margin-bottom: 0.625vw;
+}
+.form-about-title,
+.applyfor-invoice-descr{
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.833vw;
+    font-weight: 400;
+    line-height: 115%; /* 0.958vw */
+    letter-spacing: 0.058vw;
+}
+.form-about{
+    margin-bottom: 0.365vw;
+    display: flex;
+    align-items: center;
+    gap: 0.729vw;
+    justify-content: space-between;
+    margin-top: 0.625vw;
+}
+.form-about-icons{
+    display: flex;
+    align-items: center;
+    gap: 0.677vw;
+}
+.form-about-icon{
+    height: 1.042vw;
+    width: auto;
+}
+.form-about-icon img{
+    height: 100%;
+    width: auto;
+}
+.applyfor__invoice .form-content{
+    gap: 0;
+}
+.form-warnind{
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.729vw;
+    font-weight: 400;
+    line-height: 115%; /* 0.839vw */
+    letter-spacing: 0.051vw;
+    max-width: 26.927vw;
+    margin: 0.833vw 0 1.302vw;
+}
+.applyfor__invoice .form-block{
+    max-width: 16.667vw;
+}
+.applyfor__invoice .form-input{
+    border: 0.052vw solid #C09E63;
+    padding: 0 0.26vw;
+}
 @media (max-width: 1440px) {
     .contactpopup__inner::before,
     .contactpopup__inner::after{
@@ -4872,6 +4940,42 @@ a.footer__about-descr:hover{
         letter-spacing: 0.068vw;
     }
 
+    .applyfor-invoice{
+        gap: 0.972vw;
+        margin-top: 1.111vw;
+    }
+    .applyfor-invoice{
+        margin-bottom: 0.833vw;
+    }
+    .form-about-title,
+    .applyfor-invoice-descr{
+        font-size: 1.111vw;
+        letter-spacing: 0.078vw;
+    }
+    .form-about{
+        margin-bottom: 0.486vw;
+        gap: 0.972vw;
+        margin-top: 0.833vw;
+    }
+    .form-about-icons{
+        gap: 0.903vw;
+    }
+    .form-about-icon{
+        height: 1.389vw;
+    }
+    .form-warnind{
+        font-size: 0.972vw;
+        letter-spacing: 0.068vw;
+        max-width: 35.903vw;
+        margin: 1.111vw 0 1.736vw;
+    }
+    .applyfor__invoice .form-block{
+        max-width: 22.222vw;
+    }
+    .applyfor__invoice .form-input{
+        border: 0.069vw solid #C09E63;
+        padding: 0 0.347vw;
+    }
 }
 @media (max-width: 768px) {
     .contactpopup__inner::before,
@@ -4974,6 +5078,42 @@ a.footer__about-descr:hover{
         letter-spacing: 0.128vw;
     }
 
+    .applyfor-invoice{
+        gap: 1.823vw;
+        margin-top: 2.083vw;
+    }
+    .applyfor-invoice{
+        margin-bottom: 1.563vw;
+    }
+    .form-about-title,
+    .applyfor-invoice-descr{
+        font-size: 2.083vw;
+        letter-spacing: 0.146vw;
+    }
+    .form-about{
+        margin-bottom: 0.911vw;
+        gap: 1.823vw;
+        margin-top: 1.563vw;
+    }
+    .form-about-icons{
+        gap: 1.693vw;
+    }
+    .form-about-icon{
+        height: 2.604vw;
+    }
+    .form-warnind{
+        font-size: 1.823vw;
+        letter-spacing: 0.128vw;
+        max-width: 67.318vw;
+        margin: 2.083vw 0 3.255vw;
+    }
+    .applyfor__invoice .form-block{
+        max-width: 41.667vw;
+    }
+    .applyfor__invoice .form-input{
+        border: 0.13vw solid #C09E63;
+        padding: 0 0.651vw;
+    }
 }
 @media (max-width: 480px) {
     .contactpopup .container{
@@ -5079,6 +5219,43 @@ a.footer__about-descr:hover{
     }
     .form-send:first-child {
         margin-top: -5.333vw;
+    }
+
+    .applyfor-invoice{
+        gap: 3.733vw;
+        margin-top: 4.267vw;
+    }
+    .applyfor-invoice{
+        margin-bottom: 3.2vw;
+    }
+    .form-about-title,
+    .applyfor-invoice-descr{
+        font-size: 4.267vw;
+        letter-spacing: 0.299vw;
+    }
+    .form-about{
+        margin-bottom: 1.867vw;
+        gap: 3.733vw;
+        margin-top: 3.2vw;
+    }
+    .form-about-icons{
+        gap: 3.467vw;
+    }
+    .form-about-icon{
+        height: 5.333vw;
+    }
+    .form-warnind{
+        font-size: 3.733vw;
+        letter-spacing: 0.261vw;
+        max-width: 137.867vw;
+        margin: 4.267vw 0 6.667vw;
+    }
+    .applyfor__invoice .form-block{
+        max-width: 85.333vw;
+    }
+    .applyfor__invoice .form-input{
+        border: 0.267vw solid #C09E63;
+        padding: 0 1.333vw;
     }
 }
 
