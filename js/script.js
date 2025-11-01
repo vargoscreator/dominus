@@ -752,6 +752,27 @@ if(document.querySelector('.contactpopup')){
   }); 
 }
 
+if(document.querySelector('.emailconfirm')){
+  const emailconfirmPopup = document.querySelector('.emailconfirm');
+  const emailconfirmInner = document.querySelector('.emailconfirm__inner');
+  const emailconfirmClose = document.querySelector('.emailconfirm__close');
+  const emailconfirmButtons = document.querySelectorAll('.emailconfirm-open');
+  emailconfirmButtons.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      emailconfirmPopup.classList.add('show');
+    });
+  });
+  emailconfirmClose.addEventListener('click', () => {
+    emailconfirmPopup.classList.remove('show');
+  });
+  emailconfirmPopup.addEventListener('click', e => {
+    if (!emailconfirmInner.contains(e.target)) {
+      emailconfirmPopup.classList.remove('show');
+    }
+  }); 
+}
+
 
 
 
@@ -799,4 +820,47 @@ gsap.utils.toArray('.service__info, .service__apply').forEach(el => {
         toggleActions: 'play reverse play reverse'
       }
     });
+});
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const codeInputs = document.querySelectorAll('.emailconfirm-confirm-inputs input[type="tel"]');
+    codeInputs.forEach((input, index) => {
+        input.addEventListener('input', (e) => {
+            if (e.target.value.length > 1) {
+                e.target.value = e.target.value.slice(0, 1);
+            }            
+            if (e.target.value.length === 1 && index < codeInputs.length - 1) {
+                codeInputs[index + 1].focus();
+            }
+        });
+        
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Backspace' && input.value === '' && index > 0) {
+                codeInputs[index - 1].focus();
+            }
+        });
+        
+        input.addEventListener('paste', (e) => {
+            e.preventDefault();
+            const pasteData = (e.clipboardData || window.clipboardData).getData('text');
+            const digits = pasteData.replace(/\D/g, '').split('').slice(0, codeInputs.length);
+            
+            digits.forEach((digit, i) => {
+                if (codeInputs[i]) {
+                    codeInputs[i].value = digit;
+                }
+            });
+            const focusIndex = Math.min(digits.length, codeInputs.length - 1);
+            codeInputs[focusIndex].focus();
+        });
+    });
+
+    
 });

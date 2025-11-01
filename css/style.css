@@ -197,6 +197,24 @@ p > a:hover{
     height: 4.408vw;
     min-width: 3.854vw;
 }
+.btn-2{
+    padding: 14px;
+    color: #FFF;
+    text-align: center;
+    font-family: "Scheherazade New", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 100% */
+    text-transform: uppercase;
+    border-radius: 35px;
+    background: rgba(0, 0, 0, 0.00);
+    background: rgba(255, 255, 255, 0.01);
+    box-shadow: 0 0.056vw 0.056vw 0 rgba(255, 255, 255, 0.25);
+}
+.btn-2:active{
+    transform: scale(0.9);
+}
 .btn-next{
     display: flex;
     align-items: center;
@@ -4513,6 +4531,7 @@ a.footer__about-descr:hover{
 
 
 /* contactpopup */
+.emailconfirm,
 .contactpopup{
     position: fixed;
     inset: 0;
@@ -4523,10 +4542,12 @@ a.footer__about-descr:hover{
     pointer-events: none;
     transition: all .2s ease;
 }
+.emailconfirm.show,
 .contactpopup.show{
     opacity: 1;
     pointer-events: all;
 }
+.emailconfirm__inner,
 .contactpopup__inner{
     margin: 5% auto 1%;
     background: linear-gradient(167deg, #080A15 1.29%, #000 96.76%);
@@ -4537,6 +4558,7 @@ a.footer__about-descr:hover{
     transform: translateY(-100px) scale(0.5);
     transition: all .3s ease;
 }
+.emailconfirm__inner::before,
 .upload-file::before,
 .contactpopup__inner::before{
     content: '';
@@ -4550,6 +4572,7 @@ a.footer__about-descr:hover{
     background-repeat: no-repeat;
     background-size: contain;
 }
+.emailconfirm__inner::after,
 .upload-file::after,
 .contactpopup__inner::after{
     content: '';
@@ -4577,9 +4600,11 @@ a.footer__about-descr:hover{
     right: -0.156vw;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='25' viewBox='0 0 29 25' fill='none'%3E%3Cpath d='M27.1094 1.10711e-06L27.1094 24L-0.000464109 24' stroke='%23C09E63' stroke-opacity='0.48' stroke-width='2'/%3E%3C/svg%3E");
 }
+.emailconfirm.show .emailconfirm__inner,
 .contactpopup.show .contactpopup__inner{
     transform: translateY(0) scale(1);
 }
+.btn-close,
 .contactpopup__close{
     position: absolute;
     top: 0;
@@ -4840,8 +4865,12 @@ a.footer__about-descr:hover{
     padding: 0 0.26vw;
 }
 @media (max-width: 1440px) {
-    .contactpopup__inner::before,
-    .contactpopup__inner::after{
+    .emailconfirm__inner::after,
+    .upload-file::after,
+    .contactpopup__inner::after,
+    .emailconfirm__inner::before,
+    .upload-file::before,
+    .contactpopup__inner::before{
         width: 2.254vw;
         height: 2.29vw;
     }
@@ -4849,6 +4878,7 @@ a.footer__about-descr:hover{
         max-width: 33.056vw;
         padding: 4.722vw 3.958vw 1.597vw;
     }
+    .btn-close,
     .contactpopup__close{
         width: 4.167vw;
         height: 4.167vw;
@@ -4978,8 +5008,12 @@ a.footer__about-descr:hover{
     }
 }
 @media (max-width: 768px) {
-    .contactpopup__inner::before,
-    .contactpopup__inner::after{
+    .emailconfirm__inner::after,
+    .upload-file::after,
+    .contactpopup__inner::after,
+    .emailconfirm__inner::before,
+    .upload-file::before,
+    .contactpopup__inner::before{
         width: 4.226vw;
         height: 4.295vw;
     }
@@ -4987,6 +5021,7 @@ a.footer__about-descr:hover{
         max-width: 61.979vw;
         padding: 8.854vw 7.422vw 2.995vw;
     }
+    .btn-close,
     .contactpopup__close{
         width: 7.813vw;
         height: 7.813vw;
@@ -5119,8 +5154,12 @@ a.footer__about-descr:hover{
     .contactpopup .container{
         padding: 0 1vw;
     }
-    .contactpopup__inner::before,
-    .contactpopup__inner::after{
+    .emailconfirm__inner::after,
+    .upload-file::after,
+    .contactpopup__inner::after,
+    .emailconfirm__inner::before,
+    .upload-file::before,
+    .contactpopup__inner::before{
         content: none;
     }
     .contactpopup__inner{
@@ -5128,6 +5167,7 @@ a.footer__about-descr:hover{
         max-width: 126.934vw;
         padding: 14.133vw 10.667vw 9.067vw;
     }
+    .btn-close,
     .contactpopup__close{
         width: 12.533vw;
         height: 12.533vw;
@@ -6697,5 +6737,193 @@ a.footer__about-descr:hover{
     .news__item-time{
         font-size: 2.667vw;
         line-height: 3.62vw;
+    }
+}
+
+
+/* popups */
+.emailconfirm__inner{
+    max-width: 24.792vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.458vw;
+    padding: 2.083vw;
+    margin-top: 10%;
+}
+.emailconfirm__title{
+    text-align: center;
+}
+.emailconfirm__descr{
+    text-align: center;
+    font-family: "Scheherazade New", sans-serif;
+    font-size: 0.729vw;
+    font-weight: 400;
+    line-height: 1.198vw; /* 164.286% */
+    letter-spacing: 0.131vw;
+    text-transform: uppercase;
+    max-width: 18.281vw;
+    margin: 0 auto;
+}
+.emailconfirm__name{
+    text-align: center;
+    font-size: 0.729vw;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 115%; /* 0.839vw */
+    letter-spacing: 0.051vw;
+}
+.emailconfirm-confirm-inputs{
+    display: flex;
+    align-items: center;
+    gap: 0.885vw;
+    justify-content: space-between;
+    max-width: 18.229vw;
+    margin: 0 auto;
+    width: 100%;
+}
+.emailconfirm-confirm-inputs input{
+    padding: 0;
+    width: 2.083vw;
+    min-width: 2.083vw;
+    height: 2.083vw;
+    text-align: center;
+    border: 0.052vw solid #C09E63;
+}
+.emailconfirm__form-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.458vw;
+    gap: 0.521vw;
+}
+.emailconfirm__form-btn{
+    font-size: 1.042vw;
+    gap: 0.677vw;
+}
+.emailconfirm__form-btn::after{
+    width: 1.042vw;
+    min-width: 1.042vw;
+}
+@media (max-width: 1440px) {
+    .emailconfirm__inner{
+        max-width: 33.056vw;
+        gap: 1.944vw;
+        padding: 2.777vw;
+        margin-top: 10%;
+    }
+    .emailconfirm__descr{
+        font-size: 0.972vw;
+        line-height: 1.597vw; /* 164.286% */
+        letter-spacing: 0.175vw;
+        max-width: 24.375vw;
+    }
+    .emailconfirm__name{
+        font-size: 0.972vw;
+        letter-spacing: 0.068vw;
+    }
+    .emailconfirm-confirm-inputs{
+        gap: 1.18vw;
+        max-width: 24.305vw;
+    }
+    .emailconfirm-confirm-inputs input{
+        width: 2.777vw;
+        min-width: 2.777vw;
+        height: 2.777vw;
+        border: 0.069vw solid #C09E63;
+    }
+    .emailconfirm__form-bottom{
+        margin-top: 1.944vw;
+        gap: 0.695vw;
+    }
+    .emailconfirm__form-btn{
+        font-size: 1.389vw;
+        gap: 0.903vw;
+    }
+    .emailconfirm__form-btn::after{
+        width: 1.389vw;
+        min-width: 1.389vw;
+    }
+}
+@media (max-width: 768px) {
+    .emailconfirm__inner{
+        max-width: 61.98vw;
+        gap: 3.645vw;
+        padding: 5.208vw;
+        margin-top: 10%;
+    }
+    .emailconfirm__descr{
+        font-size: 1.823vw;
+        line-height: 2.995vw; /* 164.286% */
+        letter-spacing: 0.327vw;
+        max-width: 45.702vw;
+    }
+    .emailconfirm__name{
+        font-size: 1.823vw;
+        letter-spacing: 0.127vw;
+    }
+    .emailconfirm-confirm-inputs{
+        gap: 2.212vw;
+        max-width: 45.573vw;
+    }
+    .emailconfirm-confirm-inputs input{
+        width: 5.208vw;
+        min-width: 5.208vw;
+        height: 5.208vw;
+        border: 0.13vw solid #C09E63;
+    }
+    .emailconfirm__form-bottom{
+        margin-top: 3.645vw;
+        gap: 1.302vw;
+    }
+    .emailconfirm__form-btn{
+        font-size: 2.605vw;
+        gap: 1.692vw;
+    }
+    .emailconfirm__form-btn::after{
+        width: 2.605vw;
+        min-width: 2.605vw;
+    }
+}
+@media (max-width: 480px) {
+    .emailconfirm__inner{
+        max-width: 126.935vw;
+        gap: 7.465vw;
+        padding: 13.333vw 5.333vw 8vw;
+        margin-top: 20%;
+        margin-left: -3vw;
+        margin-right: -3vw;
+        width: auto;
+    }
+    .emailconfirm__descr{
+        font-size: 3.733vw;
+        line-height: 6.134vw; /* 164.286% */
+        letter-spacing: 0.671vw;
+        max-width: 93.599vw;
+    }
+    .emailconfirm__name{
+        font-size: 3.733vw;
+        letter-spacing: 0.261vw;
+    }
+    .emailconfirm-confirm-inputs{
+        gap: 4.531vw;
+        max-width: 93.333vw;
+    }
+    .emailconfirm-confirm-inputs input{
+        width: 9.867vw;
+        min-width: 1.867vw;
+        height: 9.867vw;
+        border: 0.266vw solid #C09E63;
+    }
+    .emailconfirm__form-bottom{
+        margin-top: 7.465vw;
+        gap: 2.667vw;
+    }
+    .emailconfirm__form-btn{
+        font-size: 5.335vw;
+        gap: 3.466vw;
+    }
+    .emailconfirm__form-btn::after{
+        width: 5.335vw;
+        min-width: 5.335vw;
     }
 }
