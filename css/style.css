@@ -5318,6 +5318,56 @@ a.footer__about-descr:hover{
     left: 53.594vw;
 }
 
+.service-risk .service__title{
+    top: 7.448vw;
+    left: 26.823vw;
+    max-width: 68.021vw;
+}
+.service-risk .service__descr{
+    top: 17.24vw;
+    right: 1.563vw;
+    max-width: 33.177vw;
+}
+.service-risk .service__info-1{
+    bottom: 32.552vw;
+    left: 6.615vw;
+    max-width: 28.125vw;
+}
+.service-risk .service__info-2{
+    bottom: 11.979vw;
+    right: 3.125vw;
+    max-width: 29.167vw;
+}
+.service-risk .service__apply{
+    top: 49.479vw;
+    left: 44.792vw;
+}
+
+.service-lifestyle .service__title{
+    top: 6.042vw;
+    left: 26.823vw;
+    max-width: 68.021vw;
+}
+.service-lifestyle .service__descr{
+    top: 18.75vw;
+    left: 10.26vw;
+    max-width: 36.458vw;
+}
+.service-lifestyle .service__name{
+    top: 58.125vw;
+    right: 20.833vw;
+    max-width: 36.458vw;
+}
+.service-lifestyle .service__about{
+    bottom: 6.979vw;
+    right: 8.229vw;
+    max-width: 29.688vw;
+}
+.service-lifestyle .service__apply{
+    top: 48.594vw;
+    left: 42.604vw;
+}
+
 @media (max-width: 1440px){
     .service{
         margin-top: 6.25vw;
@@ -5401,6 +5451,57 @@ a.footer__about-descr:hover{
     .service-editorial .service__apply {
         top: 70vw;
         left: 21.181vw;
+    }
+
+    .service-risk .service__title{
+        top: 7.986vw;
+        left: 3.333vw;
+        max-width: 90.694vw;
+    }
+    .service-risk .service__descr{
+        top: 22.292vw;
+        right: 2.083vw;
+        max-width: 48.889vw;
+    }
+    .service-risk .service__info-1{
+        bottom: 29.167vw;
+        left: 8.056vw;
+        max-width: 37.5vw;
+    }
+    .service-risk .service__info-2{
+        bottom: 9.722vw;
+        right: 2.639vw;
+        max-width: 38.889vw;
+    }
+    .service-risk .service__apply{
+        top: 48.958vw;
+        left: 62.083vw;
+    }
+
+    .service-lifestyle .service__title{
+        top: 7.986vw;
+        left: 3.333vw;
+        max-width: 90.694vw;
+    }
+    .service-lifestyle .service__descr{
+        top: 25vw;
+        left: 13.681vw;
+        max-width: 48.611vw;
+    }
+    .service-lifestyle .service__name{
+        top: 68.333vw;
+        right: 3.75vw;
+        max-width: 38.542vw;
+    }
+    .service-lifestyle .service__about{
+        bottom: 6.875vw;
+        right: initial;
+        left: 10.972vw;
+        max-width: 39.444vw;
+    }
+    .service-lifestyle .service__apply{
+        top: 48.958vw;
+        left: 62.083vw;
     }
 }
 @media (max-width: 768px){
@@ -5493,6 +5594,59 @@ a.footer__about-descr:hover{
         top: 45.313vw;
         left: 2.214vw;
     }
+
+    .service-risk .service__title{
+        top: 10.417vw;
+        left: 4.557vw;
+        max-width: 73.568vw;
+    }
+    .service-risk .service__descr{
+        top: 27.474vw;
+        right: 4.688vw;
+        max-width: 41.146vw;
+    }
+    .service-risk .service__info-1{
+        bottom: 39.583vw;
+        left: 4.688vw;
+        max-width: 58.594vw;
+    }
+    .service-risk .service__info-2{
+        bottom: 14.453vw;
+        right: 3.385vw;
+        max-width: 45.573vw;
+    }
+    .service-risk .service__apply{
+        top: 47.917vw;
+        left: 5.208vw;
+    }
+
+
+    .service-lifestyle .service__title{
+        top: 10.417vw;
+        left: 4.557vw;
+        max-width: 78.125vw;
+    }
+    .service-lifestyle .service__descr{
+        top: 25.391vw;
+        left: initial;
+        right: 5.208vw;
+        max-width: 41.667vw;
+    }
+    .service-lifestyle .service__name{
+        top: 63.802vw;
+        right: 4.688vw;
+        max-width: 45.573vw;
+    }
+    .service-lifestyle .service__about{
+        bottom: 7.161vw;
+        right: 3.385vw;
+        left: initial;
+        max-width: 43.62vw;
+    }
+    .service-lifestyle .service__apply{
+        top: 43.62vw;
+        left: 6.51vw;
+    }
 }
 @media (max-width: 480px){
     .service{
@@ -5570,6 +5724,52 @@ a.footer__about-descr:hover{
     .service-editorial .service__apply {
         top: 49.067vw;
         left: 5.867vw;
+    }
+
+    .service-risk .service__title{
+        top: 4vw;
+        left: 6.667vw;
+        max-width: 150.667vw;
+    }
+    .service-risk .service__descr{
+        top: initial;
+        bottom: 16.533vw;
+        right: 11.2vw;
+        max-width: 41.867vw;
+    }
+    .service-risk .service__info-1,
+    .service-risk .service__info-2{
+        bottom: -13.333vw;
+        right: 2.667vw;
+        max-width: 48vw;
+    }
+    .service-risk .service__apply{
+        display: none;
+    }
+
+    .service-lifestyle .service__title{
+        top: 5.208vw;
+        left: 5.208vw;
+        max-width: 67.708vw;
+    }
+    .service-lifestyle .service__descr{
+        top: 24.167vw;
+        left: initial;
+        right: 5.208vw;
+        max-width: 30.417vw;
+    }
+    .service-lifestyle .service__name{
+        display: none;
+    }
+    .service-lifestyle .service__about{
+        bottom: 13.542vw;
+        right: 7.292vw;
+        left: initial;
+        max-width: 34.375vw;
+    }
+    .service-lifestyle .service__apply{
+        top: 38.333vw;
+        left: 4.583vw;
     }
 }
 .blogs{
