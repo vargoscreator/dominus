@@ -4531,6 +4531,7 @@ a.footer__about-descr:hover{
 
 
 /* contactpopup */
+.successfulpay,
 .emailconfirm,
 .contactpopup{
     position: fixed;
@@ -4542,11 +4543,13 @@ a.footer__about-descr:hover{
     pointer-events: none;
     transition: all .2s ease;
 }
+.successfulpay.show,
 .emailconfirm.show,
 .contactpopup.show{
     opacity: 1;
     pointer-events: all;
 }
+.successfulpay__inner,
 .emailconfirm__inner,
 .contactpopup__inner{
     margin: 5% auto 1%;
@@ -4558,6 +4561,7 @@ a.footer__about-descr:hover{
     transform: translateY(-100px) scale(0.5);
     transition: all .3s ease;
 }
+.successfulpay__inner::before,
 .emailconfirm__inner::before,
 .upload-file::before,
 .contactpopup__inner::before{
@@ -4572,6 +4576,7 @@ a.footer__about-descr:hover{
     background-repeat: no-repeat;
     background-size: contain;
 }
+.successfulpay__inner::after,
 .emailconfirm__inner::after,
 .upload-file::after,
 .contactpopup__inner::after{
@@ -4600,6 +4605,7 @@ a.footer__about-descr:hover{
     right: -0.156vw;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='25' viewBox='0 0 29 25' fill='none'%3E%3Cpath d='M27.1094 1.10711e-06L27.1094 24L-0.000464109 24' stroke='%23C09E63' stroke-opacity='0.48' stroke-width='2'/%3E%3C/svg%3E");
 }
+.successfulpay.show .successfulpay__inner,
 .emailconfirm.show .emailconfirm__inner,
 .contactpopup.show .contactpopup__inner{
     transform: translateY(0) scale(1);
@@ -4609,9 +4615,9 @@ a.footer__about-descr:hover{
     position: absolute;
     top: 0;
     right: 0;
-    width: 4.167vw;
-    height: 4.167vw;
-    min-width: 4.167vw;
+    width: 3.167vw;
+    height: 3.167vw;
+    min-width: 3.167vw;
 }
 .contactpopup__title{
     text-align: center;
@@ -4865,6 +4871,8 @@ a.footer__about-descr:hover{
     padding: 0 0.26vw;
 }
 @media (max-width: 1440px) {
+    .successfulpay__inner::before,
+    .successfulpay__inner::after,
     .emailconfirm__inner::after,
     .upload-file::after,
     .contactpopup__inner::after,
@@ -5008,6 +5016,8 @@ a.footer__about-descr:hover{
     }
 }
 @media (max-width: 768px) {
+    .successfulpay__inner::before,
+    .successfulpay__inner::after,
     .emailconfirm__inner::after,
     .upload-file::after,
     .contactpopup__inner::after,
@@ -5154,6 +5164,8 @@ a.footer__about-descr:hover{
     .contactpopup .container{
         padding: 0 1vw;
     }
+    .successfulpay__inner::before,
+    .successfulpay__inner::after,
     .emailconfirm__inner::after,
     .upload-file::after,
     .contactpopup__inner::after,
@@ -6741,7 +6753,7 @@ a.footer__about-descr:hover{
 }
 
 
-/* popups */
+/* emailconfirm */
 .emailconfirm__inner{
     max-width: 24.792vw;
     display: flex;
@@ -6890,8 +6902,8 @@ a.footer__about-descr:hover{
         gap: 7.465vw;
         padding: 13.333vw 5.333vw 8vw;
         margin-top: 20%;
-        margin-left: -3vw;
-        margin-right: -3vw;
+        margin-left: -6.667vw;
+        margin-right: -6.667vw;
         width: auto;
     }
     .emailconfirm__descr{
@@ -6923,6 +6935,134 @@ a.footer__about-descr:hover{
         gap: 3.466vw;
     }
     .emailconfirm__form-btn::after{
+        width: 5.335vw;
+        min-width: 5.335vw;
+    }
+}
+
+/* successfulpay */
+.successfulpay__inner{
+    margin-top: 10%;
+    padding: 2.292vw 2.5vw 2.344vw;
+    max-width: 24.792vw;
+}
+.successfulpay__title{
+    text-align: center;
+}
+.successfulpay__descr{
+    margin-top: 1.458vw;
+    font-family: "Scheherazade New", sans-serif;
+    font-size: 0.729vw;
+    font-weight: 400;
+    line-height: 1.198vw; /* 164.286% */
+    letter-spacing: 0.131vw;
+    text-transform: uppercase;
+}
+.successfulpay__bottom{
+    margin-top: 1.458vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.521vw;
+}
+.successfulpay__icon{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 2.604vw;
+}
+.successfulpay__icon img{
+    width: 100%;
+}
+.successfulpay__btn{
+    gap: 0.677vw;
+    font-size: 1.042vw;
+}
+.successfulpay__btn::after{
+    width: 1.042vw;
+    min-width: 1.042vw;
+}
+@media (max-width: 1440px) {
+    .successfulpay__inner{
+        padding: 3.056vw 3.333vw 3.125vw;
+        max-width: 33.056vw;
+    }
+    .successfulpay__descr{
+        margin-top: 1.944vw;
+        font-size: 0.972vw;
+        line-height: 1.597vw; /* 164.286% */
+        letter-spacing: 0.175vw;
+    }
+    .successfulpay__bottom{
+        margin-top: 1.944vw;
+        gap: 0.695vw;
+    }
+    .successfulpay__icon{
+        max-width: 3.472vw;
+    }
+    .successfulpay__btn{
+        gap: 0.903vw;
+        font-size: 1.389vw;
+    }
+    .successfulpay__btn::after{
+        width: 1.389vw;
+        min-width: 1.389vw;
+    }
+}
+@media (max-width: 768px) {
+    .successfulpay__inner{
+        padding: 5.73vw 6.25vw 5.86vw;
+        max-width: 61.98vw;
+    }
+    .successfulpay__descr{
+        margin-top: 3.645vw;
+        font-size: 1.823vw;
+        line-height: 2.995vw; /* 164.286% */
+        letter-spacing: 0.327vw;
+    }
+    .successfulpay__bottom{
+        margin-top: 3.645vw;
+        gap: 1.302vw;
+    }
+    .successfulpay__icon{
+        max-width: 6.51vw;
+    }
+    .successfulpay__btn{
+        gap: 1.692vw;
+        font-size: 2.605vw;
+    }
+    .successfulpay__btn::after{
+        width: 2.605vw;
+        min-width: 2.605vw;
+    }
+}
+@media (max-width: 480px) {
+    .successfulpay__inner{
+        max-width: none;
+        padding: 13.333vw 5.333vw 8vw;
+        margin-top: 20%;
+        margin-left: -6.667vw;
+        margin-right: -6.667vw;
+        width: auto;
+    }
+    .successfulpay__descr{
+        margin-top: 7.465vw;
+        font-size: 3.733vw;
+        line-height: 6.134vw; /* 164.286% */
+        letter-spacing: 0.671vw;
+    }
+    .successfulpay__bottom{
+        margin-top: 7.465vw;
+        gap: 2.667vw;
+    }
+    .successfulpay__icon{
+        max-width: 13.333vw;
+    }
+    .successfulpay__btn{
+        gap: 3.466vw;
+        font-size: 5.335vw;
+    }
+    .successfulpay__btn::after{
         width: 5.335vw;
         min-width: 5.335vw;
     }

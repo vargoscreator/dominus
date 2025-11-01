@@ -773,6 +773,27 @@ if(document.querySelector('.emailconfirm')){
   }); 
 }
 
+if(document.querySelector('.successfulpay')){
+  const successfulpayPopup = document.querySelector('.successfulpay');
+  const successfulpayInner = document.querySelector('.successfulpay__inner');
+  const successfulpayClose = document.querySelector('.successfulpay__close');
+  const successfulpayButtons = document.querySelectorAll('.successfulpay-open');
+  successfulpayButtons.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      successfulpayPopup.classList.add('show');
+    });
+  });
+  successfulpayClose.addEventListener('click', () => {
+    successfulpayPopup.classList.remove('show');
+  });
+  successfulpayPopup.addEventListener('click', e => {
+    if (!successfulpayInner.contains(e.target)) {
+      successfulpayPopup.classList.remove('show');
+    }
+  }); 
+}
+
 
 
 
