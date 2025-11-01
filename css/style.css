@@ -5235,6 +5235,7 @@ a.footer__about-descr:hover{
     text-transform: uppercase;
     width: 100%;
 }
+.service__about,
 .service__descr{
     color: #FFF;
     font-size: 1.667vw;
@@ -5368,6 +5369,36 @@ a.footer__about-descr:hover{
     left: 42.604vw;
 }
 
+.service-ultra .service__title{
+    top: 5.938vw;
+    left: 26.823vw;
+    max-width: 68.021vw;
+}
+.service-ultra .service__descr{
+    top: 25vw;
+    left: 5.208vw;
+    max-width: 36.458vw;
+}
+.service-ultra .service__name{
+    top: 61.979vw;
+    right: 3.906vw;
+    max-width: 33.333vw;
+}
+.service-ultra .service__info-1{
+    bottom: 9.896vw;
+    left: 7.344vw;
+    max-width: 28.125vw;
+}
+.service-ultra .service__info-2{
+    bottom: 4.948vw;
+    right: 2.083vw;
+    max-width: 29.167vw;
+}
+.service-ultra .service__apply{
+    top: 46.875vw;
+    left: 42.708vw;
+}
+
 @media (max-width: 1440px){
     .service{
         margin-top: 6.25vw;
@@ -5379,10 +5410,8 @@ a.footer__about-descr:hover{
         font-size: 6.806vw;
         line-height: 5.799vw;
     }
-    .service__descr{
-        font-size: 2.222vw;
-        line-height: 2.708vw;
-    }
+    .service__descr,
+    .service__about,
     .service__name{
         font-size: 2.222vw;
         line-height: 2.708vw;
@@ -5503,6 +5532,36 @@ a.footer__about-descr:hover{
         top: 48.958vw;
         left: 62.083vw;
     }
+
+    .service-ultra .service__title{
+        top: 9.028vw;
+        left: 3.333vw;
+        max-width: 90.694vw;
+    }
+    .service-ultra .service__descr{
+        top: 34.444vw;
+        left: 2.986vw;
+        max-width: 43.194vw;
+    }
+    .service-ultra .service__name{
+        top: 82.639vw;
+        right: 3.264vw;
+        max-width: 44.444vw;
+    }
+    .service-ultra .service__info-1{
+        bottom: 16.181vw;
+        left: 3.333vw;
+        max-width: 37.5vw;
+    }
+    .service-ultra .service__info-2{
+        bottom: 9.306vw;
+        right: 2.986vw;
+        max-width: 37.5vw;
+    }
+    .service-ultra .service__apply{
+        top: 42.014vw;
+        left: 25.417vw;
+    }
 }
 @media (max-width: 768px){
     .service{
@@ -5515,6 +5574,7 @@ a.footer__about-descr:hover{
         font-size: 6.25vw;
         line-height: 115%;
     }
+    .service__about,
     .service__descr{
         font-size: 2.604vw;
         line-height: 115%;
@@ -5647,6 +5707,36 @@ a.footer__about-descr:hover{
         top: 43.62vw;
         left: 6.51vw;
     }
+
+    .service-ultra .service__title{
+        top: 10.417vw;
+        left: 4.557vw;
+        max-width: 78.125vw;
+    }
+    .service-ultra .service__descr{
+        top: 25.391vw;
+        left: 4.688vw;
+        max-width: 41.667vw;
+    }
+    .service-ultra .service__name{
+        top: 63.802vw;
+        right: 5.859vw;
+        max-width: 45.573vw;
+    }
+    .service-ultra .service__info-1{
+        bottom: 16.406vw;
+        left: 5.859vw;
+        max-width: 58.594vw;
+    }
+    .service-ultra .service__info-2{
+        bottom: 5.859vw;
+        right: 3.385vw;
+        max-width: 44.271vw;
+    }
+    .service-ultra .service__apply{
+        top: 43.62vw;
+        left: 6.51vw;
+    }
 }
 @media (max-width: 480px){
     .service{
@@ -5659,6 +5749,7 @@ a.footer__about-descr:hover{
     .service__title{
         font-size: 6.4vw;
     }
+    .service__about,
     .service__descr{
         font-size: 3.2vw;
     }
@@ -5727,49 +5818,79 @@ a.footer__about-descr:hover{
     }
 
     .service-risk .service__title{
-        top: 4vw;
-        left: 6.667vw;
-        max-width: 150.667vw;
+        top: 5.12vw;
+        left: 8.534vw;
+        max-width: 192.854vw;
     }
     .service-risk .service__descr{
         top: initial;
-        bottom: 16.533vw;
-        right: 11.2vw;
-        max-width: 41.867vw;
+        bottom: 21.162vw;
+        right: 14.336vw;
+        max-width: 53.59vw;
     }
     .service-risk .service__info-1,
     .service-risk .service__info-2{
-        bottom: -13.333vw;
-        right: 2.667vw;
-        max-width: 48vw;
+        bottom: -17.066vw;
+        right: 3.414vw;
+        max-width: 61.44vw;    
     }
     .service-risk .service__apply{
         display: none;
     }
 
     .service-lifestyle .service__title{
-        top: 5.208vw;
-        left: 5.208vw;
-        max-width: 67.708vw;
+        top: 6.666vw;
+        left: 6.666vw;
+        max-width: 86.666vw;
     }
     .service-lifestyle .service__descr{
-        top: 24.167vw;
+        top: 30.934vw;
         left: initial;
-        right: 5.208vw;
-        max-width: 30.417vw;
+        right: 6.666vw;
+        max-width: 38.934vw;
     }
     .service-lifestyle .service__name{
         display: none;
     }
     .service-lifestyle .service__about{
-        bottom: 13.542vw;
-        right: 7.292vw;
-        left: initial;
-        max-width: 34.375vw;
+        bottom: 17.334vw;
+        right: initial;
+        left: 9.334vw;
+        max-width: 44vw;
     }
     .service-lifestyle .service__apply{
-        top: 38.333vw;
-        left: 4.583vw;
+        top: 143.749px;
+        left: 22.001px;
+    }
+
+    .service-ultra .service__title{
+        top: 6.133vw;
+        left: 6.933vw;
+        max-width: 75.733vw;
+    }
+    .service-ultra .service__descr{
+        top: 30.667vw;
+        left: 6.933vw;
+        max-width: 40vw;
+    }
+    .service-ultra .service__name{
+        top: 73.867vw;
+        right: 7.2vw;
+        max-width: 44vw;
+    }
+    .service-ultra .service__info-1{
+        bottom: 5.067vw;
+        left: 6.4vw;
+        max-width: 44.533vw;
+    }
+    .service-ultra .service__info-2{
+        bottom: 5.067vw;
+        right: 6.4vw;
+        max-width: 44.533vw;
+    }
+    .service-ultra .service__apply{
+        top: 49.333vw;
+        left: 6.133vw;
     }
 }
 .blogs{
