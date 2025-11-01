@@ -4693,6 +4693,9 @@ a.footer__about-descr:hover{
     pointer-events: 0;
     opacity: 0;
 }
+.form-checkbox-agreed{
+    color: #FFF !important;
+}
 .form-checkbox{
     cursor: pointer;
     max-width: max-content;
@@ -4716,6 +4719,7 @@ a.footer__about-descr:hover{
     border: 0.052vw solid #C09E63;
     min-width: 1.302vw;
     position: relative;
+    border-radius: 2px;
 }
 .form-checkbox input:checked + span::after{
     position: absolute;
@@ -5399,6 +5403,36 @@ a.footer__about-descr:hover{
     left: 42.708vw;
 }
 
+.service-culture .service__title{
+    top: 6.25vw;
+    left: 26.823vw;
+    max-width: 68.021vw;
+}
+.service-culture .service__descr{
+    top: 18.646vw;
+    left: 11.823vw;
+    max-width: 36.615vw;
+}
+.service-culture .service__name{
+    top: 53.021vw;
+    right: 9.479vw;
+    max-width: 33.333vw;
+}
+.service-culture .service__info-1{
+    bottom: 28.125vw;
+    left: 40.521vw;
+    max-width: 28.125vw;
+}
+.service-culture .service__info-2{
+    bottom: 8.646vw;
+    left: 11.667vw;
+    max-width: 29.531vw;
+}
+.service-culture .service__apply{
+    top: 49.479vw;
+    left: 14.323vw;
+}
+
 @media (max-width: 1440px){
     .service{
         margin-top: 6.25vw;
@@ -5561,6 +5595,38 @@ a.footer__about-descr:hover{
     .service-ultra .service__apply{
         top: 42.014vw;
         left: 25.417vw;
+    }
+
+    .service-culture .service__title{
+        top: 143px;
+        left: 54px;
+        max-width: 1306px;
+    }
+    .service-culture .service__descr{
+        top: 380px;
+        right: 53px;
+        left: initial;
+        max-width: 525px;
+    }
+    .service-culture .service__name{
+        top: 934px;
+        right: 57px;
+        max-width: 637px;
+    }
+    .service-culture .service__info-1{
+        bottom: 226px;
+        left: 48px;
+        max-width: 540px;
+    }
+    .service-culture .service__info-2{
+        bottom: 133px;
+        right: 49px;
+        max-width: 540px;
+        left: initial;
+    }
+    .service-culture .service__apply{
+        top: 614px;
+        left: 366px;
     }
 }
 @media (max-width: 768px){
@@ -5737,6 +5803,37 @@ a.footer__about-descr:hover{
         top: 43.62vw;
         left: 6.51vw;
     }
+
+    .service-culture .service__title{
+        top: 80px;
+        left: 40px;
+        max-width: 600px;
+    }
+    .service-culture .service__descr{
+        top: 206px;
+        right: 36px;
+        max-width: 320px;
+    }
+    .service-culture .service__name{
+        top: 500px;
+        right: initial;
+        left: 41px;
+        max-width: 346px;
+    }
+    .service-culture .service__info-1{
+        bottom: 128px;
+        left: 41px;
+        max-width: 310px;
+    }
+    .service-culture .service__info-2{
+        bottom: 47px;
+        right: 26px;
+        max-width: 340px;
+    }
+    .service-culture .service__apply{
+        top: 346px;
+        left: 50px;
+    }
 }
 @media (max-width: 480px){
     .service{
@@ -5891,6 +5988,36 @@ a.footer__about-descr:hover{
     .service-ultra .service__apply{
         top: 49.333vw;
         left: 6.133vw;
+    }
+
+    .service-culture .service__title{
+        top: 6.133vw;
+        left: 6.667vw;
+        max-width: 77.333vw;
+    }
+    .service-culture .service__descr{
+        top: 30.667vw;
+        right: 6.933vw;
+        max-width: 46vw;
+    }
+    .service-culture .service__name{
+        top: 73.867vw;
+        right: 6.933vw;
+        max-width: 48vw;
+    }
+    .service-culture .service__info-1{
+        bottom: 5.067vw;
+        left: 6.133vw;
+        max-width: 40.333vw;    
+    }
+    .service-culture .service__info-2{
+        bottom: 5.067vw;
+        right: 6.133vw;
+        max-width: 40.333vw;  
+    }
+    .service-culture .service__apply{
+        top: 49.067vw;
+        left: 5.867vw;
     }
 }
 .blogs{
