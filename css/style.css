@@ -8409,3 +8409,30 @@ a.footer__about-descr:hover{
         height: 4.711vw;
     }
 }
+
+/* imageBanner */
+.imageBanner{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    height: 34.323vw;
+}
+.imageBanner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.imageBanner + .faq{
+    margin-top: 4.688vw;
+    padding-top: 0;
+}
+@media (max-width: 480px) {
+    .imageBanner{
+        height: 56.267vw;
+    }
+    .imageBanner + .faq{
+        margin-top: 13.333vw;
+    }
+}
