@@ -69,32 +69,51 @@ let teamSlider = new Swiper(".team__slider", {
     },
 });
 
-let membershipSlider = new Swiper(".membership__slider", {
+document.querySelectorAll('.membership').forEach(section => {
+  const sliderEl = section.querySelector('.membership__slider');
+  const nextBtn = section.querySelector('.membership__next');
+  const paginationEl = section.querySelector('.membership__pagination');
+
+  if (!sliderEl) return;
+
+  const isIncluded = sliderEl.classList.contains('membership__slider-included');
+
+  new Swiper(sliderEl, {
     loop: false,
+    speed: 600,
     spaceBetween: 20,
     slidesPerView: 1,
-	  navigation: {
-        nextEl: ".membership__next",
+    watchSlidesProgress: true,
+    navigation: {
+      nextEl: nextBtn,
     },
     pagination: {
-        el: ".membership__pagination",
-        clickable: true,
+      el: paginationEl,
+      clickable: true,
     },
     breakpoints: {
-        480: {
-            spaceBetween: 59,
-            slidesPerView: 2,
-        },
-        769: {
-            spaceBetween: 59,
-            slidesPerView: 4,
-        },
-		    1441: {
-            spaceBetween: 65,
-            slidesPerView: 5,
-        },
+      480: {
+        spaceBetween: 59,
+        slidesPerView: 2,
+      },
+      769: {
+        spaceBetween: 59,
+        slidesPerView: 4,
+      },
+      1441: {
+        spaceBetween: 65,
+        slidesPerView: isIncluded ? 4 : 5, // 👈 різна кількість слайдів
+      },
     },
+    on: {
+      init() {
+        console.log(`✅ Swiper initialized: ${isIncluded ? 'included' : 'default'}`);
+      }
+    }
+  });
 });
+
+
 
 let teaserSlider = new Swiper(".teaser__slider", {
     loop: false,
@@ -445,20 +464,30 @@ createScrollAnimation('.hero__image-bottom', {
     to: { x: 0, rotation: 0, opacity: 1, duration: 1.5, ease: "power3.out" }
 }, '.hero');
 
-createScrollAnimation('.membership__title', {
-    from: { y: 100, opacity: 0 },
-    to: { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }
-}, '.membership');
-createScrollAnimation('.membership__next', {
-    from: { x: -100, opacity: 0 },
-    to: { x: 0, opacity: 1, duration: 0.8, ease: "power3.out" }
-}, '.membership');
-document.querySelectorAll('.membership__item').forEach((card, i) => {
+
+document.querySelectorAll('.membership').forEach(membershipSection => {
+  const title = membershipSection.querySelector('.membership__title');
+  if (title) {
+    createScrollAnimation(title, {
+      from: { x: 100, opacity: 0 },
+      to: { x: 0, opacity: 1, duration: 1, ease: "power3.out" }
+    }, membershipSection);
+  }
+  const next = membershipSection.querySelector('.membership__next');
+  if (next) {
+    createScrollAnimation(next, {
+      from: { x: -100, opacity: 0 },
+      to: { x: 0, opacity: 1, duration: 1, ease: "power3.out" }
+    }, membershipSection);
+  }
+  membershipSection.querySelectorAll('.membership__item').forEach((card, i) => {
     createScrollAnimation(card, {
         from: { y: 200, opacity: 0, rotation: (i - 2) * 10 },
         to: { y: 0, opacity: 1, rotation: 0, duration: 1.2, ease: "power3.out", delay: i * 0.1 }
-    }, '.membership');
+    }, membershipSection);
 });
+});
+
 createScrollAnimation('.creditcard__hand', {
     from: { x: -300, rotation: 30, opacity: 1 },
     to: { x: 0, rotation: 0, opacity: 1, duration: 1.8, ease: "power4.out" }
@@ -560,9 +589,8 @@ howItTimeline.from('.howit__discover', {
     duration: 1,
     ease: "power3.out"
 }, "-=0.3");
-document.querySelectorAll('.team').forEach(teamSection => {
 
-  // Заголовок — зліва направо
+document.querySelectorAll('.team').forEach(teamSection => {
   const title = teamSection.querySelector('.team__title');
   if (title) {
     createScrollAnimation(title, {
@@ -570,8 +598,6 @@ document.querySelectorAll('.team').forEach(teamSection => {
       to: { x: 0, opacity: 1, duration: 1, ease: "power3.out" }
     }, teamSection);
   }
-
-  // Кнопка NEXT — справа наліво (якщо є)
   const next = teamSection.querySelector('.team__next');
   if (next) {
     createScrollAnimation(next, {
@@ -579,8 +605,6 @@ document.querySelectorAll('.team').forEach(teamSection => {
       to: { x: 0, opacity: 1, duration: 1, ease: "power3.out" }
     }, teamSection);
   }
-
-  // Кнопка NEXT — справа наліво (якщо є)
   const descr = teamSection.querySelector('.team__descr');
   if (descr) {
     createScrollAnimation(descr, {
@@ -588,8 +612,6 @@ document.querySelectorAll('.team').forEach(teamSection => {
       to: { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
     }, teamSection);
   }
-
-  // Кнопки вибору (Medical / Culture / Security)
   const selectBtns = teamSection.querySelectorAll('.team__select-btn');
   if (selectBtns.length) {
     createScrollAnimation(selectBtns, {
@@ -597,20 +619,29 @@ document.querySelectorAll('.team').forEach(teamSection => {
       to: { y: 0, opacity: 1, duration: 0.8, ease: "power2.out", stagger: 0.2 }
     }, teamSection.querySelector('.team__select') || teamSection);
   }
-
-  // Слайди (або swiper, або team__item)
-const slides = teamSection.querySelectorAll('.team__slide');
-if (slides.length) {
-  slides.forEach(slide => {
-    createScrollAnimation(slide, {
-      from: { y: 100, opacity: 0 },
-      to: { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }
+  const slides = teamSection.querySelectorAll('.team__slide');
+  if (slides.length) {
+    slides.forEach(slide => {
+      createScrollAnimation(slide, {
+        from: { y: 100, opacity: 0 },
+        to: { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }
+      });
     });
-  });
-}
-
-
+  }
 });
+
+createScrollAnimation('.tiers__title', {
+    from: { x: 100, opacity: 0 },
+    to: { x: 0, opacity: 1, duration: 0.8, ease: "power3.out" }
+}, '.tiers');
+createScrollAnimation('.tiers__descr', {
+    from: { x: -100, opacity: 0 },
+    to: { x: 0, opacity: 1, duration: 0.8, ease: "power3.out" }
+}, '.tiers');
+createScrollAnimation('.tiers__table', {
+    from: { y: 100, opacity: 0 },
+    to: { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }
+}, '.tiers');
 
 
 
@@ -622,10 +653,33 @@ createScrollAnimation('.stories__next', {
     from: { x: -100, opacity: 0 },
     to: { x: 0, opacity: 1, duration: 0.8, ease: "power3.out" }
 }, '.stories');
-
 document.querySelectorAll('.stories__item').forEach((item, i) => {
     const content = item.querySelector('.stories__item-content');
     const image = item.querySelector('.stories__item-image');
+    const isEven = i % 2 === 0;
+    gsap.set(content, { x: isEven ? -200 : 200, opacity: 0 });
+    gsap.set(image, { x: isEven ? 200 : -200, opacity: 0 });
+
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: item,
+            start: "top 70%",
+            end: "bottom 30%",
+            toggleActions: "play reverse play reverse",
+        }
+    });
+
+    tl.to(content, { x: 0, opacity: 1, duration: 1, ease: "power3.out" })
+      .to(image, { x: 0, opacity: 1, duration: 1, ease: "power3.out" }, "-=0.7"); 
+});
+
+createScrollAnimation('.whymembership__title', {
+    from: { y: 100, opacity: 0 },
+    to: { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }
+}, '.whymembership');
+document.querySelectorAll('.whymembership').forEach((item, i) => {
+    const content = item.querySelector('.whymembership__content');
+    const image = item.querySelector('.whymembership__image');
     const isEven = i % 2 === 0;
     gsap.set(content, { x: isEven ? -200 : 200, opacity: 0 });
     gsap.set(image, { x: isEven ? 200 : -200, opacity: 0 });
@@ -731,7 +785,7 @@ if(document.querySelector('.footer__bottom-copy')){
 }
 
 const membershipItems = document.querySelectorAll('.membership__item');
-if (window.innerWidth < 768) {
+if (window.innerWidth < 769) {
   membershipItems.forEach(item => {
     item.addEventListener('click', () => {
       item.classList.toggle('active');
