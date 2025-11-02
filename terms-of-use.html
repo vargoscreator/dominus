@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Dominus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Scheherazade+New:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body"> 
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a class="header__logo" href="index.html">
+                    <img src="img/logo.svg" alt="">
+                </a>
+
+                <nav class="header__menu">
+                    <ul>
+                        <li class="header__menu-link">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="header__menu-link">
+                            <button class="header__more-open">SERVICES <span></span></button>
+                            <div class="header__more">
+                                <a class="header__more-link" href="#">
+                                    <div class="header__more-image">
+                                        <img src="img/header/link-1.png" alt="">
+                                    </div>
+                                    <p class="header__more-title">Health, <br>Longevity & Family</p>
+                                </a>
+                                <a class="header__more-link" href="#">
+                                    <div class="header__more-image">
+                                        <img src="img/header/link-2.png" alt="">
+                                    </div>
+                                    <p class="header__more-title">Risk <br>& Security</p>
+                                </a>
+                                <a class="header__more-link" href="#">
+                                    <div class="header__more-image">
+                                        <img src="img/header/link-3.png" alt="">
+                                    </div>
+                                    <p class="header__more-title">Lifestyle <br>Operations</p>
+                                </a>
+                                <a class="header__more-link" href="#">
+                                    <div class="header__more-image">
+                                        <img src="img/header/link-4.png" alt="">
+                                    </div>
+                                    <p class="header__more-title">Ultra-curated <br>Travel & Residence</p>
+                                </a>
+                                <a class="header__more-link" href="#">
+                                    <div class="header__more-image">
+                                        <img src="img/header/link-5.png" alt="">
+                                    </div>
+                                    <p class="header__more-title">Culture, <br>Events & <br>Philanthropy</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="header__menu-link">
+                            <a href="#">Memberships</a>
+                        </li>
+                        <li class="header__menu-link">
+                            <a href="#">Experiences</a>
+                        </li>
+                        <li class="header__menu-link active">
+                            <a href="#">FAQ</a>
+                        </li>
+                        <li class="header__menu-link">
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header__buttons">
+                    <div class="header__apply">
+                        <div class="header__apply-btn button-wrap">
+                            <button>
+                                <span>
+                                    apply
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                        <path d="M4.36891 9.4641C4.62522 9.72041 5.04079 9.72041 5.29711 9.4641L9.47399 5.28721C9.73031 5.0309 9.73031 4.61533 9.47399 4.35902C9.21768 4.1027 8.80211 4.1027 8.5458 4.35902L4.83301 8.0718L1.12022 4.35902C0.863905 4.1027 0.448337 4.1027 0.192023 4.35902C-0.0642919 4.61533 -0.0642919 5.0309 0.192023 5.28721L4.36891 9.4641ZM4.83301 0L4.17667 -3.0377e-08L4.17667 9L4.83301 9L5.48934 9L5.48934 3.0377e-08L4.83301 0Z" fill="white"/>
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="button-shadow"></div>
+                        </div>
+                        <div class="header__more">
+                            <a class="header__more-link" href="apply-for-personal.html">
+                                <div class="header__more-image">
+                                    <img src="img/header/link-6.png" alt="">
+                                </div>
+                                <p class="header__more-title">Apply for PERSONAL</p>
+                            </a>
+                            <a class="header__more-link" href="apply-for-business.html">
+                                <div class="header__more-image">
+                                    <img src="img/header/link-7.png" alt="">
+                                </div>
+                                <p class="header__more-title">Apply for Business</p>
+                            </a>
+                        </div>
+                    </div>
+                    <a class="header__login" href="#">
+                        LoGIN
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M10 11H4V3C4 2.73478 4.10536 2.48043 4.29289 2.29289C4.48043 2.10536 4.73478 2 5 2H19C19.2652 2 19.5196 2.10536 19.7071 2.29289C19.8946 2.48043 20 2.73478 20 3V21C20 21.2652 19.8946 21.5196 19.7071 21.7071C19.5196 21.8946 19.2652 22 19 22H5C4.73478 22 4.48043 21.8946 4.29289 21.7071C4.10536 21.5196 4 21.2652 4 21V13H10V16L15 12L10 8V11Z" fill="#C09E63"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <button class="header__burger"></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="imageBanner">
+            <img src="img/imageBanner/terms.png" alt="">
+        </div>
+        
+        <section class="infoblock">
+            <div class="container">
+                <div class="infoblock__inner">
+                    <div class="infoblock__icon">
+                        <img src="img/icons/icon-9.svg" alt="">
+                    </div>
+                    <h1 class="infoblock__title title title-underline">terms of Use</h1>
+                    <div class="infoblock__content">
+                            <p>These Conditions apply to all services ordered from or provided to you by Quintessentially and by requesting services from Quintessentially you agree that these conditions shall apply to those services and your order.<br>
+                                1. DEFINITIONS AND INTERPRETATION<br>
+                                1.1 In these Conditions, the following definitions apply:</p>
+                                <ul role="list">
+                                <li>Benefits: means the benefits made available to Members by Suppliers.</li>
+                                <li>Conditions: (i) these terms and conditions as amended from time to time in accordance with clause 11 and (ii) any relevant conditions set out by any Quintessentially regional hub, group company or partnership, or as set out in relation to any service provided to a Member (in relation to such, in the event of conflict (ii) shall prevail).</li>
+                                <li>Joining Fee: means the Fee payable by the Member to Quintessentially upon acceptance of a Membership application, in accordance with clause 3.1.</li>
+                                <li>Member: a person registered as a member of Quintessentially.</li>
+                                <li>Membership: means membership of Quintessentially Lifestyle Membership owned by Quintessentially (UK) Limited (“Quintessentially”) .</li>
+                                <li>Membership Card: means the card issued to Members by Quintessentially upon acceptance of a Membership application in accordance with clause 2.</li>
+                                <li>Membership Fees: means the fees payable in respect of Membership notified to Members upon application for and prior to renewal of Membership.</li>
+                                <li>Member Portal: means Members dedicated space that can be accessed via Quintessentially App available from Apple App Store and Google Play Store.</li>
+                                <li>Payment Card: has the meaning given in Clause 3.7.</li>
+                                <li>Request: means a request placed by a Member with Quintessentially for Quintessentially to arrange the supply of goods and/or services from a third party on the Member’s behalf.</li>
+                                <li>Services: means the concierge and lifestyle management services provided by Quintessentially to its Members as part of their Membership.</li>
+                                <li>Supplier means a supplier engaged by Quintessentially on behalf of and as agent for a Member to provide goods and/or services to that Member.</li>
+                                <li>Website: means the website located at <a href="http://www.quintessentially.com" target="_blank" rel="noopener" data-fpl-component="primitive">www.quintessentially.com</a>.</li>
+                                </ul>
+                                <p>1.2 In these Conditions, the following rules apply:</p>
+                                <ul role="list">
+                                <li>(a) a person includes a natural person, corporate or unincorporated body (whether or not having separate legal personality);</li>
+                                <li>(b) a reference to a party includes its personal representatives, successors or permitted assigns;</li>
+                                <li>(c) a reference to a statute or statutory provision is a reference to such statute or statutory provision as amended or re-enacted. A reference to a statute or statutory provision includes any subordinate legislation made under that statute or statutory provision, as amended or re-enacted;</li>
+                                <li>(d) any phrase introduced by the terms including, include, in particular or any similar expression, shall be construed as illustrative and shall not limit the sense of the words preceding those terms; and</li>
+                                <li>(e) a reference to writing or written includes e-mails.</li>
+                                </ul>
+                                <p>2. MEMBERSHIP APPLICATIONS AND YOUR MEMBERSHIP CARD</p>
+                                <ul role="list">
+                                <li>2.1 All Membership applications are subject to acceptance by Quintessentially at its sole discretion. Quintessentially shall notify applicants in the event that his or her Membership application has been accepted. Quintessentially is under no duty to disclose its reasons for rejecting any Membership application.</li>
+                                <li>2.2 You are obliged to provide correct personal details when you apply for Membership. Failure to do so may invalidate your Membership and any subsequent transactions. Your responsibility to provide accurate information is a continuing obligation and you must notify Quintessentially promptly in the event that any information provided by you in connection with your Membership changes.</li>
+                                <li>2.3 Quintessentially operates offices in several territories worldwide. Quintessentially encourages Members with residences in multiple territories to register for Membership with the Quintessentially office in the territory where their primary residence is located in the first instance.</li>
+                                <li>2.4 Quintessentially will issue you with a Digital Membership Card, Member Portal user account, together with associated Membership documentation as soon as possible following receipt of your Joining Fee and Membership Fee. Links to download Quintessentially Member Portal app from Apple App store and Google Play Store will be included within your Membership documentation. Member Portal user account will only be applicable to territories that have opted to use this.</li>
+                                <li>2.5 Your Membership is personal to you. You are responsible for ensuring that no one (other than your personal assistant on your behalf, where applicable) uses your Membership.</li>
+                                <li>2.6 Access to and use of your personalised Membership section of the Member Portal is through a combination of username and password. You are solely responsible for maintaining the confidentiality of your username and password and you agree to notify Quintessentially immediately if you believe that there has been any breach of security, including the unauthorised use of your name and password. Member Portal user account will only be applicable to territories that have opted to use this.</li>
+                                <li>2.7 We will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with the Quintessentially privacy policy , further details of which are set out in Clause 11.1. Please note that all information you provide to us is stored within our secure CRM servers. Any payment transactions carried out by us or our chosen third-party provider of payment processing services will be encrypted using Transport Layer Security technology.</li>
+                                <li>2.8 You must notify Quintessentially immediately by e-mail at AskQ@quintessentially.com if your Membership Card is lost or stolen.</li>
+                                </ul>
+                                <p>3. MEMBERSHIP FEES, UPGRADES, CANCELLATIONS AND RENEWALS</p>
+                                <ul role="list">
+                                <li>3.1 For the first year of your Membership, Membership Fees and the Joining Fees payable shall be confirmed to you prior to acceptance of your Membership application. The Joining Fee shall be payable in full upon acceptance of your Membership application. Any increase or decrease to the Membership Fees for subsequent years of Membership will be notified to all Members in advance or their Renewal Dates.</li>
+                                <li>3.2 You acknowledge that your payment of the Joining Fee (or your first direct debit payment) constitutes your express request for us to begin to supply you with the Services.</li>
+                                <li>3.3 Subject to Clauses 3.5, 3.6 and 3.12, Membership Fees are non-refundable. Your Joining Fee covers our costs in setting up your Membership and is non-refundable in all circumstances.</li>
+                                <li>3.4 You have the right to cancel your Membership until the end of 14 days after the day on which we accept your Membership application (“Cancellation Period”) and we would ask that you inform us of your decision in writing (email will suffice).</li>
+                                <li>3.5 If you cancel your Membership within the Cancellation Period, you will be reimbursed for your Membership Fee or, if paying by direct debit, the Membership fee paid up to cancelation date , less deductions for the Services we have performed up until you informed us of your decision to cancel.</li>
+                                <li>3.6 Quintessentially reserves the absolute right to cancel or suspend your Membership where it has reason to do so. If Quintessentially cancels your Membership, where it is reasonable to do so Quintessentially shall refund the balance of the current annual Membership Fee on a pro rata basis in respect of the unexpired period to which the annual Membership Fee relates. Where you are paying by direct debit, Quintessentially shall cancel the next due payment (unless payment is due within 5 business days) and any subsequent outstanding payments.</li>
+                                <li>3.7 Unless paying by 12 monthly direct debit payments, Membership Fees are due on acceptance of your Membership application and annually thereafter (the “Renewal Date”), and full payment will be taken by Quintessentially annually in advance by bank transfer or payment by a credit or debit card which you have authorised us to deduct such payment from (“Payment Card”) in accordance with the relevant invoice. Where paying by direct debit, the payment will auto-renew unless you have notified Quintessentially prior to your renewal date,</li>
+                                <li>3.8 Where you have provided us with details of a Payment Card or have authorised a direct debit mandate for full membership payment, you hereby expressly authorise Quintessentially to deduct collect renewal Membership Fees up to 28 days prior to or on your Renewal Date. Alternatively, you will be contacted directly in order to renew your Membership.</li>
+                                <li>3.9 If you do not wish to renew your Membership you must notify us at least 30 days prior to your Renewal Date.</li>
+                                <li>3.10 If you do not notify us in accordance with Clause 3.9, Quintessentially reserves the right to recharge the then current Membership Fee in order to renew the Membership.</li>
+                                <li>3.11 Quintessentially (and its affiliated international offices) reserve the right to refuse to provide the Services should any payment due under these Conditions not be received.</li>
+                                <li>3.12 If, during the course of your current Membership, you wish to upgrade your Membership to a higher level of Membership or Quintessentially reasonably requests you to upgrade your Membership based on your usage of the Services, the difference in price between the two categories of Membership will be payable on a pro rata basis. If you do not accept Quintessentially’s request for you to upgrade your Membership then Quintessentially reserves the right to cancel your existing Membership with immediate effect in which case you will be entitled to a pro-rata refund in respect of the period from the date of cancellation until the end of the relevant Membership year for which you have paid Membership Fees. Where paying by direct debit, you will be refunded up to 1 month (pro-rata) of your monthly direct debit payment.</li>
+                                <li>3.13 Quintessentially may at your request purchase goods or services on your behalf on an ‘as is’ basis In the event that we act as a credit agent in this regard, you hereby authorise Quintessentially to deduct the credit sum from your Payment Card immediately.</li>
+                                </ul>
+                                <p>4. SUPPLY OF SERVICES</p>
+                                <ul role="list">
+                                <li>4.1 Quintessentially shall supply the Services to the Member during the Membership in accordance with the Member’s particular Requests, provided that Quintessentially shall not be required to provide or facilitate the supply of goods and/or services that it deems at its sole discretion may violate applicable laws, standards and/or regulations or may offend taste and decency in the relevant jurisdiction.</li>
+                                <li>4.2 Quintessentially shall use its reasonable endeavours to meet any performance dates specified, but any such dates shall be estimates only and time shall not be of the essence for performance of any Services.</li>
+                                <li>4.3 Quintessentially shall have the right to make any changes to the Services which are necessary to comply with any applicable law or safety requirement, or which do not materially affect the nature or quality of the Services, and Quintessentially shall notify the Member in any such event.</li>
+                                <li>4.4 Services will be provided in English (and in other languages depending on the location of the Quintessentially office during normal business hours).</li>
+                                <li>4.5 Outside normal business hours (or as may otherwise be required from time to time), Member queries and/or Requests may be routed to an alternative Quintessentially office for assistance. At such times, services will be provided in the English language.</li>
+                                <li>4.6 You acknowledge that Quintessentially reserves the right to accept commissions upon the supply of products or performance of services by any Supplier.</li>
+                                <li>4.7 Telephone calls to Quintessentially may be monitored or recorded for training and quality control purposes.</li>
+                                <li>4.8 Quintessentially shall provide the Services using reasonable care and skill and, as far as reasonably possible, in accordance with your Requests and reasonable instructions from time to time.</li>
+                                <li>4.9 Restaurants and clubs:</li>
+                                <li>(a) When you use the restaurant booking service you hereby authorise us to debit your Payment Card for any deposit paid by us on your behalf to the restaurant which is forfeited as a result of your cancellation of the booking.</li>
+                                <li>(b) When you use the restaurant booking service you agree that where you cancel a restaurant booking within 24 hours of the time the restaurant reservation is made you shall not be entitled to any refund of any monies paid to secure the booking including the return of any booking deposit.</li>
+                                <li>(c) Quintessentially reserves the right to deny restaurant requests from Members if Members repeatedly fail to honour their bookings or continuously violate cancellation policies.</li>
+                                <li>(d) Admission of Members to Quintessentially premises is at all times at the sole discretion of the Quintessentially shall have no liability where a Member is refused admission to any premises.</li>
+                                <li>(a) Quintessentially may be able to obtain “best tickets” for you in relation to sold out events through one of its ticket agent partners. Please note that by instructing Quintessentially to obtain such tickets on your behalf you are agreeing to purchase tickets above face value and the total cost may include a service charge to Quintessentially in respect of our provision of services to obtain the seats for you. Quintessentially is not the seller of the tickets and is not responsible for fulfilment of your order.</li>
+                                <li>(b) All such tickets and ticket agent partners (who shall be the seller in respect of the transaction) shall have their own terms and conditions (which we suggest you should read). Such terms and conditions are likely to include terms which state that sales of tickets are final and no refunds shall be issued after the purchase has been made. Quintessentially shall not be able to provide you with any refund or obtain any such refund on your behalf.</li>
+                                <li>(c) In the event of a show being cancelled directly by the artist/promoter, it may be possible to obtain a refund of the face value of the relevant tickets.</li>
+                                <li>(d) Quintessentially or its ticket agent partner will despatch your tickets through delivery agents at standard rates. Please note that Quintessentially shall not be liable for any failure by delivery agents to deliver your tickets.</li>
+                                </ul>
+                                <p>5. PLACING A REQUEST</p>
+                                <ul role="list">
+                                <li>5.1 Members may place Requests by telephone (which does not include text messages), e-mail, common and Quintessentially approved messaging apps, or through the Member Portal.</li>
+                                <li>5.2 Members should always contact their primary office in the first instance to manage all Requests (including international Requests).</li>
+                                <li>5.3 Quintessentially, acting reasonably, reserves the right to withdraw any of the Services and/or to refuse to accept any Requests at its sole discretion.</li>
+                                <li>5.4 If Quintessentially is unable or not obliged to deal with any Request, it will inform the Member as soon as reasonably practicable.</li>
+                                <li>5.5 You undertake that all details you provide to us for the purpose of booking, ordering or purchasing products or services are correct, that the debit, credit and/or Payment Card you use from time to time is your own and that you have sufficient funds to cover the cost of the product or service.</li>
+                                <li>5.6 From time to time the procurement or provision of certain services, products or benefits may incur a Quintessentially services fee or handling charge (of which you will be notified in advance, and which may vary between Quintessentially offices) and in such event you hereby authorise Quintessentially to debit your Payment Card with any such handling charges or, alternatively, to invoice you in respect of such fees or charges.</li>
+                                </ul>
+                                <p>6. CANCELLATIONS, REFUNDS AND RETURNS</p>
+                                <ul role="list">
+                                <li>6.1 The Member acknowledges that the sales contract for the supply of goods and/or services made as a result of a Request is between the Member and the relevant Supplier and that Quintessentially is not a party to such contract. Cancellation of contracts with Suppliers should be addressed with the Supplier directly and will be subject to the relevant Supplier’s policies.</li>
+                                <li>6.2 If a Request for a specific product or service is not available, Quintessentially may offer you substitute products or services of a similar description and standard. You may at your sole discretion refuse acceptance of such substitute products and/or services and request a full refund in the event that payment has already been made to the Supplier for the unavailable product or service.</li>
+                                <li>6.3 All descriptions of any products, services or Benefits on the Website have been approved by the relevant Supplier. Quintessentially shall not be liable for inaccurate or misleading descriptions.</li>
+                                <li>6.4 Payment for all products and services shall be due immediately upon acceptance of the order by the relevant Supplier.</li>
+                                <li>6.5 The Member further acknowledges that for goods purchased on his or her behalf by Quintessentially directly from a Supplier, returns and exchanges will be subject to the terms and conditions of that Supplier and returns or exchange of goods purchased may not always be permitted. In circumstances where Quintessentially is asked to source a specific item for a Member, Quintessentially shall inform the Member of the refund and exchange policy of that Supplier in advance. Quintessentially shall not be liable to the Member where a Supplier does not accept the return or exchange of an item.</li>
+                                <li>6.6 It shall be the Member’s sole responsibility to retain all proof of return of goods to a Supplier, we recommend returning the goods by registered delivery, or by any other similar means of ascertaining the date of the return dispatch and tracking the return.</li>
+                                <li>6.7 We will inform you when we become aware that a refund of an order has been processed by a Supplier.</li>
+                                <li>6.8 Where orders are delivered outside the EU, any applicable customs duties and sales taxes shall not be refundable through Quintessentially. It shall be the Member’s sole responsibility to recover such monies. Quintessentially shall have no liability for any items held by any customs or border agency.</li>
+                                <li>6.9 In the case of premium courier services, if the Member is not at the specified Delivery address to receive their Order at the scheduled time, the Member may incur further charges for subsequent attempts to re-deliver the goods.</li>
+                                </ul>
+                                <p>7. SUPPLIERS</p>
+                                <ul role="list">
+                                <li>7.1 Suppliers are responsible for providing you with the services, products and Benefits you Request us to order on your behalf from time to time. Quintessentially shall communicate with Suppliers on your behalf unless it is more appropriate for you to contact the Supplier directly.</li>
+                                <li>7.2 Suppliers may impose their own terms and conditions which, in every case apply to the supply of goods and/or services by that Supplier to you, and such terms and conditions shall be binding upon you at the time of order.</li>
+                                <li>7.3 When ordering a product or service or accessing a Benefit, you may be required to provide your Payment Card details. If you request and authorise Quintessentially to use your Payment Card in order to pay a Supplier for products or services, you acknowledge and agree that Quintessentially shall have no liability or be responsible in any way whatsoever in respect of the use of your Payment Card provided that Quintessentially acts in accordance with the instructions issued by you in relation thereof.</li>
+                                <li>7.4 You acknowledge that the Benefits are subject to availability and may change from time to time without notice.</li>
+                                <li>7.5 If Quintessentially’s performance of any of its obligations under these Conditions is prevented or delayed by any act or omission by the Member or failure by the Member to perform any relevant obligation (Member Default):</li>
+                                <li>(a) Quintessentially shall without limiting its other rights or remedies have the right to suspend performance of the Services until the Member remedies the Member Default, and to rely on the Member Default to relieve it from the performance of any of its obligations to the extent the Member Default prevents or delays Quintessentially’s performance of any of its obligations;</li>
+                                <li>(b) Quintessentially shall not be liable for any costs or losses sustained or incurred by the Member arising directly or indirectly from Quintessentially’s failure or delay to perform any of its obligations as set out in this clause; and</li>
+                                <li>(c) the Member shall reimburse Quintessentially on written demand for any costs or losses sustained or incurred by Quintessentially arising directly or indirectly from the Member Default.</li>
+                                </ul>
+                                <p>8. MEMBER PORTAL</p>
+                                <ul role="list">
+                                <li>8.1 Full Memberships include Quintessentially Member Portal user account. Member Portal user account will only be applicable to territories that have opted to use this.</li>
+                                <li>8.2 Member Portal user account is created by Quintessentially. Quintessentially will provide the login credentials using a secure method.</li>
+                                <li>8. 3 Upon request, Multi-Factor Authentication (MFA) can be enabled on your Member Portal login.</li>
+                                <li>8.4 Your Member Portal user account is personal to you. You are responsible for ensuring that no one uses your Member Portal user account.</li>
+                                <li>8.5 Any designated personal assistance will not have access to the portal. Your personal assistant must place or update request via email, telephone, or a Quintessentially approved messaging application outside of the Members Portal.</li>
+                                <li>8.6 By using your Member Portal account, you accept that:</li>
+                                <li>(a) Quintessentially may, without limiting your rights, share your personal data collected through the Member Portal with a third-party supplier to fulfil your request; ;</li>
+                                <li>(b) by uploading your image, Quintessentially may share your image with a third-party supplier to facilitate your request. If you do not your image shared, it is your responsibility to notify Quintessentially upon placing the request.</li>
+                                <li>8.8 To improve and personalised experience, Quintessentially may collect and process information on your requests and your usage of the portal.</li>
+                                </ul>
+                                <p>9. LIMITATION OF LIABILITY</p>
+                                <ul role="list">
+                                <li>9.1 Nothing in these Conditions shall limit or exclude Quintessentially’s liability for:</li>
+                                <li>(a) death or personal injury caused by its negligence, or the negligence of its employees, agents or subcontractors;</li>
+                                <li>(b) fraud or fraudulent misrepresentation; or</li>
+                                <li>(c) breach of the terms implied by section 2 of the Supply of Goods and Services Act 1982 (title and quiet possession).</li>
+                                <li>(a) Quintessentially shall not be liable to the Member, whether in contract, tort (including negligence), breach of statutory duty, or otherwise, for any loss of profits, loss of business, depletion of goodwill and/or similar losses, loss of anticipated savings, loss of goods; or, loss of contract, or loss of use or, loss of corruption of data or information whether direct or indirect or, any special, indirect, consequential or pure economic loss, costs, damages, charges or expenses arising under or in connection with their Membership; and</li>
+                                <li>(b) Quintessentially’s total liability to the Member in respect of all other losses arising under or in connection with their Membership, whether in contract, tort (including negligence), breach of statutory duty, or otherwise, shall be limited to the total value of the Member’s annual Membership Fee.</li>
+                                <li>9.4 You acknowledge that any contract entered into by you with any Supplier is an independent contract. Quintessentially hereby disclaims any and all liability for any act or omission of any Supplier or any loss incurred by you as a result of any act or omission of a Supplier whether or not arranged through the Quintessentially.</li>
+                                <li>9.5 Quintessentially shall have no liability to you for any loss, damage, costs, expenses or other claims for compensation arising from Requests or any instructions supplied by you which are incomplete, incorrect or inaccurate or arising from their late arrival or non-arrival, or any Member Default.</li>
+                                <li>9.6 Quintessentially shall not be liable to you or be deemed to be in breach of these Conditions by reason of any delay in performing, or any failure to perform, any of Quintessentially’s obligations in relation to the Services, if the delay or failure was due to any cause beyond Quintessentially’s reasonable control.</li>
+                                <li>9.7 Except as expressly set out in these Conditions, all warranties, conditions and other terms implied by statute or common law are, to the fullest extent permitted by law, excluded from these Conditions.</li>
+                                <li>9.8 This clause shall survive termination of these Conditions.</li>
+                                </ul>
+                                <p>10. COMMENCEMENT AND TERMINATION</p>
+                                <ul role="list">
+                                <li>10.1. These Conditions shall take effect and be binding upon the Member and Quintessentially (UK) Limited upon acceptance by Quintessentially of your Membership application. These Conditions shall be applicable for the duration of your Membership and shall only cease to have effect upon the expiry or termination of your Membership. You agree that your only rights and remedies under these Conditions shall be against Quintessentially (UK) Limited and no other entity.</li>
+                                </ul>
+                                <p>11. GENERAL</p>
+                            <ul role="list">
+                                <li>11.1 Privacy and Data Protection</li>
+                                <li>The Services and your Membership are subject to the Quintessentially privacy policy, incorporated into these Conditions by reference and set out at the following web address: <a href="https://quintessentially.com/Special-pages/Privacy-Policy/" target="_blank" rel="noopener" data-fpl-component="primitive">Privacy Policy</a> which applies at all times in relation to any data that we collect from you.</li>
+                                <li>(a) Quintessentially may at any time assign, transfer, charge, subcontract or deal in any other manner with all or any of its rights under these Conditions and may subcontract or delegate in any manner any or all of its obligations under these Conditions to any third party or agent.</li>
+                                <li>(b) The Member shall not, without the prior written consent of Quintessentially, assign, transfer, charge, subcontract or deal in any other manner with all or any of its rights or obligations under these Conditions.</li>
+                                <li>(a) A waiver of any right under these Conditions is only effective if it is in writing and shall not be deemed to be a waiver of any subsequent breach or default. No failure or delay by a party in exercising any right or remedy under these Conditions or by law shall constitute a waiver of that or any other right or remedy, nor preclude or restrict its further exercise. No single or partial exercise of such right or remedy shall preclude or restrict the further exercise of that or any other right or remedy.</li>
+                                <li>(b) Unless specifically provided otherwise, rights arising under these Conditions are cumulative and do not exclude rights provided by law.</li>
+                                <li>(a) If a court or any other competent authority finds that any provision of these Conditions (or part of any provision) is invalid, illegal or unenforceable, that provision or part-provision shall, to the extent required, be deemed deleted, and the validity and enforceability of the other provisions of these Conditions shall not be affected.</li>
+                                <li>(b) If any invalid, unenforceable or illegal provision of these Conditions would be valid, enforceable and legal if some part of it were deleted, the provision shall apply with the minimum modification necessary to make it legal, valid and enforceable.</li>
+                                <li>11.6 No partnership: Nothing in these Conditions is intended to, or shall be deemed to, constitute a partnership or joint venture of any kind between any of the parties, nor constitute any party the agent of another party for any purpose. No party shall have authority to act as agent for, or to bind, the other party in any way.</li>
+                                <li>11.7 Third parties: A person who is not a party to these Conditions shall not have any rights under or in connection with it.</li>
+                                <li>11.8 These conditions constitute the entire agreement between the parties and supersedes all previous agreements and arrangements (if any) whether written, oral or implied between the Member and Quintessentially. All prior agreements still effective at the date. For the avoidance of doubt, nothing in this clause shall operate to exclude or limit the liability of any party in respect of fraud. The Member acknowledges that, in entering this Agreement, he/she has not relied on any representations by the Company, or the Education Consultant made before the execution of this Agreement other than those expressly set out in this Agreement.</li>
+                                <li>11.9 Governing law and jurisdiction: These Conditions, and any dispute or claim arising out of or in connection with it or its subject matter or formation (including non-contractual disputes or claims), shall be governed by, and construed in accordance with, English law, and the parties irrevocably submit to the exclusive jurisdiction of the courts of England and Wales.</li>
+                            </ul>
+                    </div>
+                    <div class="infoblock__end">
+                        <img src="img/icons/icon-3.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contactpopup">
+            <div class="container">
+                <div class="contactpopup__inner">
+                    <button class="contactpopup__close btn-close"></button>
+                    <h2 class="contactpopup__title title">Contact us</h2>
+                    <form class="contactpopup__form form-inner" action="#">
+                        <div class="form-content">
+                            <div class="form-block">
+                                <label class="form-label" for="name">Your name</label>
+                                <input class="form-input form-required" type="text" name="name" id="name">
+                                <p class="form-error">* Required field</p>
+                            </div>
+                            <div class="form-block">
+                                <label class="form-label" for="email">Email</label>
+                                <input class="form-input form-required" type="email" name="email" id="email">
+                                <p class="form-error">* Required field</p>
+                            </div>
+                            <div class="form-block">
+                                <label class="form-label" for="number">Phone number</label>
+                                <input class="form-input form-required" type="tel" name="number" id="number">
+                                <p class="form-error">* Required field</p>
+                            </div>
+                            <div class="form-block">
+                                <label class="form-label" for="message">Message</label>
+                                <textarea class="form-input form-required" name="message" id="message"></textarea>
+                                <p class="form-error">* Required field</p>
+                            </div>
+                        </div>
+                        <div class="form-bottom">
+                            <div class="form-icon">
+                                <img src="img/icons/icon-3.svg" alt="">
+                            </div>
+                            <button class="form-send btn-next" type="submit">SEND MESSAGE</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__top-inner">
+                    <div class="footer__top-logo">
+                        <img src="img/icons/icon-3.svg" alt="">
+                    </div>
+                    <div class="footer__top-content">
+                        <ul class="footer__top-menu">
+                            <li>
+                                <a href="#">Health & Longevity</a>
+                            </li>
+                            <li>
+                                <a href="#">Family & Education</a>
+                            </li>
+                            <li>
+                                <a href="#">TRAVEL</a>
+                            </li>
+                            <li>
+                                <a href="#">Culture & Philanthropy</a>
+                            </li>
+                            <li>
+                                <a href="#">Lifestyle</a>
+                            </li>
+                            <li>
+                                <a href="#">Security</a>
+                            </li>
+                            <li>
+                                <a href="#">Health & Longevity</a>
+                            </li>
+                            <li>
+                                <a href="#">Family & Education</a>
+                            </li>
+                            <li>
+                                <a href="#">TRAVEL</a>
+                            </li>
+                            <li>
+                                <a href="#">Culture & Philanthropy</a>
+                            </li>
+                            <li>
+                                <a href="#">Lifestyle</a>
+                            </li>
+                            <li>
+                                <a href="#">Security</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="footer-line"></span>
+        <div class="footer__end-content footer-mobile">
+                <ul class="footer__menu">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">SERVICES</a>
+                    </li>
+                    <li>
+                        <a href="#">Memberships</a>
+                    </li>
+                </ul>
+                <ul class="footer__menu">
+                    <li>
+                        <a href="#">Experiences</a>
+                    </li>
+                    <li>
+                        <a href="#">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="#">FAQ</a>
+                    </li>
+                </ul>
+                <ul class="footer__menu">
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">LoGIN</a>
+                    </li>
+                </ul>
+        </div>
+        <div class="container">
+            <div class="footer__inner">
+                <p class="footer__drops">DROP US <br>A LINE <img src="img/icons/icon-8.svg" alt=""></p>
+                <div class="footer__about">
+                    <div class="footer__about-block">
+                        <h3 class="footer__about-title">location </h3>
+                        <p class="footer__about-descr">Gonzales, 5 <br>The Leventis, Gallery Tower, <br>Floor 13, Flat/Office <br>1097, Barcelona, Spain <br>XXXX LTD <br>HEXXXXX</p>
+                    </div>
+                    <div class="footer__about-block">
+                        <h3 class="footer__about-title">contact</h3>
+                        <a class="footer__about-btn btn" href="#"></a>
+                        <p class="footer__about-descr">Mon - Sun, 08:00 - 01:00 (UTC+3)</p>
+                        <p class="footer__about-descr">Phone number</p>
+                        <a class="footer__about-descr" href="tel+340902513326">+34(090)251-33-26</a>
+                        <a class="footer__about-descr" href="#">Telegram</a>
+                        <a class="footer__about-descr" href="mailto:support@giftdoo.io">support@giftdoo.io</a>
+                        <div class="footer__about-btn button-wrap contact-open">
+                            <button>
+                                <span>
+                                    Contact us
+                                </span>
+                            </button>
+                            <div class="button-shadow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="footer-line"></span>
+        <div class="footer__bottom">
+            <div class="container">
+                <p class="footer__bottom-descr">we coordinate and organize services provided by licensed third parties. We are not a tour operator, medical provider, or security provider. All bookings are subject to the terms and conditions of our partners and applicable laws.</p>
+            </div>
+            <span class="footer-line footer-line-mobile"></span>
+            <div class="container">
+                <div class="footer__bottom-content">
+                    <div class="footer__bottom-icons">
+                        <div class="footer__bottom-icon">
+                            <img src="img/icons/icon-4.svg" alt="">
+                        </div>
+                        <div class="footer__bottom-icon">
+                            <img src="img/icons/icon-5.svg" alt="">
+                        </div>
+                        <div class="footer__bottom-icon">
+                            <img src="img/icons/icon-6.svg" alt="">
+                        </div>
+                        <div class="footer__bottom-icon">
+                            <img src="img/icons/icon-7.svg" alt="">
+                        </div>
+                    </div>
+                    <p class="footer__bottom-copy">© 2025 Dominus. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+        <span class="footer-line"></span>
+        <div class="container">
+            <div class="footer__end">
+                <form class="footer__form" action="#">
+                    <h3 class="footer__form-title">Get on the list</h3>
+                    <div class="footer__form-content">
+                        <input class="footer__form-input" type="email" placeholder="Email address" required name="email">
+                        <button class="footer__form-btn" type="submit">
+                            subscribe
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="15" viewBox="0 0 31 15" fill="none">
+                                <path d="M30.7071 8.07039C31.0976 7.67986 31.0976 7.0467 30.7071 6.65617L24.3431 0.292213C23.9526 -0.0983109 23.3195 -0.0983109 22.9289 0.292213C22.5384 0.682738 22.5384 1.3159 22.9289 1.70643L28.5858 7.36328L22.9289 13.0201C22.5384 13.4107 22.5384 14.0438 22.9289 14.4343C23.3195 14.8249 23.9526 14.8249 24.3431 14.4343L30.7071 8.07039ZM0 7.36328V8.36328H30V7.36328V6.36328H0V7.36328Z" fill="#C09E63"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+                <p class="footer__drops footer-mobile">DROP US <br>A LINE <img src="img/icons/icon-1.svg" alt=""></p>
+                <div class="footer__end-content">
+                    <ul class="footer__menu">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">SERVICES</a>
+                        </li>
+                        <li>
+                            <a href="#">Memberships</a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer__menu">
+                        <li>
+                            <a href="#">Experiences</a>
+                        </li>
+                        <li>
+                            <a href="#">ABOUT</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQ</a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer__menu">
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#">LoGIN</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

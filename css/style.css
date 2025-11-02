@@ -8428,11 +8428,203 @@ a.footer__about-descr:hover{
     margin-top: 4.688vw;
     padding-top: 0;
 }
+@media (max-width: 1440px) {
+    .imageBanner{
+        height: 45.764vw;
+    }
+    .imageBanner + .faq{
+        margin-top: 6.25vw;
+    }
+}
+@media (max-width: 768px) {
+    .imageBanner{
+        height: 85.807vw;
+    }
+    .imageBanner + .faq{
+        margin-top: 11.719vw;
+    }
+}
 @media (max-width: 480px) {
     .imageBanner{
         height: 56.267vw;
     }
     .imageBanner + .faq{
         margin-top: 13.333vw;
+    }
+}
+
+/* infoblock */
+.infoblock{
+    position: relative;
+    z-index: 2;
+    padding-bottom: 11.979vw;
+}
+.infoblock__inner{
+    max-width: 77.969vw; 
+    width: 100%;
+    margin: -22.917vw auto 0;
+    padding: 5.052vw 4.688vw 11.979vw;
+    background-color: #fff;
+    box-shadow: 1.458vw 0.885vw 1.568vw 0 rgba(0, 0, 0, 0.25);
+}
+.infoblock__icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 11.927vw;
+}
+.infoblock__end img,
+.infoblock__icon img{
+    width: 100%;
+}
+.infoblock__title{
+    color: #02030A;
+    margin-top: 1.302vw;
+}
+.infoblock__content{
+    margin-top: 2.604vw;
+}
+.infoblock__end{
+    width: 100%;
+    max-width: 7.031vw;
+    display: flex;
+    align-content: center;
+    margin-left: auto;
+    margin-top: 5.208vw;
+}
+.infoblock__content{
+    color: #02030A;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.729vw;
+    font-weight: 400;
+    line-height: 115%; /* 0.839vw */
+    letter-spacing: 0.051vw;
+}
+.infoblock__content ul li{
+    padding-left: 1.198vw;
+    position: relative;
+}
+.infoblock__content ul li::before{
+    content: '';
+    position: absolute;
+    width: 0.208vw;
+    height: 0.208vw;
+    border-radius: 50%;
+    background-color: #02030A;
+    top: 0.26vw;
+    left: 0.521vw;
+}
+@media (max-width: 1440px) {
+    .infoblock{
+        padding-bottom: 15.972vw;
+    }
+    .infoblock__inner{
+        max-width: 93.542vw; 
+        margin: -30.556vw auto 0;
+        padding: 6.736vw 6.25vw 15.972vw;
+        box-shadow: 1.944vw 1.181vw 2.09vw 0 rgba(0, 0, 0, 0.25);
+    }
+    .infoblock__icon{
+        max-width: 15.903vw;
+    }
+    .infoblock__title{
+        margin-top: 1.736vw;
+    }
+    .infoblock__content{
+        margin-top: 3.472vw;
+    }
+    .infoblock__end{
+        max-width: 9.375vw;
+        margin-top: 6.944vw;
+    }
+    .infoblock__content{
+        font-size: 0.972vw;
+        letter-spacing: 0.068vw;
+    }
+    .infoblock__content ul li{
+        padding-left: 1.597vw;
+    }
+    .infoblock__content ul li::before{
+        width: 0.278vw;
+        height: 0.278vw;
+        top: 0.347vw;
+        left: 0.694vw;
+    }
+}
+@media (max-width: 768px) {
+    .infoblock{
+        padding-bottom: 0;
+    }
+    .infoblock__inner{
+        max-width: none;
+        width: auto;
+        margin: 0 -49.92px;
+        padding: 5.208vw 4.688vw 16.146vw;
+        box-shadow: 3.646vw 2.214vw 3.919vw 0 rgba(0, 0, 0, 0.25);
+    }
+    .infoblock__icon{
+        max-width: 29.818vw;
+    }
+    .infoblock__title{
+        margin-top: 3.255vw;
+    }
+    .infoblock__content{
+        margin-top: 6.51vw;
+    }
+    .infoblock__end{
+        max-width: 15.625vw;
+        margin-top: 13.021vw;
+    }
+    .infoblock__content{
+        font-size: 1.823vw;
+        letter-spacing: 0.128vw;
+    }
+    .infoblock__content ul li{
+        padding-left: 2.995vw;
+    }
+    .infoblock__content ul li::before{
+        width: 0.521vw;
+        height: 0.521vw;
+        top: 0.651vw;
+        left: 1.302vw;
+    }
+}
+@media (max-width: 480px) {
+    .infoblock{
+        padding-bottom: 0;
+    }
+    .infoblock__inner{
+        max-width: 399.2vw; 
+        margin: 0 -25.001px;
+        padding: 13.333vw 6.667vw;
+        box-shadow: 7.467vw 4.533vw 8.027vw 0 rgba(0, 0, 0, 0.25);
+    }
+    .infoblock__icon{
+        max-width: 44.533vw;
+    }
+    .infoblock__title{
+        margin-top: 6.667vw;
+    }
+    .infoblock__content{
+        margin-top: 16vw;
+    }
+    .infoblock__end{
+        max-width: 12.8vw;
+        margin-top: 13.333vw;
+    }
+    .infoblock__content{
+        font-size: 3.733vw;
+        letter-spacing: 0.261vw;
+    }
+    .infoblock__content ul li{
+        padding-left: 6.133vw;
+    }
+    .infoblock__content ul li::before{
+        width: 1.067vw;
+        height: 1.067vw;
+        top: 1.333vw;
+        left: 2.667vw;
     }
 }

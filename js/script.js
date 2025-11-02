@@ -707,6 +707,10 @@ createScrollAnimation('.imageBanner img', {
   from: { y: 0, opacity: 0, scale: 1.2 },
   to: { y: 0, opacity: 1, scale: 1, duration: 1.5, ease: "power3.out" }
 });
+createScrollAnimation('.infoblock', {
+  from: { y: 100, opacity: 1, },
+  to: { y: 0, opacity: 1, duration: 1.5, ease: "power3.out" }
+});
 
 
 function typewriterEffectFromHTML(selector, speed = 20) {
