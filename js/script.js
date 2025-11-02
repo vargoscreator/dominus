@@ -46,6 +46,29 @@ let wedoSlider = new Swiper(".wedo__slider", {
     },
 });
 
+let teamSlider = new Swiper(".team__slider", {
+    loop: false,
+    spaceBetween: 18,
+    slidesPerView: 1,
+	  navigation: {
+        nextEl: ".team__next",
+    },
+    breakpoints: {
+      481: {
+            slidesPerView: 2,
+        },
+        769: {
+            spaceBetween: 20,
+            slidesPerView: 3,
+			      initialSlide: 0,
+        },
+        1441: {
+            spaceBetween: 20,
+            slidesPerView: 4,
+        },
+    },
+});
+
 let membershipSlider = new Swiper(".membership__slider", {
     loop: false,
     spaceBetween: 20,
@@ -359,7 +382,7 @@ window.addEventListener('resize', checkScroll);
 window.addEventListener('scroll', checkScroll);
 function checkScroll() {
   const header = document.querySelector('header');
-  if (window.scrollY > 100) {
+  if (window.scrollY > 50) {
     header.classList.add('scrolled');
   } else {
     header.classList.remove('scrolled');
@@ -537,6 +560,57 @@ howItTimeline.from('.howit__discover', {
     duration: 1,
     ease: "power3.out"
 }, "-=0.3");
+document.querySelectorAll('.team').forEach(teamSection => {
+
+  // Заголовок — зліва направо
+  const title = teamSection.querySelector('.team__title');
+  if (title) {
+    createScrollAnimation(title, {
+      from: { x: 100, opacity: 0 },
+      to: { x: 0, opacity: 1, duration: 1, ease: "power3.out" }
+    }, teamSection);
+  }
+
+  // Кнопка NEXT — справа наліво (якщо є)
+  const next = teamSection.querySelector('.team__next');
+  if (next) {
+    createScrollAnimation(next, {
+      from: { x: -100, opacity: 0 },
+      to: { x: 0, opacity: 1, duration: 1, ease: "power3.out" }
+    }, teamSection);
+  }
+
+  // Кнопка NEXT — справа наліво (якщо є)
+  const descr = teamSection.querySelector('.team__descr');
+  if (descr) {
+    createScrollAnimation(descr, {
+      from: { y: 100, opacity: 0 },
+      to: { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
+    }, teamSection);
+  }
+
+  // Кнопки вибору (Medical / Culture / Security)
+  const selectBtns = teamSection.querySelectorAll('.team__select-btn');
+  if (selectBtns.length) {
+    createScrollAnimation(selectBtns, {
+      from: { y: 80, opacity: 0 },
+      to: { y: 0, opacity: 1, duration: 0.8, ease: "power2.out", stagger: 0.2 }
+    }, teamSection.querySelector('.team__select') || teamSection);
+  }
+
+  // Слайди (або swiper, або team__item)
+const slides = teamSection.querySelectorAll('.team__slide');
+if (slides.length) {
+  slides.forEach(slide => {
+    createScrollAnimation(slide, {
+      from: { y: 100, opacity: 0 },
+      to: { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }
+    });
+  });
+}
+
+
+});
 
 
 
