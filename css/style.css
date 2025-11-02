@@ -5662,6 +5662,40 @@ a.footer__about-descr:hover{
     left: 14.323vw;
 }
 
+
+.service-experiences .service__title{
+    top: 11.615vw;
+    left: 24.479vw;
+    max-width: 68.021vw;
+}
+.service-experiences .service__descr{
+    top: 20.052vw;
+    right: 10.729vw;
+    max-width: 33.333vw;
+}
+.service-experiences .service__name{
+    top: 56.094vw;
+    left: 13.021vw;
+    max-width: 36.615vw;
+}
+.service-experiences .service__info-1{
+    bottom: 35.938vw;
+    left: 2.917vw;
+    text-align: left;
+    max-width: 28.125vw;
+}
+.service-experiences .service__info-2{
+    bottom: 11.979vw;
+    right: 3.125vw;
+    max-width: 29.688vw;
+    text-align: left;
+}
+.service-experiences .service__apply{
+    top: 47.917vw;
+    left: 53.646vw;
+}
+
+
 @media (max-width: 1440px){
     .service{
         margin-top: 6.25vw;
@@ -5856,6 +5890,37 @@ a.footer__about-descr:hover{
     .service-culture .service__apply{
         top: 614px;
         left: 366px;
+    }
+
+
+    .service-experiences .service__title{
+        top: 10.417vw;
+        left: 4.097vw;
+        max-width: 90.694vw;
+    }
+    .service-experiences .service__descr{
+        top: 21.528vw;
+        right: 1.389vw;
+        max-width: 44.444vw;
+    }
+    .service-experiences .service__name{
+        top: 40.278vw;
+        left: 4.306vw;
+        max-width: 48.819vw;
+    }
+    .service-experiences .service__info-1{
+        bottom: 27.778vw;
+        left: 4.861vw;
+        max-width: 37.5vw;
+    }
+    .service-experiences .service__info-2{
+        bottom: 16.667vw;
+        right: 4.167vw;
+        max-width: 39.583vw;
+    }
+    .service-experiences .service__apply{
+        top: 63.889vw;
+        left: 71.528vw;
     }
 }
 @media (max-width: 768px){
@@ -6063,6 +6128,36 @@ a.footer__about-descr:hover{
         top: 346px;
         left: 50px;
     }
+
+    .service-experiences .service__title{
+        top: 12.5vw;
+        left: 4.557vw;
+        max-width: 78.125vw;
+    }
+    .service-experiences .service__descr{
+        top: 25.391vw;
+        right: 4.688vw;
+        max-width: 41.667vw;
+    }
+    .service-experiences .service__name{
+        top: 63.802vw;
+        left: 4.688vw;
+        max-width: 45.573vw;
+    }
+    .service-experiences .service__info-1{
+        bottom: 16.667vw;
+        left: 4.688vw;
+        max-width: 58.594vw;
+    }
+    .service-experiences .service__info-2{
+        bottom: 6.12vw;
+        right: 3.385vw;
+        max-width: 43.62vw;
+    }
+    .service-experiences .service__apply{
+        top: 45.833vw;
+        left: 2.344vw;
+    }
 }
 @media (max-width: 480px){
     .service{
@@ -6247,6 +6342,38 @@ a.footer__about-descr:hover{
     .service-culture .service__apply{
         top: 49.067vw;
         left: 5.867vw;
+    }
+
+    .service-experiences .service__title{
+        top: 6.133vw;
+        left: 6.667vw;
+        max-width: 76vw;
+    }
+    .service-experiences .service__descr{
+        top: 30.667vw;
+        right: 6.667vw;
+        max-width: 40vw;
+    }
+    .service-experiences .service__name{
+        top: 66.667vw;
+        left: 6.933vw;
+        max-width: 44vw;
+    }
+    .service-experiences .service__info-1{
+        bottom: 5.067vw;
+        left: 6.133vw;
+        max-width: 40vw;
+        text-align: center;
+    }
+    .service-experiences .service__info-2{
+        bottom: 5.067vw;
+        right: 6.133vw;
+        text-align: center;
+        max-width: 40vw;
+    }
+    .service-experiences .service__apply{
+        top: 101.067vw;
+        left: 52vw;
     }
 }
 .blogs{

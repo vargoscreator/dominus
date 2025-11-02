@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Dominus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Scheherazade+New:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body"> 
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a class="header__logo" href="index.html">
+                    <img src="img/logo.svg" alt="">
+                </a>
+
+                <nav class="header__menu">
+                    <ul>
+                        <li class="header__menu-link">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="header__menu-link">
+                            <button class="header__more-open">SERVICES <span></span></button>
+                            <div class="header__more">
+                                <a class="header__more-link" href="#">
+                                    <div class="header__more-image">
+                                        <img src="img/header/link-1.png" alt="">
+                                    </div>
+                                    <p class="header__more-title">Health, <br>Longevity & Family</p>
+                                </a>
+                                <a class="header__more-link" href="#">
+                                    <div class="header__more-image">
+                                        <img src="img/header/link-2.png" alt="">
+                                    </div>
+                                    <p class="header__more-title">Risk <br>& Security</p>
+                                </a>
+                                <a class="header__more-link" href="#">
+                                    <div class="header__more-image">
+                                        <img src="img/header/link-3.png" alt="">
+                                    </div>
+                                    <p class="header__more-title">Lifestyle <br>Operations</p>
+                                </a>
+                                <a class="header__more-link" href="#">
+                                    <div class="header__more-image">
+                                        <img src="img/header/link-4.png" alt="">
+                                    </div>
+                                    <p class="header__more-title">Ultra-curated <br>Travel & Residence</p>
+                                </a>
+                                <a class="header__more-link" href="#">
+                                    <div class="header__more-image">
+                                        <img src="img/header/link-5.png" alt="">
+                                    </div>
+                                    <p class="header__more-title">Culture, <br>Events & <br>Philanthropy</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="header__menu-link">
+                            <a href="#">Memberships</a>
+                        </li>
+                        <li class="header__menu-link">
+                            <a href="#">Experiences</a>
+                        </li>
+                        <li class="header__menu-link">
+                            <a href="#">FAQ</a>
+                        </li>
+                        <li class="header__menu-link">
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header__buttons">
+                    <div class="header__apply">
+                        <div class="header__apply-btn button-wrap">
+                            <button>
+                                <span>
+                                    apply
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                        <path d="M4.36891 9.4641C4.62522 9.72041 5.04079 9.72041 5.29711 9.4641L9.47399 5.28721C9.73031 5.0309 9.73031 4.61533 9.47399 4.35902C9.21768 4.1027 8.80211 4.1027 8.5458 4.35902L4.83301 8.0718L1.12022 4.35902C0.863905 4.1027 0.448337 4.1027 0.192023 4.35902C-0.0642919 4.61533 -0.0642919 5.0309 0.192023 5.28721L4.36891 9.4641ZM4.83301 0L4.17667 -3.0377e-08L4.17667 9L4.83301 9L5.48934 9L5.48934 3.0377e-08L4.83301 0Z" fill="white"/>
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="button-shadow"></div>
+                        </div>
+                        <div class="header__more">
+                            <a class="header__more-link" href="apply-for-personal.html">
+                                <div class="header__more-image">
+                                    <img src="img/header/link-6.png" alt="">
+                                </div>
+                                <p class="header__more-title">Apply for PERSONAL</p>
+                            </a>
+                            <a class="header__more-link" href="apply-for-business.html">
+                                <div class="header__more-image">
+                                    <img src="img/header/link-7.png" alt="">
+                                </div>
+                                <p class="header__more-title">Apply for Business</p>
+                            </a>
+                        </div>
+                    </div>
+                    <a class="header__login" href="#">
+                        LoGIN
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M10 11H4V3C4 2.73478 4.10536 2.48043 4.29289 2.29289C4.48043 2.10536 4.73478 2 5 2H19C19.2652 2 19.5196 2.10536 19.7071 2.29289C19.8946 2.48043 20 2.73478 20 3V21C20 21.2652 19.8946 21.5196 19.7071 21.7071C19.5196 21.8946 19.2652 22 19 22H5C4.73478 22 4.48043 21.8946 4.29289 21.7071C4.10536 21.5196 4 21.2652 4 21V13H10V16L15 12L10 8V11Z" fill="#C09E63"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <button class="header__burger"></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="mouse-btn-hover">
+            <div class="glass-container">
+                <div class="glass-filter"></div>
+                <div class="glass-overlay"></div>
+                <div class="glass-specular"></div>
+                <svg style="display: none">
+                    <filter id="lg-dist" x="0%" y="0%" width="100%" height="100%">
+                        <feTurbulence type="fractalNoise" baseFrequency="0.008 0.008" numOctaves="2" seed="92" result="noise" />
+                        <feGaussianBlur in="noise" stdDeviation="2" result="blurred" />
+                        <feDisplacementMap in="SourceGraphic" in2="blurred" scale="70" xChannelSelector="R" yChannelSelector="G" />
+                    </filter>
+                </svg>
+            </div>
+        </div>
+
+        <section class="service">
+            <div class="service__bg">
+                <img src="img/service/experiences.png" alt="">
+            </div>
+            <div class="container">
+                <div class="service__inner service-experiences">
+                    <h1 class="service__title">Our Experiences</h1>
+                    <p class="service__descr">How we solve problems for our clients</p>
+                    <p class="service__name">Private, 24/7 concierge for health, travel, culture, and security — designed exclusively for families and leaders.</p>
+                    <p class="service__info service__info-1">Ultra-low client/manager ratio</p>
+                    <p class="service__info service__info-2">Transparent, legal partners only</p>
+                    <a class="service__apply apply-btn" href="#">Apply for membership</a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="membership">
+            <div class="container">
+                <div class="membership__inner">
+                    <div class="membership__top title-top">
+                        <h2 class="membership__title title title-icon title-underline">Membership Plans </h2>
+                        <a class="membership__next btn-next" href="#">NEXT</a>
+                    </div>
+                    <div class="membership__slider">
+                        <div class="swiper-wrapper">
+                            <div class="membership__item swiper-slide">
+                                <div class="membership__item-inner">
+                                    <div class="membership__item-front">
+                                        <div class="membership__item-icon">
+                                            <img src="img/icons/icon-9.svg" alt="">
+                                        </div>
+                                        <p class="membership__item-title title-underline">ACCESS</p>
+                                        <p class="membership__item-joining">+ joining €2,000</p>
+                                        <p class="membership__item-price">€9,000</p>
+                                        <p class="membership__item-duration">subscribe for 1 year</p>
+                                    </div>
+
+                                    <div class="membership__item-back">
+                                        <p class="membership__item-title title-underline">SIGNATURE</p>
+                                        <ul class="membership__item-list custom-list">
+                                            <li>Dedicated Lifestyle Manager (≤10 families per manager);</li>
+                                            <li>SLA: within 15 minutes;</li>
+                                            <li>Up to 4 Major Projects per year — up to 40 hours of planning;</li>
+                                            <li>Priority access windows with partner networks;</li>
+                                            <li>Annual “Family Health Map” (medical coordination only).</li>
+                                        </ul>
+                                        <p class="membership__item-price">€ 24,000</p>
+                                        <p class="membership__item-duration">subscribe for 1 year</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="membership__item swiper-slide">
+                                <div class="membership__item-inner">
+                                    <div class="membership__item-front">
+                                        <div class="membership__item-icon">
+                                            <img src="img/icons/icon-9.svg" alt="">
+                                        </div>
+                                        <p class="membership__item-title title-underline">ACCESS</p>
+                                        <p class="membership__item-joining">+ joining €2,000</p>
+                                        <p class="membership__item-price">€9,000</p>
+                                        <p class="membership__item-duration">subscribe for 1 year</p>
+                                    </div>
+
+                                    <div class="membership__item-back">
+                                        <p class="membership__item-title title-underline">SIGNATURE</p>
+                                        <ul class="membership__item-list custom-list">
+                                            <li>Dedicated Lifestyle Manager (≤10 families per manager);</li>
+                                            <li>SLA: within 15 minutes;</li>
+                                            <li>Up to 4 Major Projects per year — up to 40 hours of planning;</li>
+                                            <li>Priority access windows with partner networks;</li>
+                                            <li>Annual “Family Health Map” (medical coordination only).</li>
+                                        </ul>
+                                        <p class="membership__item-price">€ 24,000</p>
+                                        <p class="membership__item-duration">subscribe for 1 year</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="membership__item swiper-slide">
+                                <div class="membership__item-inner">
+                                    <div class="membership__item-front">
+                                        <div class="membership__item-icon">
+                                            <img src="img/icons/icon-9.svg" alt="">
+                                        </div>
+                                        <p class="membership__item-title title-underline">PRIVÉ</p>
+                                        <p class="membership__item-joining">+ joining €10,000</p>
+                                        <p class="membership__item-price">€48,000</p>
+                                        <p class="membership__item-duration">subscribe for 1 year</p>
+                                    </div>
+
+                                    <div class="membership__item-back">
+                                        <p class="membership__item-title title-underline">SIGNATURE</p>
+                                        <ul class="membership__item-list custom-list">
+                                            <li>Dedicated Lifestyle Manager (≤10 families per manager);</li>
+                                            <li>SLA: within 15 minutes;</li>
+                                            <li>Up to 4 Major Projects per year — up to 40 hours of planning;</li>
+                                            <li>Priority access windows with partner networks;</li>
+                                            <li>Annual “Family Health Map” (medical coordination only).</li>
+                                        </ul>
+                                        <p class="membership__item-price">€ 24,000</p>
+                                        <p class="membership__item-duration">subscribe for 1 year</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="membership__item swiper-slide">
+                                <div class="membership__item-inner">
+                                    <div class="membership__item-front">
+                                        <div class="membership__item-icon">
+                                            <img src="img/icons/icon-9.svg" alt="">
+                                        </div>
+                                        <p class="membership__item-title title-underline">FOUNDER’S CIRCLE</p>
+                                        <p class="membership__item-joining">+ joining €2,000</p>
+                                        <p class="membership__item-price">Tailored Plan</p>
+                                        <p class="membership__item-duration">subscribe for 1 year</p>
+                                    </div>
+
+                                    <div class="membership__item-back">
+                                        <p class="membership__item-title title-underline">SIGNATURE</p>
+                                        <ul class="membership__item-list custom-list">
+                                            <li>Dedicated Lifestyle Manager (≤10 families per manager);</li>
+                                            <li>SLA: within 15 minutes;</li>
+                                            <li>Up to 4 Major Projects per year — up to 40 hours of planning;</li>
+                                            <li>Priority access windows with partner networks;</li>
+                                            <li>Annual “Family Health Map” (medical coordination only).</li>
+                                        </ul>
+                                        <p class="membership__item-price">€ 24,000</p>
+                                        <p class="membership__item-duration">subscribe for 1 year</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="membership__item swiper-slide">
+                                <div class="membership__item-inner">
+                                    <div class="membership__item-front">
+                                        <div class="membership__item-icon">
+                                            <img src="img/icons/icon-9.svg" alt="">
+                                        </div>
+                                        <p class="membership__item-title title-underline">Single Engagement</p>
+                                        <p class="membership__item-joining">+ joining €2,000</p>
+                                        <p class="membership__item-price">Bespoke Plan</p>
+                                        <p class="membership__item-duration">subscribe for 1 year</p>
+                                    </div>
+
+                                    <div class="membership__item-back">
+                                        <p class="membership__item-title title-underline">SIGNATURE</p>
+                                        <ul class="membership__item-list custom-list">
+                                            <li>Dedicated Lifestyle Manager (≤10 families per manager);</li>
+                                            <li>SLA: within 15 minutes;</li>
+                                            <li>Up to 4 Major Projects per year — up to 40 hours of planning;</li>
+                                            <li>Priority access windows with partner networks;</li>
+                                            <li>Annual “Family Health Map” (medical coordination only).</li>
+                                        </ul>
+                                        <p class="membership__item-price">€ 24,000</p>
+                                        <p class="membership__item-duration">subscribe for 1 year</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="membership__pagination"></div>
+                    <p class="membership__descr"><mark>DISCOUNTS:</mark> Option to choose between Family or Individual membership packages /Discounts available for Family packages / Referral benefits: bring friends and receive exclusive discounts / Loyalty reductions for memberships held over 3 years.</p>
+                    <p class="membership__descr membership-mark">Single engagements are coordinated exclusively with licensed and verified third-party providers.Availability is limited, and acceptance is subject to prior review by our membership office.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="stories stories-reset">
+            <div class="container">
+                <div class="stories__inner">
+                    <div class="stories__top title-top">
+                        <h2 class="stories__title title title-icon">Experiences / Stories</h2>
+                        <a class="stories__next btn-next" href="#">NEXT</a>
+                    </div>
+                    <div class="stories__block">
+                        <div class="stories__item">
+                            <div class="stories__item-content">
+                                <p class="stories__item-title">“Medical week in Zurich + Mayo Clinic second opinion”</p>
+                                <ul class="stories__item-list custom-list">
+                                    <li>“Private sunrise at Christ the Redeemer + vineyard dinner with the owner”</li>
+                                    <li>“Art Basel private previews + acquisition advisory”</li>
+                                </ul>
+                                <a class="stories__item-btn btn-next" href="#">NEXT</a>
+                            </div>
+                            <div class="stories__item-image">
+                                <img src="img/stories/1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <div class="faq__inner">
+                    <div class="faq__image">
+                        <img src="img/icons/icon-9.svg" alt="">
+                    </div>
+                    <div class="faq__content">
+                        <h2 class="faq__title title title-icon">FAQ</h2>
+                        <div class="faq__block">
+                            <div class="faq__item">
+                                <p class="faq__item-title">How are we different from a bank/card concierge?</p>
+                                <p class="faq__item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ad nemo tempora, id, saepe enim, nobis tempore quae facere distinctio officiis? Iste odio sapiente dicta non aliquam corrupti itaque suscipit?</p>
+                            </div>
+                            <div class="faq__item">
+                                <p class="faq__item-title">What's included in the retainer/what's included?</p>
+                                <p class="faq__item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ad nemo tempora, id, saepe enim, nobis tempore quae facere distinctio officiis? Iste odio sapiente dicta non aliquam corrupti itaque suscipit?</p>
+                            </div>
+                            <div class="faq__item">
+                                <p class="faq__item-title">How quickly do you respond/fulfill?</p>
+                                <p class="faq__item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ad nemo tempora, id, saepe enim, nobis tempore quae facere distinctio officiis? Iste odio sapiente dicta non aliquam corrupti itaque suscipit?</p>
+                            </div>
+                            <div class="faq__item">
+                                <p class="faq__item-title">How is privacy ensured?</p>
+                                <p class="faq__item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ad nemo tempora, id, saepe enim, nobis tempore quae facere distinctio officiis? Iste odio sapiente dicta non aliquam corrupti itaque suscipit?</p>
+                            </div>
+                            <div class="faq__item">
+                                <p class="faq__item-title">Is it a one-time payment? </p>
+                                <p class="faq__item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ad nemo tempora, id, saepe enim, nobis tempore quae facere distinctio officiis? Iste odio sapiente dicta non aliquam corrupti itaque suscipit?</p>
+                            </div>
+                            <div class="faq__item">
+                                <p class="faq__item-title">Refunds?</p>
+                                <p class="faq__item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ad nemo tempora, id, saepe enim, nobis tempore quae facere distinctio officiis? Iste odio sapiente dicta non aliquam corrupti itaque suscipit?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contactpopup">
+            <div class="container">
+                <div class="contactpopup__inner">
+                    <button class="contactpopup__close btn-close"></button>
+                    <h2 class="contactpopup__title title">Contact us</h2>
+                    <form class="contactpopup__form form-inner" action="#">
+                        <div class="form-content">
+                            <div class="form-block">
+                                <label class="form-label" for="name">Your name</label>
+                                <input class="form-input form-required" type="text" name="name" id="name">
+                                <p class="form-error">* Required field</p>
+                            </div>
+                            <div class="form-block">
+                                <label class="form-label" for="email">Email</label>
+                                <input class="form-input form-required" type="email" name="email" id="email">
+                                <p class="form-error">* Required field</p>
+                            </div>
+                            <div class="form-block">
+                                <label class="form-label" for="number">Phone number</label>
+                                <input class="form-input form-required" type="tel" name="number" id="number">
+                                <p class="form-error">* Required field</p>
+                            </div>
+                            <div class="form-block">
+                                <label class="form-label" for="message">Message</label>
+                                <textarea class="form-input form-required" name="message" id="message"></textarea>
+                                <p class="form-error">* Required field</p>
+                            </div>
+                        </div>
+                        <div class="form-bottom">
+                            <div class="form-icon">
+                                <img src="img/icons/icon-3.svg" alt="">
+                            </div>
+                            <button class="form-send btn-next" type="submit">SEND MESSAGE</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__top-inner">
+                    <div class="footer__top-logo">
+                        <img src="img/icons/icon-3.svg" alt="">
+                    </div>
+                    <div class="footer__top-content">
+                        <ul class="footer__top-menu">
+                            <li>
+                                <a href="#">Health & Longevity</a>
+                            </li>
+                            <li>
+                                <a href="#">Family & Education</a>
+                            </li>
+                            <li>
+                                <a href="#">TRAVEL</a>
+                            </li>
+                            <li>
+                                <a href="#">Culture & Philanthropy</a>
+                            </li>
+                            <li>
+                                <a href="#">Lifestyle</a>
+                            </li>
+                            <li>
+                                <a href="#">Security</a>
+                            </li>
+                            <li>
+                                <a href="#">Health & Longevity</a>
+                            </li>
+                            <li>
+                                <a href="#">Family & Education</a>
+                            </li>
+                            <li>
+                                <a href="#">TRAVEL</a>
+                            </li>
+                            <li>
+                                <a href="#">Culture & Philanthropy</a>
+                            </li>
+                            <li>
+                                <a href="#">Lifestyle</a>
+                            </li>
+                            <li>
+                                <a href="#">Security</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="footer-line"></span>
+        <div class="footer__end-content footer-mobile">
+                <ul class="footer__menu">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">SERVICES</a>
+                    </li>
+                    <li>
+                        <a href="#">Memberships</a>
+                    </li>
+                </ul>
+                <ul class="footer__menu">
+                    <li>
+                        <a href="#">Experiences</a>
+                    </li>
+                    <li>
+                        <a href="#">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="#">FAQ</a>
+                    </li>
+                </ul>
+                <ul class="footer__menu">
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">LoGIN</a>
+                    </li>
+                </ul>
+        </div>
+        <div class="container">
+            <div class="footer__inner">
+                <p class="footer__drops">DROP US <br>A LINE <img src="img/icons/icon-8.svg" alt=""></p>
+                <div class="footer__about">
+                    <div class="footer__about-block">
+                        <h3 class="footer__about-title">location </h3>
+                        <p class="footer__about-descr">Gonzales, 5 <br>The Leventis, Gallery Tower, <br>Floor 13, Flat/Office <br>1097, Barcelona, Spain <br>XXXX LTD <br>HEXXXXX</p>
+                    </div>
+                    <div class="footer__about-block">
+                        <h3 class="footer__about-title">contact</h3>
+                        <a class="footer__about-btn btn" href="#"></a>
+                        <p class="footer__about-descr">Mon - Sun, 08:00 - 01:00 (UTC+3)</p>
+                        <p class="footer__about-descr">Phone number</p>
+                        <a class="footer__about-descr" href="tel+340902513326">+34(090)251-33-26</a>
+                        <a class="footer__about-descr" href="#">Telegram</a>
+                        <a class="footer__about-descr" href="mailto:support@giftdoo.io">support@giftdoo.io</a>
+                        <div class="footer__about-btn button-wrap contact-open">
+                            <button>
+                                <span>
+                                    Contact us
+                                </span>
+                            </button>
+                            <div class="button-shadow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="footer-line"></span>
+        <div class="footer__bottom">
+            <div class="container">
+                <p class="footer__bottom-descr">we coordinate and organize services provided by licensed third parties. We are not a tour operator, medical provider, or security provider. All bookings are subject to the terms and conditions of our partners and applicable laws.</p>
+            </div>
+            <span class="footer-line footer-line-mobile"></span>
+            <div class="container">
+                <div class="footer__bottom-content">
+                    <div class="footer__bottom-icons">
+                        <div class="footer__bottom-icon">
+                            <img src="img/icons/icon-4.svg" alt="">
+                        </div>
+                        <div class="footer__bottom-icon">
+                            <img src="img/icons/icon-5.svg" alt="">
+                        </div>
+                        <div class="footer__bottom-icon">
+                            <img src="img/icons/icon-6.svg" alt="">
+                        </div>
+                        <div class="footer__bottom-icon">
+                            <img src="img/icons/icon-7.svg" alt="">
+                        </div>
+                    </div>
+                    <p class="footer__bottom-copy">© 2025 Dominus. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+        <span class="footer-line"></span>
+        <div class="container">
+            <div class="footer__end">
+                <form class="footer__form" action="#">
+                    <h3 class="footer__form-title">Get on the list</h3>
+                    <div class="footer__form-content">
+                        <input class="footer__form-input" type="email" placeholder="Email address" required name="email">
+                        <button class="footer__form-btn" type="submit">
+                            subscribe
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="15" viewBox="0 0 31 15" fill="none">
+                                <path d="M30.7071 8.07039C31.0976 7.67986 31.0976 7.0467 30.7071 6.65617L24.3431 0.292213C23.9526 -0.0983109 23.3195 -0.0983109 22.9289 0.292213C22.5384 0.682738 22.5384 1.3159 22.9289 1.70643L28.5858 7.36328L22.9289 13.0201C22.5384 13.4107 22.5384 14.0438 22.9289 14.4343C23.3195 14.8249 23.9526 14.8249 24.3431 14.4343L30.7071 8.07039ZM0 7.36328V8.36328H30V7.36328V6.36328H0V7.36328Z" fill="#C09E63"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+                <p class="footer__drops footer-mobile">DROP US <br>A LINE <img src="img/icons/icon-1.svg" alt=""></p>
+                <div class="footer__end-content">
+                    <ul class="footer__menu">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">SERVICES</a>
+                        </li>
+                        <li>
+                            <a href="#">Memberships</a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer__menu">
+                        <li>
+                            <a href="#">Experiences</a>
+                        </li>
+                        <li>
+                            <a href="#">ABOUT</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQ</a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer__menu">
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#">LoGIN</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
