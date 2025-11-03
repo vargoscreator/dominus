@@ -168,6 +168,9 @@
 	justify-content: space-between;
 	margin-top: 1.8vw;
 }
+.auth-form__actions button:first-child{
+	margin-left: auto;
+}
 
 .auth-form__link {
   font-family: "Scheherazade New", sans-serif;

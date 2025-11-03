@@ -696,13 +696,10 @@ document.querySelectorAll('.whymembership').forEach((item, i) => {
     tl.to(content, { x: 0, opacity: 1, duration: 1, ease: "power3.out" })
       .to(image, { x: 0, opacity: 1, duration: 1, ease: "power3.out" }, "-=0.7"); 
 });
-
-
 createScrollAnimation('.stories__more', {
     from: { y: -50, opacity: 0 },
     to: { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
 });
-
 createScrollAnimation('.imageBanner img', {
   from: { y: 0, opacity: 0, scale: 1.2 },
   to: { y: 0, opacity: 1, scale: 1, duration: 1.5, ease: "power3.out" }
@@ -711,8 +708,6 @@ createScrollAnimation('.infoblock', {
   from: { y: 100, opacity: 1, },
   to: { y: 0, opacity: 1, duration: 1.5, ease: "power3.out" }
 });
-
-
 function typewriterEffectFromHTML(selector, speed = 20) {
     const el = document.querySelector(selector);
     if (!el) return;
@@ -801,71 +796,6 @@ if (window.innerWidth < 769) {
     });
   });
 }
-
-
-document.querySelectorAll('.form-inner').forEach(form => {
-  const requiredFields = form.querySelectorAll('.form-required');
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    let valid = true;
-
-    requiredFields.forEach(field => {
-      const parent = field.closest('.form-block');
-      if (field.tagName === 'INPUT' || field.tagName === 'TEXTAREA' || field.tagName === 'SELECT') {
-        if (!field.value.trim()) {
-          parent.classList.add('error');
-          valid = false;
-        } else {
-          parent.classList.remove('error');
-        }
-      }
-      else if (field.classList.contains('form-checkboxes')) {
-        const checkboxes = field.querySelectorAll('input[type="checkbox"]');
-        const isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
-
-        if (!isChecked) {
-          parent.classList.add('error');
-          valid = false;
-        } else {
-          parent.classList.remove('error');
-        }
-      }
-    });
-
-    if (valid) {
-      console.log('Form is valid and ready to submit!');
-    }
-  });
-
-  requiredFields.forEach(field => {
-    field.addEventListener('input', () => {
-      const parent = field.closest('.form-block');
-      if (field.tagName === 'INPUT' || field.tagName === 'TEXTAREA' || field.tagName === 'SELECT') {
-        if (field.value.trim()) {
-          parent.classList.remove('error');
-        }
-      }
-      else if (field.classList.contains('form-checkboxes')) {
-        const checkboxes = field.querySelectorAll('input[type="checkbox"]');
-        const isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
-        if (isChecked) {
-          parent.classList.remove('error');
-        }
-      }
-    });
-    if (field.classList.contains('form-checkboxes')) {
-      field.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-        checkbox.addEventListener('change', () => {
-          const parent = field.closest('.form-block');
-          const isChecked = Array.from(field.querySelectorAll('input[type="checkbox"]')).some(c => c.checked);
-          if (isChecked) {
-            parent.classList.remove('error');
-          }
-        });
-      });
-    }
-  });
-});
 
 
 if(document.querySelector('.contactpopup')){
