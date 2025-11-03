@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Scheherazade+New:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/forms.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="body"> 
@@ -608,20 +609,21 @@
                     <p class="emailconfirm__descr">Your application has been successfully sent!</p>
                     <p class="emailconfirm__name">На указанный e-mail отправлен код подтверждения.</p>
                     <form class="emailconfirm__form form-inner" action="#">
-                        <div class="form-block">
+                        <div class="auth-form__field">
                             <div class="emailconfirm-confirm-inputs">
-                                <input type="tel" class="form-required">
-                                <input type="tel" class="form-required">
-                                <input type="tel" class="form-required">
+                                <input type="tel" class="form-required" pattern="[0-9]" maxlength="1">
+                                <input type="tel" class="form-required" pattern="[0-9]" maxlength="1">
+                                <input type="tel" class="form-required" pattern="[0-9]" maxlength="1">
                                 <br>
-                                <input type="tel" class="form-required">
-                                <input type="tel" class="form-required">
-                                <input type="tel" class="form-required">
+                                <input type="tel" class="form-required" pattern="[0-9]" maxlength="1">
+                                <input type="tel" class="form-required" pattern="[0-9]" maxlength="1">
+                                <input type="tel" class="form-required" pattern="[0-9]" maxlength="1">
                             </div>
-                            <p class="form-error">* Required field</p>
+
+                            <small class="auth-form__error">* Required field</small>
                         </div>
                         <div class="emailconfirm__form-bottom">
-                            <button class="emailconfirm__form-reser btn-2" type="button">Resend code</button>
+                            <button class="emailconfirm__form-reset btn-2" type="button">Resend code</button>
                             <button class="emailconfirm__form-btn btn-next" type="submit">NEXT</button>
                         </div>
                     </form>

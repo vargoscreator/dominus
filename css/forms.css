@@ -1314,6 +1314,7 @@
 	.auth-form__field label {
 			font-size: 4vw;
 			font-size: clamp(16px, 4vw, 4vw);
+			line-height: 5.2vw;
 	}
 
 	.auth-form__field {

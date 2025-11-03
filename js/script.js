@@ -92,7 +92,7 @@ document.querySelectorAll('.membership').forEach(section => {
       clickable: true,
     },
     breakpoints: {
-      480: {
+      481: {
         spaceBetween: 59,
         slidesPerView: 2,
       },
@@ -123,7 +123,7 @@ let teaserSlider = new Swiper(".teaser__slider", {
         nextEl: ".teaser__next",
     },
     breakpoints: {
-        480: {
+        481: {
             spaceBetween: 20,
             slidesPerView: 1,
         },
@@ -164,6 +164,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 gsap.registerPlugin(ScrollTrigger);
+window.addEventListener('load', () => {
+    ScrollTrigger.refresh();
+});
 
 function wrapText(element) {
   const content = element.innerHTML.replace(/<br\s*\/?>/gi, "[[BR]]");
@@ -419,6 +422,7 @@ function createScrollAnimation(selector, animationProps, trigger = null) {
                 start: "top 70%",
                 end: "bottom 10%",
                 toggleActions: "play reverse play reverse",
+                invalidateOnRefresh: true
             }
         });
         tl.fromTo(elements,
@@ -435,6 +439,7 @@ function createScrollAnimation(selector, animationProps, trigger = null) {
                     start: "top 70%",
                     end: "bottom 10%",
                     toggleActions: "play reverse play reverse",
+                    invalidateOnRefresh: true
                 }
             });
         });
@@ -951,4 +956,149 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     
+});
+
+
+document.querySelectorAll('.emailconfirm-confirm-inputs input').forEach(input => {
+    input.addEventListener('input', () => {
+        input.value = input.value.replace(/[^0-9]/g, '');
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const emailConfirmForms = document.querySelectorAll(".emailconfirm__form");
+  emailConfirmForms.forEach((form) => {
+    const inputs = form.querySelectorAll(".emailconfirm-confirm-inputs input.form-required");
+    const errorElement = form.querySelector(".auth-form__error");
+
+    inputs.forEach((input) => {
+      input.addEventListener("input", () => validateInputs());
+    });
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (validateInputs()) {
+        form.submit();
+      }
+    });
+
+    function validateInputs() {
+      let valid = true;
+      inputs.forEach((input) => {
+        if (!input.value.match(/^\d$/)) {
+          valid = false;
+        }
+      });
+
+      if (!valid) {
+        showError(errorElement, "* Required field");
+      } else {
+        hideError(errorElement);
+      }
+
+      return valid;
+    }
+
+    function showError(element, message) {
+      if (!element) return;
+      element.textContent = message;
+      element.style.display = "block";
+      setTimeout(() => {
+        element.style.opacity = "1";
+        element.style.transform = "translateY(0)";
+      }, 10);
+    }
+
+    function hideError(element) {
+      if (!element) return;
+      element.style.opacity = "0";
+      element.style.transform = "translateY(-0.5vw)";
+      setTimeout(() => {
+        element.style.display = "none";
+      }, 300);
+    }
+  });
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const applyForms = document.querySelectorAll(".applyfor__form");
+  applyForms.forEach((form) => {
+    const inputs = form.querySelectorAll("input.form-required");
+    
+    inputs.forEach((input) => {
+      input.addEventListener("input", () => validateField(input));
+    });
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      let valid = true;
+      inputs.forEach((input) => {
+        if (!validateField(input)) valid = false;
+      });
+
+      if (valid) form.submit();
+    });
+
+    function validateField(input) {
+      const value = input.value.trim();
+      const errorElement = input.nextElementSibling;
+
+      if (!value) {
+        showError(errorElement, "* Required field", input);
+        return false;
+      }
+
+      if (input.name === "card_number") {
+        const cardRegex = /^[0-9 ]{16,19}$/;
+        if (!cardRegex.test(value)) {
+          showError(errorElement, "* Invalid card number", input);
+          return false;
+        }
+      }
+
+      if (input.name === "expiry_date") {
+        const expRegex = /^(0[1-9]|1[0-2])\/\d{2}$/;
+        if (!expRegex.test(value)) {
+          showError(errorElement, "* Invalid date (MM/YY)", input);
+          return false;
+        }
+      }
+
+      if (input.name === "cvc") {
+        const cvcRegex = /^\d{3}$/;
+        if (!cvcRegex.test(value)) {
+          showError(errorElement, "* Invalid CVC", input);
+          return false;
+        }
+      }
+
+      hideError(errorElement, input);
+      return true;
+    }
+
+    function showError(element, message, input) {
+      if (!element) return;
+      element.textContent = message;
+      input.classList.add("input-error");
+      element.style.display = "block";
+      setTimeout(() => {
+        element.style.opacity = "1";
+        element.style.transform = "translateY(0)";
+      }, 10);
+    }
+
+    function hideError(element, input) {
+      if (!element) return;
+      input.classList.remove("input-error");
+      element.style.opacity = "0";
+      element.style.transform = "translateY(-0.5vw)";
+      setTimeout(() => {
+        element.style.display = "none";
+      }, 300);
+    }
+  });
 });

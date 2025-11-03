@@ -142,7 +142,7 @@
                         ></path>
                         </svg>
                     </div>
-                    <h1 class="applyfor__title title">Contact</h1>
+                    <h1 class="applyfor__title title">Your Invoice</h1>
                     <form class="applyfor__form form-inner applyfor__invoice" action="#">
                         <div class="form-content">
                             <div class="applyfor-invoice">
@@ -171,22 +171,22 @@
                                         <div class="form-about-icon"><img src="img/icons/icon-7.svg" alt=""></div>
                                     </div>
                                 </div>
-                                <input class="form-input form-required" type="text" name="card_number" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19" autocomplete="cc-number"  required>
-                                <p class="form-error">* Required field</p>
+                                <input class="form-input form-required" type="text" name="card_number" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19" autocomplete="cc-number" >
+                               <small class="auth-form__error">* Required field</small>
                             </div>
                             <div class="form-block">
                                 <div class="form-about">
                                     <p class="form-about-title">Expiration Date</p>
                                 </div>
-                                <input class="form-input form-required" type="text" name="expiry_date" id="expiry-date" placeholder="MM/YY" maxlength="5" pattern="\d{2}/\d{2}" autocomplete="cc-exp" required>
-                                <p class="form-error">* Required field</p>
+                                <input class="form-input form-required" type="text" name="expiry_date" id="expiry-date" placeholder="MM/YY" maxlength="5" pattern="\d{2}/\d{2}" autocomplete="cc-exp">
+                                <small class="auth-form__error">* Required field</small>
                             </div>
                             <div class="form-block">
                                 <div class="form-about">
                                     <p class="form-about-title">CVC:</p>
                                 </div>
-                                <input class="form-input form-required" type="text" name="cvc" id="cvc" placeholder="123" maxlength="3" autocomplete="cc-csc" required>
-                                <p class="form-error">* Required field</p>
+                                <input class="form-input form-required" type="text" name="cvc" id="cvc" placeholder="123" maxlength="3" autocomplete="cc-csc">
+                                <small class="auth-form__error">* Required field</small>
                             </div>
                         </div>
                         <p class="form-warnind">Send payment to one of the following wallets. After payment, please email the transaction hash to <a href="mailto:info@service.com">info@service.com</a></p>
