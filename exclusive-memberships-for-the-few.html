@@ -564,34 +564,35 @@
                 <div class="contactpopup__inner">
                     <button class="contactpopup__close btn-close"></button>
                     <h2 class="contactpopup__title title">Contact us</h2>
-                    <form class="contactpopup__form form-inner" action="#">
-                        <div class="form-content">
-                            <div class="form-block">
-                                <label class="form-label" for="name">Your name</label>
-                                <input class="form-input form-required" type="text" name="name" id="name">
-                                <p class="form-error">* Required field</p>
-                            </div>
-                            <div class="form-block">
-                                <label class="form-label" for="email">Email</label>
-                                <input class="form-input form-required" type="email" name="email" id="email">
-                                <p class="form-error">* Required field</p>
-                            </div>
-                            <div class="form-block">
-                                <label class="form-label" for="number">Phone number</label>
-                                <input class="form-input form-required" type="tel" name="number" id="number">
-                                <p class="form-error">* Required field</p>
-                            </div>
-                            <div class="form-block">
-                                <label class="form-label" for="message">Message</label>
-                                <textarea class="form-input form-required" name="message" id="message"></textarea>
-                                <p class="form-error">* Required field</p>
-                            </div>
+                    <form class="contactpopup__form js-auth-form" novalidate>
+                        <div class="auth-form__field">
+                            <label for="contactpopup-name">Your name</label>
+                            <input type="text" id="contactpopup-name" name="Your name" required />
+                            <small class="auth-form__error">* Required field</small>
                         </div>
-                        <div class="form-bottom">
-                            <div class="form-icon">
-                                <img src="img/icons/icon-3.svg" alt="">
-                            </div>
-                            <button class="form-send btn-next" type="submit">SEND MESSAGE</button>
+                        <div class="auth-form__field">
+                            <label for="contactpopup-email">Email</label>
+                            <input type="email" id="contactpopup-email" name="Email" required />
+                            <small class="auth-form__error">* Required field</small>
+                        </div>
+                        <div class="auth-form__field">
+                            <label for="contactpopup-number">Phone number</label>
+                            <input type="tel" id="contactpopup-number" name="Phone number" required />
+                            <small class="auth-form__error">* Required field</small>
+                        </div>
+                        <div class="auth-form__field">
+                            <label for="contactpopup-message">Message</label>
+                            <textarea class="form-input form-required" name="message" id="contactpopup-message"></textarea>
+                            <small class="auth-form__error">* Required field</small>
+                        </div>
+                        <div class="auth-form__actions">
+                          <div class="form-icon">
+                              <img src="img/icons/icon-3.svg" alt="">
+                          </div>
+                          <button type="submit" class="auth-form__btn btn-next"> SEND MESSAGE <svg width="31" height="15" viewBox="0 0 31 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M30.7071 8.07039C31.0976 7.67986 31.0976 7.0467 30.7071 6.65617L24.3431 0.292213C23.9526 -0.0983109 23.3195 -0.0983109 22.9289 0.292213C22.5384 0.682738 22.5384 1.3159 22.9289 1.70643L28.5858 7.36328L22.9289 13.0201C22.5384 13.4107 22.5384 14.0438 22.9289 14.4343C23.3195 14.8249 23.9526 14.8249 24.3431 14.4343L30.7071 8.07039ZM0 7.36328V8.36328H30V7.36328V6.36328H0V7.36328Z" fill="#C09E63" />
+                            </svg>
+                          </button>
                         </div>
                     </form>
                 </div>

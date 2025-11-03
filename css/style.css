@@ -4690,7 +4690,6 @@ a.footer__about-descr:hover{
 }
 .successfulpay__inner::before,
 .emailconfirm__inner::before,
-.upload-file::before,
 .contactpopup__inner::before{
     content: '';
     position: absolute;
@@ -4705,7 +4704,6 @@ a.footer__about-descr:hover{
 }
 .successfulpay__inner::after,
 .emailconfirm__inner::after,
-.upload-file::after,
 .contactpopup__inner::after{
     content: '';
     position: absolute;
@@ -4717,20 +4715,6 @@ a.footer__about-descr:hover{
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-}
-.upload-file::after, .upload-file::before {
-    width: 1.578vw;
-    height: 1.354vw;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='25' viewBox='0 0 30 25' fill='none'%3E%3Cpath d='M1 25V1H29.2885' stroke='%23C09E63' stroke-opacity='0.48' stroke-width='2'/%3E%3C/svg%3E");
-}
-.upload-file::before{
-    top: -0.156vw;
-    left: -0.104vw;
-}
-.upload-file::after{
-    bottom: -0.104vw;
-    right: -0.156vw;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='25' viewBox='0 0 29 25' fill='none'%3E%3Cpath d='M27.1094 1.10711e-06L27.1094 24L-0.000464109 24' stroke='%23C09E63' stroke-opacity='0.48' stroke-width='2'/%3E%3C/svg%3E");
 }
 .successfulpay.show .successfulpay__inner,
 .emailconfirm.show .emailconfirm__inner,
@@ -4818,9 +4802,14 @@ a.footer__about-descr:hover{
     max-width: 14.583vw;
     display: flex;
     align-items: center;
-    border: 0.104vw dotted rgba(192, 158, 99, 0.48);
     justify-content: center;
     gap: 0.729vw;
+}
+.upload-file{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='310' height='90' viewBox='0 0 310 90' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 25V1H29.2885' stroke='%23C09E63' stroke-opacity='0.48' stroke-width='2'/%3E%3Cpath d='M308.637 65L308.637 89L281.527 89' stroke='%23C09E63' stroke-opacity='0.48' stroke-width='2'/%3E%3Cpath d='M29.2891 1L309.817 1.00004' stroke='%23C09E63' stroke-opacity='0.48' stroke-width='2' stroke-dasharray='4 4'/%3E%3Cpath d='M308.637 1L308.637 65' stroke='%23C09E63' stroke-opacity='0.48' stroke-width='2' stroke-dasharray='4 4'/%3E%3Cpath d='M1 25L1.00001 89' stroke='%23C09E63' stroke-opacity='0.48' stroke-width='2' stroke-dasharray='4 4'/%3E%3Cpath d='M2.17969 89L281.529 89' stroke='%23C09E63' stroke-opacity='0.48' stroke-width='2' stroke-dasharray='4 4'/%3E%3C/svg%3E%0A");
 }
 .upload-file-icon{
     display: flex;
@@ -4999,10 +4988,8 @@ a.footer__about-descr:hover{
     .successfulpay__inner::before,
     .successfulpay__inner::after,
     .emailconfirm__inner::after,
-    .upload-file::after,
     .contactpopup__inner::after,
     .emailconfirm__inner::before,
-    .upload-file::before,
     .contactpopup__inner::before{
         width: 2.254vw;
         height: 2.29vw;
@@ -5051,7 +5038,6 @@ a.footer__about-descr:hover{
         padding: 1.18vw 0.695vw 1.18vw 0.695vw;
         margin-top: 1.667vw;
         max-width: 19.444vw;
-        border: 0.139vw dotted rgba(192, 158, 99, 0.48);
         gap: 0.972vw;
     }
     .upload-file-icon{
@@ -5145,10 +5131,8 @@ a.footer__about-descr:hover{
     .successfulpay__inner::before,
     .successfulpay__inner::after,
     .emailconfirm__inner::after,
-    .upload-file::after,
     .contactpopup__inner::after,
     .emailconfirm__inner::before,
-    .upload-file::before,
     .contactpopup__inner::before{
         width: 4.226vw;
         height: 4.295vw;
@@ -5197,7 +5181,6 @@ a.footer__about-descr:hover{
         padding: 2.212vw 1.302vw 2.212vw 1.302vw;
         margin-top: 3.125vw;
         max-width: 36.458vw;
-        border: 0.26vw dotted rgba(192, 158, 99, 0.48);
         gap: 1.823vw;
     }
     .upload-file-icon svg{
@@ -5293,10 +5276,8 @@ a.footer__about-descr:hover{
     .successfulpay__inner::before,
     .successfulpay__inner::after,
     .emailconfirm__inner::after,
-    .upload-file::after,
     .contactpopup__inner::after,
     .emailconfirm__inner::before,
-    .upload-file::before,
     .contactpopup__inner::before{
         content: none;
     }
@@ -5345,7 +5326,6 @@ a.footer__about-descr:hover{
         padding: 2.667vw 5.333vw;
         margin-top: 5.333vw;
         max-width: 46.4vw;
-        border: 0.303vw dotted rgba(192, 158, 99, 0.48);
         gap: 2.133vw;
     }
     .upload-file-icon svg{

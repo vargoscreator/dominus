@@ -149,104 +149,244 @@
             <div class="auth-form__field">
               <label for="why-are-your">Why are you considering membership with us?</label>
               <div class="form-checkboxes form-required" data-name="membership_reason">
-                  <label class="form-checkbox">
-                      <input type="checkbox" name="membership_reason[]" value="referral">
-                      <span></span>Referral
+                  <label class="checkbox-container">
+                    <input type="checkbox" />
+                    <div class="custom-checkbox">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M5 13l4 4L19 7"></path>
+                      </svg>
+                    </div>
+                    <span>Referral</span>
                   </label>
-                  <label class="form-checkbox">
-                      <input type="checkbox" name="membership_reason[]" value="switching">
-                      <span></span>Switching from Existing Agent
+                  <label class="checkbox-container">
+                    <input type="checkbox" />
+                    <div class="custom-checkbox">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M5 13l4 4L19 7"></path>
+                      </svg>
+                    </div>
+                    <span>Switching from Existing Agent</span>
                   </label>
-                  <label class="form-checkbox">
-                      <input type="checkbox" name="membership_reason[]" value="first_time">
-                      <span></span>First-Time Using Luxury Travel Support
+                  <label class="checkbox-container">
+                    <input type="checkbox" />
+                    <div class="custom-checkbox">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M5 13l4 4L19 7"></path>
+                      </svg>
+                    </div>
+                    <span>First-Time Using Luxury Travel Support</span>
                   </label>
-                  <label class="form-checkbox">
-                      <input type="checkbox" name="membership_reason[]" value="upscaling">
-                      <span></span>Upscaling Lifestyle Needs
+                  <label class="checkbox-container">
+                    <input type="checkbox" />
+                    <div class="custom-checkbox">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M5 13l4 4L19 7"></path>
+                      </svg>
+                    </div>
+                    <span>Upscaling Lifestyle Needs</span>
                   </label>
-                  <label class="form-checkbox">
-                      <input type="checkbox" name="membership_reason[]" value="post_life_event">
-                      <span></span>Post-Life Event
+                  <label class="checkbox-container">
+                    <input type="checkbox" />
+                    <div class="custom-checkbox">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M5 13l4 4L19 7"></path>
+                      </svg>
+                    </div>
+                    <span>Post-Life Event</span>
                   </label>
               </div>
               <small class="auth-form__error">* Required field</small>
             </div>
             <div class="auth-form__field">
               <label for="auth-rep-membership">Are you requesting a membership for yourself or on behalf of someone?</label>
-              <select class="form-select form-required" name="Are you requesting a membership for yourself or on behalf of someone?" id="auth-rep-membership">
-                  <option value="" disabled selected>Please select</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3+">3 or more</option>
-              </select>
+              <div class="custom-select">
+                <div class="custom-select__trigger">
+                  <span>Please Select</span>
+                  <svg
+                    class="arrow"
+                    width="10"
+                    height="10"
+                    viewBox="0 0 10 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.30004 0.192152C5.04372 -0.0641632 4.62815 -0.0641632 4.37184 0.192152L0.194954 4.36904C-0.0613606 4.62535 -0.0613606 5.04092 0.194954 5.29723C0.451268 5.55355 0.866836 5.55355 1.12315 5.29723L4.83594 1.58445L8.54872 5.29723C8.80504 5.55355 9.22061 5.55355 9.47692 5.29723C9.73324 5.04092 9.73324 4.62535 9.47692 4.36904L5.30004 0.192152ZM4.83594 9.65625L5.49227 9.65625L5.49227 0.65625L4.83594 0.65625L4.1796 0.65625L4.1796 9.65625L4.83594 9.65625Z"
+                      fill="#C09E63"
+                    />
+                  </svg>
+                </div>
+
+                <div class="custom-select__dropdown">
+                  <div class="custom-select__option">Option 1</div>
+                  <div class="custom-select__option">Option 2</div>
+                  <div class="custom-select__option">Option 3</div>
+                </div>
+              </div>
               <small class="auth-form__error">* Required field</small>
             </div>
             <div class="auth-form__field">
               <label for="auth-rep-residencies">How many residencies do you have?</label>
-              <select class="form-select form-required" name="How many residencies do you have?" id="auth-rep-residencies">
-                  <option value="" disabled selected>Please select</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3+">3 or more</option>
-              </select>
+              <div class="custom-select">
+                <div class="custom-select__trigger">
+                  <span>Please Select</span>
+                  <svg
+                    class="arrow"
+                    width="10"
+                    height="10"
+                    viewBox="0 0 10 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.30004 0.192152C5.04372 -0.0641632 4.62815 -0.0641632 4.37184 0.192152L0.194954 4.36904C-0.0613606 4.62535 -0.0613606 5.04092 0.194954 5.29723C0.451268 5.55355 0.866836 5.55355 1.12315 5.29723L4.83594 1.58445L8.54872 5.29723C8.80504 5.55355 9.22061 5.55355 9.47692 5.29723C9.73324 5.04092 9.73324 4.62535 9.47692 4.36904L5.30004 0.192152ZM4.83594 9.65625L5.49227 9.65625L5.49227 0.65625L4.83594 0.65625L4.1796 0.65625L4.1796 9.65625L4.83594 9.65625Z"
+                      fill="#C09E63"
+                    />
+                  </svg>
+                </div>
+
+                <div class="custom-select__dropdown">
+                  <div class="custom-select__option">Option 1</div>
+                  <div class="custom-select__option">Option 2</div>
+                  <div class="custom-select__option">Option 3</div>
+                </div>
+              </div>
               <small class="auth-form__error">* Required field</small>
             </div>
             <div class="auth-form__field">
               <label for="auth-rep-travel-spend">What is your typical annual spend on travel experiences?</label>
-              <select class="form-select form-required" name="What is your typical annual spend on travel experiences?" id="auth-rep-travel-spend">
-                  <option value="" disabled selected>Please select</option>
-                  <option value="low">Under \$50k</option>
-                  <option value="medium">\$50k - \$150k</option>
-                  <option value="high">Over \$150k</option>
-              </select>
+              <div class="custom-select">
+                <div class="custom-select__trigger">
+                  <span>Please Select</span>
+                  <svg
+                    class="arrow"
+                    width="10"
+                    height="10"
+                    viewBox="0 0 10 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.30004 0.192152C5.04372 -0.0641632 4.62815 -0.0641632 4.37184 0.192152L0.194954 4.36904C-0.0613606 4.62535 -0.0613606 5.04092 0.194954 5.29723C0.451268 5.55355 0.866836 5.55355 1.12315 5.29723L4.83594 1.58445L8.54872 5.29723C8.80504 5.55355 9.22061 5.55355 9.47692 5.29723C9.73324 5.04092 9.73324 4.62535 9.47692 4.36904L5.30004 0.192152ZM4.83594 9.65625L5.49227 9.65625L5.49227 0.65625L4.83594 0.65625L4.1796 0.65625L4.1796 9.65625L4.83594 9.65625Z"
+                      fill="#C09E63"
+                    />
+                  </svg>
+                </div>
+
+                <div class="custom-select__dropdown">
+                  <div class="custom-select__option">Option 1</div>
+                  <div class="custom-select__option">Option 2</div>
+                  <div class="custom-select__option">Option 3</div>
+                </div>
+              </div>
               <small class="auth-form__error">* Required field</small>
             </div>
             <div class="auth-form__field">
               <label for="auth-rep-net-worth">What is your net worth?</label>
               <p class="form-descr">We ask this because our membership service is exclusively available to individuals with a high net worth to ensure we can provide tailored services to our VIP clients. <br>Please Select</p>
-              <select class="form-select form-required" name="We ask this because our membership service is exclusively available" id="auth-rep-net-worth">
-                  <option value="" disabled selected>Please select</option>
-                  <option value="range1">Range 1</option>
-                  <option value="range2">Range 2</option>
-                  <option value="range3">Range 3</option>
-              </select>
+              <div class="custom-select">
+                <div class="custom-select__trigger">
+                  <span>Please Select</span>
+                  <svg
+                    class="arrow"
+                    width="10"
+                    height="10"
+                    viewBox="0 0 10 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.30004 0.192152C5.04372 -0.0641632 4.62815 -0.0641632 4.37184 0.192152L0.194954 4.36904C-0.0613606 4.62535 -0.0613606 5.04092 0.194954 5.29723C0.451268 5.55355 0.866836 5.55355 1.12315 5.29723L4.83594 1.58445L8.54872 5.29723C8.80504 5.55355 9.22061 5.55355 9.47692 5.29723C9.73324 5.04092 9.73324 4.62535 9.47692 4.36904L5.30004 0.192152ZM4.83594 9.65625L5.49227 9.65625L5.49227 0.65625L4.83594 0.65625L4.1796 0.65625L4.1796 9.65625L4.83594 9.65625Z"
+                      fill="#C09E63"
+                    />
+                  </svg>
+                </div>
+
+                <div class="custom-select__dropdown">
+                  <div class="custom-select__option">Option 1</div>
+                  <div class="custom-select__option">Option 2</div>
+                  <div class="custom-select__option">Option 3</div>
+                </div>
+              </div>
               <small class="auth-form__error">* Required field</small>
             </div>
             <div class="auth-form__field">
               <label for="travel_styles">Why are you considering membership with us?</label>
               <div class="form-checkboxes form-required" data-name="travel_styles">
-                  <label class="form-checkbox">
-                      <input type="checkbox" name="travel_styles[]" value="cultural">
-                      <span></span>Cultural (Museums, Histories, UNESCO)
+                <label class="checkbox-container">
+                    <input type="checkbox" />
+                    <div class="custom-checkbox">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M5 13l4 4L19 7"></path>
+                      </svg>
+                    </div>
+                    <span>Cultural (Museums, Histories, UNESCO)</span>
                   </label>
-                  <label class="form-checkbox">
-                      <input type="checkbox" name="travel_styles[]" value="adventure">
-                      <span></span>Adventure (Motorcycles, Scuba, Heli-Ski)
+                  <label class="checkbox-container">
+                    <input type="checkbox" />
+                    <div class="custom-checkbox">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M5 13l4 4L19 7"></path>
+                      </svg>
+                    </div>
+                    <span>Adventure (Motorcycles, Scuba, Heli-Ski)</span>
                   </label>
-                  <label class="form-checkbox">
-                      <input type="checkbox" name="travel_styles[]" value="family_friendly">
-                      <span></span>Family-Friendly
+                  <label class="checkbox-container">
+                    <input type="checkbox" />
+                    <div class="custom-checkbox">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M5 13l4 4L19 7"></path>
+                      </svg>
+                    </div>
+                    <span>Family-Friendly</span>
                   </label>
-                  <label class="form-checkbox">
-                      <input type="checkbox" name="travel_styles[]" value="event_based">
-                      <span></span>Event-Based (F1, Film Festival)
+                  <label class="checkbox-container">
+                    <input type="checkbox" />
+                    <div class="custom-checkbox">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M5 13l4 4L19 7"></path>
+                      </svg>
+                    </div>
+                    <span>Event-Based (F1, Film Festival)</span>
                   </label>
-                  <label class="form-checkbox">
-                      <input type="checkbox" name="travel_styles[]" value="luxury">
-                      <span></span>Luxury Travel (Villa vs. Hotel)
+                  <label class="checkbox-container">
+                    <input type="checkbox" />
+                    <div class="custom-checkbox">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M5 13l4 4L19 7"></path>
+                      </svg>
+                    </div>
+                    <span>Luxury Travel (Villa vs. Hotel)</span>
                   </label>
               </div>
               <small class="auth-form__error">* Required field</small>
             </div>
             <div class="auth-form__field">
               <label for="auth-rep-start-date">When would you like to begin your membership?</label>
-              <select class="form-select form-required" name="When would you like to begin your membership?" id="auth-rep-start-date">
-                  <option value="" disabled selected>Please select</option>
-                  <option value="immediately">Immediately</option>
-                  <option value="1-3months">1-3 months</option>
-                  <option value="3+months">3+ months</option>
-              </select>
+              <div class="custom-select">
+                <div class="custom-select__trigger">
+                  <span>Please Select</span>
+                  <svg
+                    class="arrow"
+                    width="10"
+                    height="10"
+                    viewBox="0 0 10 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.30004 0.192152C5.04372 -0.0641632 4.62815 -0.0641632 4.37184 0.192152L0.194954 4.36904C-0.0613606 4.62535 -0.0613606 5.04092 0.194954 5.29723C0.451268 5.55355 0.866836 5.55355 1.12315 5.29723L4.83594 1.58445L8.54872 5.29723C8.80504 5.55355 9.22061 5.55355 9.47692 5.29723C9.73324 5.04092 9.73324 4.62535 9.47692 4.36904L5.30004 0.192152ZM4.83594 9.65625L5.49227 9.65625L5.49227 0.65625L4.83594 0.65625L4.1796 0.65625L4.1796 9.65625L4.83594 9.65625Z"
+                      fill="#C09E63"
+                    />
+                  </svg>
+                </div>
+
+                <div class="custom-select__dropdown">
+                  <div class="custom-select__option">Option 1</div>
+                  <div class="custom-select__option">Option 2</div>
+                  <div class="custom-select__option">Option 3</div>
+                </div>
+              </div>
               <small class="auth-form__error">* Required field</small>
             </div>
             <div class="auth-form__field">

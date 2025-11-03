@@ -191,6 +191,9 @@
 .auth-form__btn {
 	transition: all 0.3s ease;
 }
+.auth-form__btn::after{
+	content: none !important;
+}
 
 .auth-form__btn svg{
 	width: 2vw;
@@ -466,7 +469,7 @@
 }
 
 
-.cabinet .checkbox-container {
+ .checkbox-container {
 	display: flex;
 	align-items: center;
 	gap: 1vw;
@@ -478,12 +481,11 @@
 	line-height: 1;
 	user-select: none;
 }
-
-.cabinet .checkbox-container input {
+ .checkbox-container input {
 	display: none;
 }
 
-.cabinet .custom-checkbox {
+.custom-checkbox {
 	width: 1.3vw;
 	height: 1.3vw;
 	border: 0.1vw solid #c9a35b;
@@ -493,7 +495,7 @@
 	transition: all 0.25s ease;
 }
 
-.cabinet .custom-checkbox svg {
+.custom-checkbox svg {
 	width: 1.2vw;
 	height: 1.2vw;
 	stroke: #c9a35b;
@@ -504,12 +506,12 @@
 	transition: all 0.25s ease;
 }
 
-.cabinet .checkbox-container input:checked + .custom-checkbox svg {
+ .checkbox-container input:checked + .custom-checkbox svg {
 	opacity: 1;
 	transform: scale(1);
 }
 
-.cabinet .checkbox-container:hover .custom-checkbox {
+ .checkbox-container:hover .custom-checkbox {
 	box-shadow: 0 0 6px rgba(201, 163, 91, 0.4);
 }
 
@@ -891,7 +893,6 @@
     max-width:21.583vw;
     display: flex;
     align-items: center;
-    border: 0.104vw dotted rgba(192, 158, 99, 0.48);
     justify-content: center;
     gap: 1.7vw;
 }
@@ -907,7 +908,6 @@
     background: rgba(255, 255, 255, 0.01);
     box-shadow: 0 0.056vw 0.056vw 0 rgba(255, 255, 255, 0.25);
 }
-
 .upload-file-title {
     color: #C09E63;
     font-family: "Scheherazade New", sans-serif;
@@ -917,40 +917,6 @@
     text-transform: uppercase;
     text-wrap: nowrap;
 }
-
-.upload-file::before {
-    content: '';
-    position: absolute;
-    top: -0.1vw;
-    left:  -0.1vw;
-    width: 1.691vw;
-    height: 1.718vw;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.upload-file::after {
-    content: '';
-    position: absolute;
-    bottom: -0.1vw;
-    right:  -0.1vw;
-    width: 1.691vw;
-    height: 1.718vw;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-
-.upload-file::before {
-		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='43' viewBox='0 0 42 43' fill='none'%3E%3Cpath d='M0.5 42.5527V0.5H41.8862' stroke='%23C09E63'/%3E%3C/svg%3E");
-}
-
-.upload-file::after {
-		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='43' viewBox='0 0 42 43' fill='none'%3E%3Cpath d='M41.3857 0V42.0527H-0.000411987' stroke='%23C09E63'/%3E%3C/svg%3E");
-}
-
 .chat__downloads{
 	display: flex;
 	align-items: center;
@@ -994,7 +960,7 @@
 		margin-bottom: 4.8vw;
 	}
 
-	.cabinet .checkbox-container,
+	.checkbox-container,
 	.auth-form__field label{
 		font-size: 2.3vw;
 	}
@@ -1096,12 +1062,12 @@
 		padding: 0 4.557vw;
 	}
 
-	.cabinet .custom-checkbox{
+	 .custom-checkbox{
 		width: 3vw;
 		height: 3vw;
 	}
 
-	.cabinet .custom-checkbox svg{
+	 .custom-checkbox svg{
 		width: 3vw;
 		height: 3vw;
 	}
@@ -1312,12 +1278,6 @@
     padding: 2.885vw 1.521vw 1.885vw 1.521vw;
 		gap: 4.5vw;
 	}
-
-	.upload-file::before,
-	.upload-file::after{
-		width: 3.691vw;
-    height: 3.718vw;
-	}
 }
 
 @media (max-width: 480px) {
@@ -1350,7 +1310,7 @@
 		padding: 0;
 	}
 
-	.cabinet .checkbox-container,
+	 .checkbox-container,
 	.auth-form__field label {
 			font-size: 4vw;
 			font-size: clamp(16px, 4vw, 4vw);
@@ -1661,20 +1621,15 @@
 	.chat__download{
 		gap: 2vw;
 	}
-
-	.upload-file::before, .upload-file::after {
-		width: 4.691vw;
-		height: 4.718vw;
-	}
 	.chat__downloads{
 		margin-bottom: 6vw;
 	}
-	.cabinet .custom-checkbox svg,
-	.cabinet .custom-checkbox {
+	 .custom-checkbox svg,
+	 .custom-checkbox {
 		width: 5vw;
 		height: 5vw;
 	}
-	.cabinet .checkbox-container{
+	 .checkbox-container{
 		gap: 2.5vw;
 	}
 }
