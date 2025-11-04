@@ -2382,9 +2382,6 @@ p > a:hover{
         bottom: 1.389vw;
         max-width: 18.056vw;
     }
-    .wedo-bg::before{
-        content: none;
-    }
 }
 @media (max-width: 768px) {
     .wedo{
