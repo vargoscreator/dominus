@@ -2301,10 +2301,11 @@ p > a:hover{
     left: -0.521vw;
     width: 46.354vw;
     height: 52.552vw;
-    background-image: url('../img/icons/ds.svg');
+    background-image: url('../img/icons/ds-full.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    opacity: 0.05;
     z-index: -1;
 }   
 .wedo__inner{
