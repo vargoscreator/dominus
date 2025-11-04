@@ -709,10 +709,26 @@ createScrollAnimation('.imageBanner img', {
   from: { y: 0, opacity: 0, scale: 1.2 },
   to: { y: 0, opacity: 1, scale: 1, duration: 1.5, ease: "power3.out" }
 });
-createScrollAnimation('.infoblock', {
-  from: { y: 100, opacity: 1, },
-  to: { y: 0, opacity: 1, duration: 1.5, ease: "power3.out" }
+document.addEventListener("DOMContentLoaded", () => {
+  const blocks = document.querySelectorAll(".infoblock");
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.01) {
+        gsap.fromTo(entry.target,
+          { y: 100, opacity: 1 },
+          { y: 0, opacity: 1, duration: 1.5, ease: "power3.out" }
+        );
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: [0.01]
+  });
+
+  blocks.forEach(block => observer.observe(block));
 });
+
+
 function typewriterEffectFromHTML(selector, speed = 20) {
     const el = document.querySelector(selector);
     if (!el) return;
@@ -1102,3 +1118,186 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+const selects = document.querySelectorAll(".custom-select");
+
+  selects.forEach((select) => {
+    const trigger = select.querySelector(".custom-select__trigger");
+    const dropdown = select.querySelector(".custom-select__dropdown");
+    const options = select.querySelectorAll(".custom-select__option");
+    const span = trigger.querySelector("span");
+
+    trigger.addEventListener("click", () => {
+      selects.forEach((s) => s !== select && s.classList.remove("open"));
+      select.classList.toggle("open");
+    });
+
+    options.forEach((option) => {
+      option.addEventListener("click", () => {
+        options.forEach((opt) => opt.classList.remove("selected"));
+        option.classList.add("selected");
+        span.textContent = option.textContent;
+        select.classList.remove("open");
+      });
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!select.contains(e.target)) {
+        select.classList.remove("open");
+      }
+    });
+  });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const forms = document.querySelectorAll(".js-auth-form");
+
+  forms.forEach((form) => {
+    const inputs = form.querySelectorAll("input[required]");
+    const textareas = form.querySelectorAll("textarea.form-required");
+    const selects = form.querySelectorAll("select.form-required");
+    const fileInput = form.querySelector('input[type="file"]');
+    const fileError = fileInput ? fileInput.closest(".auth-form__field").querySelector(".auth-form__error") : null;
+    const checkboxGroups = form.querySelectorAll(".form-checkboxes.form-required");
+
+    inputs.forEach((input) => {
+      input.addEventListener("input", () => validateField(input));
+    });
+
+    textareas.forEach((textarea) => {
+      textarea.addEventListener("input", () => validateTextarea(textarea));
+    });
+
+    selects.forEach((select) => {
+      select.addEventListener("change", () => validateSelect(select));
+    });
+
+    if (fileInput) {
+      fileInput.addEventListener("change", () => {
+        if (fileInput.files.length > 0 && fileError) hideError(fileError, fileInput);
+      });
+    }
+
+    checkboxGroups.forEach((group) => {
+      const checkboxes = group.querySelectorAll("input[type='checkbox']");
+      checkboxes.forEach((cb) => {
+        cb.addEventListener("change", () => {
+          if (cb.checked) hideError(group.closest(".auth-form__field").querySelector(".auth-form__error"), group);
+        });
+      });
+    });
+
+    function validateField(input) {
+      const value = input.value.trim();
+      const type = input.type;
+      const errorElement = input.nextElementSibling;
+
+      if (!value) {
+        showError(errorElement, "* Required field", input);
+        return false;
+      }
+
+      if (type === "email") {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(value)) {
+          showError(errorElement, "* Invalid email format", input);
+          return false;
+        }
+      }
+
+      if (type === "tel") {
+        const phoneRegex = /^\+?[0-9\s\-()]{10,}$/;
+        if (!phoneRegex.test(value)) {
+          showError(errorElement, "* Invalid phone number", input);
+          return false;
+        }
+      }
+
+      if (type === "number") {
+        if (isNaN(value) || value <= 0) {
+          showError(errorElement, "* Invalid number", input);
+          return false;
+        }
+      }
+
+      hideError(errorElement, input);
+      return true;
+    }
+
+    function validateTextarea(textarea) {
+      const value = textarea.value.trim();
+      const errorElement = textarea.nextElementSibling;
+
+      if (!value) {
+        showError(errorElement, "* Required field", textarea);
+        return false;
+      } else {
+        hideError(errorElement, textarea);
+        return true;
+      }
+    }
+
+    function validateSelect(select) {
+      const value = select.value;
+      const errorElement = select.closest(".auth-form__field").querySelector(".auth-form__error");
+
+      if (!value) {
+        showError(errorElement, "* Required field", select);
+        return false;
+      } else {
+        hideError(errorElement, select);
+        return true;
+      }
+    }
+
+    function validateCheckboxGroup(group) {
+      const checkboxes = group.querySelectorAll("input[type='checkbox']");
+      const errorElement = group.closest(".auth-form__field").querySelector(".auth-form__error");
+      let checked = false;
+      checkboxes.forEach((cb) => { if (cb.checked) checked = true; });
+
+      if (!checked) {
+        showError(errorElement, "* Required field", group);
+        return false;
+      } else {
+        hideError(errorElement, group);
+        return true;
+      }
+    }
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      let valid = true;
+
+      inputs.forEach((input) => { if (!validateField(input)) valid = false; });
+      textareas.forEach((textarea) => { if (!validateTextarea(textarea)) valid = false; });
+      selects.forEach((select) => { if (!validateSelect(select)) valid = false; });
+      if (fileInput && fileInput.files.length === 0) { if (fileError) showError(fileError, "* Required field", fileInput); valid = false; }
+      checkboxGroups.forEach((group) => { if (!validateCheckboxGroup(group)) valid = false; });
+
+      if (valid) form.submit();
+    });
+
+    function showError(element, message, input) {
+      if (!element) return;
+      element.textContent = message;
+      if (input instanceof HTMLInputElement || input instanceof HTMLSelectElement || input instanceof HTMLTextAreaElement) input.classList.add("input-error");
+      else if (input.classList) input.classList.add("input-error");
+      element.style.display = "block";
+      setTimeout(() => { element.style.opacity = "1"; element.style.transform = "translateY(0)"; }, 10);
+    }
+
+    function hideError(element, input) {
+      if (!element) return;
+      if (input instanceof HTMLInputElement || input instanceof HTMLSelectElement || input instanceof HTMLTextAreaElement) input.classList.remove("input-error");
+      else if (input.classList) input.classList.remove("input-error");
+      element.style.opacity = "0";
+      element.style.transform = "translateY(-0.5vw)";
+      setTimeout(() => { element.style.display = "none"; }, 300);
+    }
+  });
+});
+
+
+
+
