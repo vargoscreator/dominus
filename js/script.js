@@ -913,8 +913,8 @@ function splitTextAnimation(selector, delay = 0, speed = 0.05) {
   });
 }
 splitTextAnimation('.service__title', 0, 0.05);
-splitTextAnimation('.service__descr', 0.2, 0.03);
-splitTextAnimation('.service__name', 0.4, 0.02);
+splitTextAnimation('.service__descr', 0.1, 0.02);
+splitTextAnimation('.service__name', 0.2, 0.02);
 gsap.utils.toArray('.service__info, .service__apply').forEach(el => {
   gsap.fromTo(el, 
     {opacity: 0, y: 30}, 
@@ -1301,3 +1301,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const dobInput = document.getElementById('auth-rep-dob');
+    if (dobInput) { 
+        dobInput.setAttribute('maxlength', '10');
+        dobInput.addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, '');
+            let formattedValue = '';
+            if (value.length > 0) {
+                formattedValue += value.substring(0, 2);
+            }
+            if (value.length >= 3) {
+                formattedValue += '.' + value.substring(2, 4);
+            }
+            if (value.length >= 5) {
+                formattedValue += '.' + value.substring(4, 8);
+            }
+            e.target.value = formattedValue;
+            if (e.target.value.length > 10) {
+                 e.target.value = e.target.value.slice(0, 10);
+            }
+        });
+        dobInput.addEventListener('paste', (e) => {
+            const pasteData = (e.clipboardData || window.clipboardData).getData('text');
+            const digits = pasteData.replace(/\D/g, '');
+            let formattedPaste = '';
+            if (digits.length > 0) formattedPaste += digits.substring(0, 2);
+            if (digits.length >= 3) formattedPaste += '.' + digits.substring(2, 4);
+            if (digits.length >= 5) formattedPaste += '.' + digits.substring(4, 8);
+            
+            e.target.value = formattedPaste.slice(0, 10);
+            e.preventDefault();
+            dobInput.dispatchEvent(new Event('input'));
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const textInputs = document.querySelectorAll('.text-only');
+    textInputs.forEach(input => {
+      input.addEventListener('input', () => {
+        input.value = input.value.replace(/[^a-zA-Zа-яА-ЯёЁ\s]/g, '');
+      });
+    });
+  });
