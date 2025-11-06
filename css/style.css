@@ -2430,6 +2430,8 @@ p > a:hover{
 }
 .membership__slider{
     margin-top: 2.188vw;
+    width: 100%;
+    max-width: 89.583vw;
 }
 .membership__item {
     width: 100%;
@@ -2608,6 +2610,7 @@ p > a:hover{
     }
     .membership__slider{
         margin-top: 2.222vw;
+        max-width: 90.278vw;
     }
     .membership__item {
         perspective: 69.444vw;
@@ -8699,7 +8702,7 @@ a.footer__about-descr:hover{
 .auth-page__container {
 	position: relative;
 	border-radius: 0.417vw;
-	padding: 3.1vw 2vw;
+	padding: 3.1vw 2vw 2vw;
 	max-width: 38.5vw;
 	width: 100%;
 	background: linear-gradient(150deg, #080A15 0%, #000000 100%);
@@ -8857,7 +8860,7 @@ a.footer__about-descr:hover{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-top: 1.8vw;
+	margin-top: 2.8vw;
 }
 .auth-form__actions button:first-child{
 	margin-left: auto;
