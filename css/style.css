@@ -1798,26 +1798,6 @@ p > a:hover{
     max-width: 26.094vw;
     position: relative;
 }
-.whowe-icon-1 {
-    position: absolute;
-    top: 18.646vw;
-    left: 23.177vw;
-    display: flex;
-    align-items: center;
-    width: 2.396vw;
-}
-.whowe-icon-2 {
-    position: absolute;
-    left: 59.636vw;
-    display: flex;
-    align-items: center;
-    width: 2.396vw;
-    bottom: -0.521vw;
-}
-.whowe-icon-2 img,
-.whowe-icon-1 img{
-    width: 100%;
-}
 .whowe__about-image{
     display: flex;
     align-items: center;
@@ -1906,16 +1886,6 @@ p > a:hover{
         bottom: 1.667vw;
         right: 28.927vw;
     }
-    .whowe-icon-1 {
-        top: 19.646vw;
-        left: 24.677vw;
-        width: 3.096vw;
-    }
-    .whowe-icon-2 {
-        left: 64.636vw;
-        bottom: -1.521vw;
-        width: 3.096vw;
-    }
 }
 @media (max-width: 768px) {
     .whowe{
@@ -1962,22 +1932,8 @@ p > a:hover{
         height: 93.359vw;
         overflow: hidden;
     }
-    .whowe-icon-1 {
-        top: 41.646vw;
-        left: 55.677vw;
-        width: 4.796vw;
-    }
-    .whowe-icon-2 {
-        left: 70.636vw;
-        bottom: 2.479vw;
-        width: 6.096vw;
-    }
 }
 @media (max-width: 480px) {
-    .whowe-icon-1,
-    .whowe-icon-2{
-        display: none;
-    }
     .whowe{
         margin-top: 33.066vw;
     }
@@ -2964,7 +2920,7 @@ p > a:hover{
     width: 100%;
     margin: 0 auto;
     max-width: 20.833vw;
-    padding: 2.083vw 2.083vw 3.646vw;
+    padding: 2.083vw 2.983vw 3.646vw;
     position: relative;
     min-height: 29.427vw;
     display: flex;
@@ -2987,7 +2943,6 @@ p > a:hover{
     font-size: 0.833vw;
     font-weight: 400;
     line-height: 1.172vw;
-    text-transform: uppercase;
 }
 .stories__item-btn{
     position: absolute;
@@ -4641,14 +4596,14 @@ a.footer__about-descr:hover{
     align-items: center;
     justify-content: center;
     gap: 0.729vw;
-    border: 1px dashed rgba(192, 158, 99, 0.48);
+    border: 2px dashed rgba(192, 158, 99, 0.48);
     position: relative;
 }
 .upload-file::before{
     content: '';
     position: absolute;
-    top: -0.104vw;
-    left: -0.104vw;
+    top: -0.156vw;
+    left: -0.156vw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -4659,8 +4614,8 @@ a.footer__about-descr:hover{
 .upload-file::after{
     content: '';
     position: absolute;
-    bottom: -0.104vw;
-    right: -0.104vw;
+    bottom: -0.156vw;
+    right: -0.156vw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;

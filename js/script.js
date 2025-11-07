@@ -1346,3 +1346,17 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+
+
+  const heroBtn = document.querySelector('.hero__discover');
+const heroSection = document.querySelector('.hero');
+if (heroBtn && heroSection) {
+    heroBtn.addEventListener('click', () => {
+        const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+        window.scrollTo({
+            top: heroBottom,
+            behavior: 'smooth'
+        });
+    });
+}
