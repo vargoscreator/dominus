@@ -93,22 +93,20 @@ document.querySelectorAll('.membership').forEach(section => {
     },
     breakpoints: {
       481: {
-        spaceBetween: 59,
+        spaceBetween: isIncluded ? 20 : 59,
         slidesPerView: 2,
       },
       769: {
-        spaceBetween: 59,
+        spaceBetween: isIncluded ? 20 : 59,
         slidesPerView: 4,
       },
       1441: {
-        spaceBetween: 65,
-        slidesPerView: isIncluded ? 4 : 5, // 👈 різна кількість слайдів
+        spaceBetween: isIncluded ? 20 : 65,
+        slidesPerView: isIncluded ? 4 : 5,
       },
     },
     on: {
-      init() {
-        console.log(`✅ Swiper initialized: ${isIncluded ? 'included' : 'default'}`);
-      }
+      init() {}
     }
   });
 });
@@ -487,8 +485,8 @@ document.querySelectorAll('.membership').forEach(membershipSection => {
   }
   membershipSection.querySelectorAll('.membership__item').forEach((card, i) => {
     createScrollAnimation(card, {
-        from: { y: 200, opacity: 0, rotation: (i - 2) * 10 },
-        to: { y: 0, opacity: 1, rotation: 0, duration: 1.2, ease: "power3.out", delay: i * 0.1 }
+        from: { y: 200, opacity: 0 },
+        to: { y: 0, opacity: 1, duration: 1.2, ease: "power3.out", delay: i * 0.1 }
     }, membershipSection);
 });
 });
@@ -1346,10 +1344,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
-
-
-
-  const heroBtn = document.querySelector('.hero__discover');
+const heroBtn = document.querySelector('.hero__discover');
 const heroSection = document.querySelector('.hero');
 if (heroBtn && heroSection) {
     heroBtn.addEventListener('click', () => {
@@ -1360,3 +1355,14 @@ if (heroBtn && heroSection) {
         });
     });
 }
+
+function updatePlaceholder() {
+    const input = document.querySelector('.footer__form-input');
+    if (input && window.innerWidth < 769) {
+      input.placeholder = 'Email';
+    } else {
+      input.placeholder = 'Email address';
+    }
+}
+updatePlaceholder();
+window.addEventListener('resize', updatePlaceholder);
