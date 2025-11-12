@@ -1366,3 +1366,29 @@ function updatePlaceholder() {
 }
 updatePlaceholder();
 window.addEventListener('resize', updatePlaceholder);
+
+
+document.querySelectorAll('.stories__item-btn').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+
+    const currentItem = btn.closest('.stories__item');
+    const allItems = Array.from(document.querySelectorAll('.stories__item'));
+    const currentIndex = allItems.indexOf(currentItem);
+
+    const nextItem = allItems[currentIndex + 1];
+    if (nextItem) {
+      nextItem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+
+    let nextSection = currentItem.closest('section')?.nextElementSibling;
+    while (nextSection && nextSection.tagName.toLowerCase() !== 'section') {
+      nextSection = nextSection.nextElementSibling;
+    }
+
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});

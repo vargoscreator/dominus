@@ -1376,6 +1376,7 @@ p > a:hover{
 }
 .apply-btn{
     position: absolute;
+    z-index: 90;
     text-align: center;
     font-family: "Scheherazade New", sans-serif;
     font-size: 1.042vw;
@@ -1386,7 +1387,6 @@ p > a:hover{
     text-transform: uppercase;
     max-width: 7.969vw;
     transition: all .1s ease;
-    z-index: 20;
 }
 .apply-btn:hover{
     color: #C09E63;
@@ -5524,7 +5524,7 @@ a.footer__about-descr:hover{
     max-width: 47.76vw;
 }
 .service-health .service__info-1{
-    top: 77 .427vw;
+    top: 77.427vw;
     left: 6.615vw;
     max-width: 28.125vw;
 }
