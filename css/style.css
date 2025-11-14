@@ -3054,6 +3054,18 @@ p > a:hover{
     font-weight: 300;
     line-height: normal;
 }
+
+.stories__inner_slider .swiper-slide{
+    overflow: hidden;
+}
+
+/* .stories__inner_slider .container{
+    max-width: 100%;
+    padding: 0;
+} */
+
+
+
 @media (max-width: 1440px) {
     .stories{
         margin-top: 9.861vw;
@@ -3334,6 +3346,15 @@ p > a:hover{
     .stories-info .stories__item-content::after{
         content: none;
     }
+    .stories__inner_slider .stories__item-content{
+        max-width: 100%;
+        padding: 0 6.667vw;
+    }
+
+    .stories__inner_slider .textbanner__inner{
+        padding-left:6.667vw;
+        padding-right: 6.667vw;
+    }
 }
 /* creditcard */
 .creditcard{
@@ -3605,7 +3626,8 @@ p > a:hover{
     max-width: 24.375vw;
     margin-top: 7.292vw;
 }
-.faq__image img{
+.faq__image img,
+.faq__image svg{
     width: 100%;
 }
 .faq__content{
@@ -3889,7 +3911,8 @@ p > a:hover{
     position: relative;
     max-width: 45.781vw;
 }
-.footer__drops img {
+.footer__drops img,
+.footer__drops svg {
     position: absolute;
     bottom: 1.302vw;
     right: 3.125vw;
@@ -4105,7 +4128,8 @@ a.footer__about-descr:hover{
         display: inline-block;
         padding: 3.125vw 0 3.333vw;
     }
-    .footer__drops img {
+    .footer__drops img,
+    .footer__drops svg {
         bottom: 3.125vw;
         width: 6.25vw;
     }
@@ -4256,7 +4280,8 @@ a.footer__about-descr:hover{
         display: inline-block;
         margin-left: auto;
     }
-    .footer__drops img {
+    .footer__drops img,
+    .footer__drops svg {
         bottom: 0.651vw;
         width: 5.859vw;
     }
@@ -4491,7 +4516,8 @@ a.footer__about-descr:hover{
         letter-spacing: -0.065vw;
         margin-left: 0;
     }
-    .footer__drops img {
+    .footer__drops img,
+    .footer__drops svg {
         bottom: -0.8vw;
         width: 13.334vw;
         right: 12vw;
@@ -7856,6 +7882,14 @@ a.footer__about-descr:hover{
     justify-content: space-between;
     margin-top: 1.302vw;
 }
+
+.whymembership__content .swiper-slide{
+    display: flex;
+    align-items: center;
+    gap: 1.563vw;
+    justify-content: space-between;
+}
+
 .whymembership__image{
     display: flex;
     align-items: center;
@@ -7922,6 +7956,11 @@ a.footer__about-descr:hover{
         gap: 2.083vw;
         margin-top: 1.736vw;
     }
+
+    .whymembership__content .swiper-slide{
+           gap: 2.083vw;
+    }
+
     .whymembership__image{
         max-width: 58.889vw;
         height: 33.125vw;
@@ -7952,6 +7991,12 @@ a.footer__about-descr:hover{
         margin-top: 3.255vw;
         flex-direction: column;
     }
+
+    .whymembership__content .swiper-slide{
+        gap: 3.906vw;
+        flex-direction: column;
+    }
+    
     .whymembership__image{
         max-width: 110.417vw;
         height: 69.401vw;
@@ -7980,6 +8025,9 @@ a.footer__about-descr:hover{
     .whymembership__content{
         gap: 8vw;
         margin-top: 6.667vw;
+    }
+    .whymembership__content .swiper-slide{
+         gap: 8vw;
     }
     .whymembership__image{
         max-width: none;
