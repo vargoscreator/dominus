@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dominus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Scheherazade+New:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="header__logo" href="index.html">
+            <img src="img/logo.svg" alt="" />
+          </a>
+          <nav class="header__menu">
+            <ul>
+              <li class="header__menu-link">
+                <a href="index.html">Home</a>
+              </li>
+              <li class="header__menu-link">
+                <button class="header__more-open">
+                  SERVICES <span></span>
+                </button>
+                <div class="header__more">
+                  <a
+                    class="header__more-link"
+                    href="health-longevity-family.html"
+                  >
+                    <div class="header__more-image">
+                      <img src="img/header/link-1.png" alt="" />
+                    </div>
+                    <p class="header__more-title">
+                      Health, <br />Longevity & Family
+                    </p>
+                  </a>
+                  <a class="header__more-link" href="risk-security.html">
+                    <div class="header__more-image">
+                      <img src="img/header/link-2.png" alt="" />
+                    </div>
+                    <p class="header__more-title">Risk <br />& Security</p>
+                  </a>
+                  <a class="header__more-link" href="lifestyle-operations.html">
+                    <div class="header__more-image">
+                      <img src="img/header/link-3.png" alt="" />
+                    </div>
+                    <p class="header__more-title">Lifestyle <br />Operations</p>
+                  </a>
+                  <a
+                    class="header__more-link"
+                    href="ultra-curated-travel-residence.html"
+                  >
+                    <div class="header__more-image">
+                      <img src="img/header/link-4.png" alt="" />
+                    </div>
+                    <p class="header__more-title">
+                      Ultra-curated <br />Travel & Residence
+                    </p>
+                  </a>
+                  <a
+                    class="header__more-link"
+                    href="culture-events-philanthropy.html"
+                  >
+                    <div class="header__more-image">
+                      <img src="img/header/link-5.png" alt="" />
+                    </div>
+                    <p class="header__more-title">
+                      Culture, <br />Events & <br />Philanthropy
+                    </p>
+                  </a>
+                </div>
+              </li>
+              <li class="header__menu-link">
+                <a href="#">Memberships</a>
+              </li>
+              <li class="header__menu-link">
+                <a href="our-experiences.html">Experiences</a>
+              </li>
+              <li class="header__menu-link">
+                <a href="faq.html">FAQ</a>
+              </li>
+              <li class="header__menu-link">
+                <a href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__buttons">
+            <div class="header__apply">
+              <button class="header__apply-btn button-wrap">
+                apply
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="10"
+                  height="10"
+                  viewBox="0 0 10 10"
+                  fill="none"
+                >
+                  <path
+                    d="M4.36891 9.4641C4.62522 9.72041 5.04079 9.72041 5.29711 9.4641L9.47399 5.28721C9.73031 5.0309 9.73031 4.61533 9.47399 4.35902C9.21768 4.1027 8.80211 4.1027 8.5458 4.35902L4.83301 8.0718L1.12022 4.35902C0.863905 4.1027 0.448337 4.1027 0.192023 4.35902C-0.0642919 4.61533 -0.0642919 5.0309 0.192023 5.28721L4.36891 9.4641ZM4.83301 0L4.17667 -3.0377e-08L4.17667 9L4.83301 9L5.48934 9L5.48934 3.0377e-08L4.83301 0Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+              <div class="header__more">
+                <a class="header__more-link" href="apply-for-personal.html">
+                  <div class="header__more-image">
+                    <img src="img/header/link-6.png" alt="" />
+                  </div>
+                  <p class="header__more-title">Apply for PERSONAL</p>
+                </a>
+                <a class="header__more-link" href="apply-for-business.html">
+                  <div class="header__more-image">
+                    <img src="img/header/link-7.png" alt="" />
+                  </div>
+                  <p class="header__more-title">Apply for Business</p>
+                </a>
+              </div>
+            </div>
+            <a class="header__login" href="login.html">
+              LoGIN
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M10 11H4V3C4 2.73478 4.10536 2.48043 4.29289 2.29289C4.48043 2.10536 4.73478 2 5 2H19C19.2652 2 19.5196 2.10536 19.7071 2.29289C19.8946 2.48043 20 2.73478 20 3V21C20 21.2652 19.8946 21.5196 19.7071 21.7071C19.5196 21.8946 19.2652 22 19 22H5C4.73478 22 4.48043 21.8946 4.29289 21.7071C4.10536 21.5196 4 21.2652 4 21V13H10V16L15 12L10 8V11Z"
+                  fill="#C09E63"
+                />
+              </svg>
+            </a>
+          </div>
+          <button class="header__burger"></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="imageBanner">
+        <img src="img/imageBanner/article.png" alt="" />
+      </div>
+
+      <section class="infoblock infoblock_article">
+        <div class="container">
+          <div class="infoblock__inner">
+            <h1 class="infoblock__main">
+              The Future of Fashion: How Technology is Shaping Lifestyle?
+            </h1>
+            <div class="infoblock__photo">
+              <img src="img/article/article-img.jpg" alt="" />
+            </div>
+            <div class="infoblock__row">
+              <p>Travel</p>
+              <p>5 min read</p>
+            </div>
+            <h2 class="infoblock__title title">
+              An overview of new trends in clothing and accessories using AR, 3D
+              printing, and smart fabrics.
+            </h2>
+            <div class="infoblock__content">
+              <p>The Future of Fashion: How Technology Is Shaping Lifestyle</p>
+              <p>
+                In the twenty-first century, fashion has transcended the idea of
+                fabric and silhouette. It is no longer merely about what we wear
+                — it is about how we live, how we connect, and how we express
+                individuality in a hyper-connected, data-driven world.
+                Technology, once seen as the opposite of emotion, has become the
+                silent architect of style, crafting a new narrative where
+                digital precision meets human desire.
+              </p>
+              <ul class="list">
+                <li>1. The Convergence of Design and Intelligence</li>
+              </ul>
+              <p>
+                Modern fashion houses are no longer defined solely by creative
+                directors — they are powered by data scientists, engineers, and
+                innovators. Artificial intelligence assists in forecasting
+                trends, analyzing global aesthetics, and even co-creating new
+                silhouettes. From Balenciaga’s algorithmic collections to
+                Gucci’s digital twins, design today is as much about code as it
+                is about couture.
+              </p>
+              <p>
+                What emerges is a new paradigm: fashion as a living system. Each
+                garment becomes a vessel of intelligence — an interface between
+                the human body and the invisible digital network that surrounds
+                it.
+              </p>
+              <ul class="list">
+                <li>2. Smart Fabrics and Sensory Couture</li>
+              </ul>
+              <p>
+                The era of passive clothing is over. Smart materials — woven
+                with nanotechnology and micro-sensors — now allow garments to
+                adapt, cool, warm, illuminate, and even heal. A jacket that
+                regulates your temperature during a long flight; a shirt that
+                monitors posture and breathing; a dress that changes hue with
+                emotion — these are not prototypes, they are products of today’s
+                laboratories.
+              </p>
+              <p>
+                The goal is no longer decoration, but optimization: a symbiosis
+                of aesthetics, performance, and awareness. In the luxury sphere,
+                this creates a new form of elegance — invisible yet intelligent,
+                beautiful yet functional.
+              </p>
+              <ul class="list">
+                <li>3. Sustainability Through Innovation</li>
+              </ul>
+              <p>
+                Technology is also rewriting the ethics of fashion. For decades,
+                the industry was criticized for its environmental cost — waste,
+                overproduction, and pollution. But innovation is quietly
+                correcting the narrative.
+              </p>
+              <p>
+                3D printing and bio-fabrication allow designers to create
+                exquisite garments from recycled materials or lab-grown fibers.
+                Virtual prototyping reduces waste before a single piece of
+                fabric is cut. Blockchain, once a tool of finance, now ensures
+                supply-chain transparency — allowing a client in Zurich or Tokyo
+                to trace a cashmere coat back to its ethical origin.
+              </p>
+              <p>
+                Luxury no longer hides behind exclusivity; it stands for
+                responsibility, traceability, and refined purpose.
+              </p>
+              <ul class="list">
+                <li>4. The Rise of Digital Fashion</li>
+              </ul>
+              <p>
+                As the physical and digital worlds merge, “what we wear” extends
+                beyond reality. Digital couture — from virtual handbags to
+                NFT-only garments — has become a new arena of expression. Brands
+                such as The Fabricant and DressX are pioneering wardrobes that
+                exist purely online, worn in social spaces, metaverses, and
+                private digital galleries.
+              </p>
+              <p>
+                For high-net-worth individuals, digital fashion is not about
+                escape; it’s about extension — owning both the tangible and the
+                virtual, the classic and the experimental. This evolution
+                reflects a simple truth: identity today is multi-layered, and
+                luxury adapts to all its dimensions.
+              </p>
+              <ul class="list">
+                <li>5. Augmented Reality and the Future of Retail</li>
+              </ul>
+              <p>
+                Imagine entering a flagship boutique in Paris or Dubai where
+                mirrors become portals: as you move, your reflection wears
+                infinite possibilities. Augmented Reality (AR) and Virtual
+                Try-On (VTO) technologies redefine shopping — blending tactile
+                intimacy with digital precision. Clients preview collections
+                without physical contact, stylists curate wardrobes remotely,
+                and personalization becomes an art of data interpretation.
+              </p>
+              <p>
+                Luxury retail thus evolves into experience design — immersive,
+                frictionless, and profoundly human.
+              </p>
+              <ul class="list">
+                <li>6. The Personal Algorithm</li>
+              </ul>
+              <p>
+                Tomorrow’s stylist might not be a person, but an AI trained
+                exclusively on your lifestyle. <br />
+                It will know your climate, schedule, travels, and even emotional
+                rhythms — curating looks before you realize what you need .<br />
+                A morning flight to Zurich? The system prepares a
+                thermoregulating suit and discreet luggage recommendations. A
+                gala in Dubai? It syncs with your wardrobe database and suggests
+                what harmonizes with the desert light.
+              </p>
+              <p>
+                This is not surveillance — it’s symbiosis. Technology learns
+                taste; it doesn’t dictate it. The ultimate luxury is
+                anticipation — being understood before asking.
+              </p>
+              <ul class="list">
+                <li>7. Craftsmanship Meets Code</li>
+              </ul>
+              <p>
+                True luxury is timeless — and that timelessness depends on
+                craft.<br />
+                Technology does not replace artisanship; it enhances it. 3D
+                scanners preserve ancient tailoring techniques. Robotics assist
+                but never override the human touch. <br />
+                The result is a form of modern couture that unites centuries of
+                savoir-faire with the elegance of digital precision.
+              </p>
+              <p>
+                It’s not about abandoning tradition, but encoding it —
+                preserving beauty for the next era of creators.
+              </p>
+              <ul class="list">
+                <li>8. The Silent Revolution of Lifestyle</li>
+              </ul>
+              <p>
+                Beyond clothing, the technological shift in fashion signals
+                something deeper: the redefinition of lifestyle itself.<br />
+                What we wear, how we travel, how we rest — all are shaped by the
+                same pursuit of intelligent simplicity. <br />
+                Technology gives us time, comfort, and freedom — the new
+                currency of true sophistication.
+              </p>
+              <p>Conclusion: The Age of Intelligent Elegance</p>
+              <p>
+                The future of fashion is not about disruption — it is about
+                harmony. Between data and design, between sustainability and
+                seduction, between the physical and the virtual. It is an age
+                where style becomes consciousness, and where technology, quietly
+                and gracefully, shapes the way we live, move, and express who we
+                are.
+              </p>
+              <p>
+                Luxury is no longer about more — it is about meaning. And
+                meaning, in this century, is written in both fabric and code.
+              </p>
+              <p>The Future of Fashion: How Technology Is Shaping Lifestyle</p>
+              <p>
+                In the twenty-first century, fashion has transcended the idea of
+                fabric and silhouette. It is no longer merely about what we wear
+                — it is about how we live, how we connect, and how we express
+                individuality in a hyper-connected, data-driven world.
+                Technology, once seen as the opposite of emotion, has become the
+                silent architect of style, crafting a new narrative where
+                digital precision meets human desire.
+              </p>
+              <ul class="list">
+                <li>1. The Convergence of Design and Intelligence</li>
+              </ul>
+              <p>
+                Modern fashion houses are no longer defined solely by creative
+                directors — they are powered by data scientists, engineers, and
+                innovators. Artificial intelligence assists in forecasting
+                trends, analyzing global aesthetics, and even co-creating new
+                silhouettes. From Balenciaga’s algorithmic collections to
+                Gucci’s digital twins, design today is as much about code as it
+                is about couture.
+              </p>
+              <p>
+                What emerges is a new paradigm: fashion as a living system. Each
+                garment becomes a vessel of intelligence — an interface between
+                the human body and the invisible digital network that surrounds
+                it.
+              </p>
+              <ul class="list">
+                <li>2. Smart Fabrics and Sensory Couture</li>
+              </ul>
+              <p>
+                The era of passive clothing is over. Smart materials — woven
+                with nanotechnology and micro-sensors — now allow garments to
+                adapt, cool, warm, illuminate, and even heal. A jacket that
+                regulates your temperature during a long flight; a shirt that
+                monitors posture and breathing; a dress that changes hue with
+                emotion — these are not prototypes, they are products of today’s
+                laboratories.
+              </p>
+              <p>
+                The goal is no longer decoration, but optimization: a symbiosis
+                of aesthetics, performance, and awareness. In the luxury sphere,
+                this creates a new form of elegance — invisible yet intelligent,
+                beautiful yet functional.
+              </p>
+              <ul class="list">
+                <li>3. Sustainability Through Innovation</li>
+              </ul>
+              <p>
+                Technology is also rewriting the ethics of fashion. For decades,
+                the industry was criticized for its environmental cost — waste,
+                overproduction, and pollution. But innovation is quietly
+                correcting the narrative.
+              </p>
+              <p>
+                3D printing and bio-fabrication allow designers to create
+                exquisite garments from recycled materials or lab-grown fibers.
+                Virtual prototyping reduces waste before a single piece of
+                fabric is cut. Blockchain, once a tool of finance, now ensures
+                supply-chain transparency — allowing a client in Zurich or Tokyo
+                to trace a cashmere coat back to its ethical origin.
+              </p>
+              <p>
+                Luxury no longer hides behind exclusivity; it stands for
+                responsibility, traceability, and refined purpose.
+              </p>
+              <ul class="list">
+                <li>4. The Rise of Digital Fashion</li>
+              </ul>
+              <p>
+                As the physical and digital worlds merge, “what we wear” extends
+                beyond reality. Digital couture — from virtual handbags to
+                NFT-only garments — has become a new arena of expression. Brands
+                such as The Fabricant and DressX are pioneering wardrobes that
+                exist purely online, worn in social spaces, metaverses, and
+                private digital galleries.
+              </p>
+              <p>
+                For high-net-worth individuals, digital fashion is not about
+                escape; it’s about extension — owning both the tangible and the
+                virtual, the classic and the experimental. This evolution
+                reflects a simple truth: identity today is multi-layered, and
+                luxury adapts to all its dimensions.
+              </p>
+              <ul class="list">
+                <li>5. Augmented Reality and the Future of Retail</li>
+              </ul>
+              <p>
+                Imagine entering a flagship boutique in Paris or Dubai where
+                mirrors become portals: as you move, your reflection wears
+                infinite possibilities. Augmented Reality (AR) and Virtual
+                Try-On (VTO) technologies redefine shopping — blending tactile
+                intimacy with digital precision. Clients preview collections
+                without physical contact, stylists curate wardrobes remotely,
+                and personalization becomes an art of data interpretation.
+              </p>
+              <p>
+                Luxury retail thus evolves into experience design — immersive,
+                frictionless, and profoundly human.
+              </p>
+              <ul class="list">
+                <li>6. The Personal Algorithm</li>
+              </ul>
+              <p>
+                Tomorrow’s stylist might not be a person, but an AI trained
+                exclusively on your lifestyle. <br />
+                It will know your climate, schedule, travels, and even emotional
+                rhythms — curating looks before you realize what you need .<br />
+                A morning flight to Zurich? The system prepares a
+                thermoregulating suit and discreet luggage recommendations. A
+                gala in Dubai? It syncs with your wardrobe database and suggests
+                what harmonizes with the desert light.
+              </p>
+              <p>
+                This is not surveillance — it’s symbiosis. Technology learns
+                taste; it doesn’t dictate it. The ultimate luxury is
+                anticipation — being understood before asking.
+              </p>
+              <ul class="list">
+                <li>7. Craftsmanship Meets Code</li>
+              </ul>
+              <p>
+                True luxury is timeless — and that timelessness depends on
+                craft.<br />
+                Technology does not replace artisanship; it enhances it. 3D
+                scanners preserve ancient tailoring techniques. Robotics assist
+                but never override the human touch. <br />
+                The result is a form of modern couture that unites centuries of
+                savoir-faire with the elegance of digital precision.
+              </p>
+              <p>
+                It’s not about abandoning tradition, but encoding it —
+                preserving beauty for the next era of creators.
+              </p>
+              <ul class="list">
+                <li>8. The Silent Revolution of Lifestyle</li>
+              </ul>
+              <p>
+                Beyond clothing, the technological shift in fashion signals
+                something deeper: the redefinition of lifestyle itself.<br />
+                What we wear, how we travel, how we rest — all are shaped by the
+                same pursuit of intelligent simplicity. <br />
+                Technology gives us time, comfort, and freedom — the new
+                currency of true sophistication.
+              </p>
+              <p>Conclusion: The Age of Intelligent Elegance</p>
+              <p>
+                The future of fashion is not about disruption — it is about
+                harmony. Between data and design, between sustainability and
+                seduction, between the physical and the virtual. It is an age
+                where style becomes consciousness, and where technology, quietly
+                and gracefully, shapes the way we live, move, and express who we
+                are.
+              </p>
+              <p>
+                Luxury is no longer about more — it is about meaning. And
+                meaning, in this century, is written in both fabric and code.
+              </p>
+              <p>The Future of Fashion: How Technology Is Shaping Lifestyle</p>
+              <p>
+                In the twenty-first century, fashion has transcended the idea of
+                fabric and silhouette. It is no longer merely about what we wear
+                — it is about how we live, how we connect, and how we express
+                individuality in a hyper-connected, data-driven world.
+                Technology, once seen as the opposite of emotion, has become the
+                silent architect of style, crafting a new narrative where
+                digital precision meets human desire.
+              </p>
+              <ul class="list">
+                <li>1. The Convergence of Design and Intelligence</li>
+              </ul>
+              <p>
+                Modern fashion houses are no longer defined solely by creative
+                directors — they are powered by data scientists, engineers, and
+                innovators. Artificial intelligence assists in forecasting
+                trends, analyzing global aesthetics, and even co-creating new
+                silhouettes. From Balenciaga’s algorithmic collections to
+                Gucci’s digital twins, design today is as much about code as it
+                is about couture.
+              </p>
+              <p>
+                What emerges is a new paradigm: fashion as a living system. Each
+                garment becomes a vessel of intelligence — an interface between
+                the human body and the invisible digital network that surrounds
+                it.
+              </p>
+              <ul class="list">
+                <li>2. Smart Fabrics and Sensory Couture</li>
+              </ul>
+              <p>
+                The era of passive clothing is over. Smart materials — woven
+                with nanotechnology and micro-sensors — now allow garments to
+                adapt, cool, warm, illuminate, and even heal. A jacket that
+                regulates your temperature during a long flight; a shirt that
+                monitors posture and breathing; a dress that changes hue with
+                emotion — these are not prototypes, they are products of today’s
+                laboratories.
+              </p>
+              <p>
+                The goal is no longer decoration, but optimization: a symbiosis
+                of aesthetics, performance, and awareness. In the luxury sphere,
+                this creates a new form of elegance — invisible yet intelligent,
+                beautiful yet functional.
+              </p>
+              <ul class="list">
+                <li>3. Sustainability Through Innovation</li>
+              </ul>
+              <p>
+                Technology is also rewriting the ethics of fashion. For decades,
+                the industry was criticized for its environmental cost — waste,
+                overproduction, and pollution. But innovation is quietly
+                correcting the narrative.
+              </p>
+              <p>
+                3D printing and bio-fabrication allow designers to create
+                exquisite garments from recycled materials or lab-grown fibers.
+                Virtual prototyping reduces waste before a single piece of
+                fabric is cut. Blockchain, once a tool of finance, now ensures
+                supply-chain transparency — allowing a client in Zurich or Tokyo
+                to trace a cashmere coat back to its ethical origin.
+              </p>
+              <p>
+                Luxury no longer hides behind exclusivity; it stands for
+                responsibility, traceability, and refined purpose.
+              </p>
+              <ul class="list">
+                <li>4. The Rise of Digital Fashion</li>
+              </ul>
+              <p>
+                As the physical and digital worlds merge, “what we wear” extends
+                beyond reality. Digital couture — from virtual handbags to
+                NFT-only garments — has become a new arena of expression. Brands
+                such as The Fabricant and DressX are pioneering wardrobes that
+                exist purely online, worn in social spaces, metaverses, and
+                private digital galleries.
+              </p>
+              <p>
+                For high-net-worth individuals, digital fashion is not about
+                escape; it’s about extension — owning both the tangible and the
+                virtual, the classic and the experimental. This evolution
+                reflects a simple truth: identity today is multi-layered, and
+                luxury adapts to all its dimensions.
+              </p>
+              <ul class="list">
+                <li>5. Augmented Reality and the Future of Retail</li>
+              </ul>
+              <p>
+                Imagine entering a flagship boutique in Paris or Dubai where
+                mirrors become portals: as you move, your reflection wears
+                infinite possibilities. Augmented Reality (AR) and Virtual
+                Try-On (VTO) technologies redefine shopping — blending tactile
+                intimacy with digital precision. Clients preview collections
+                without physical contact, stylists curate wardrobes remotely,
+                and personalization becomes an art of data interpretation.
+              </p>
+              <p>
+                Luxury retail thus evolves into experience design — immersive,
+                frictionless, and profoundly human.
+              </p>
+              <ul class="list">
+                <li>6. The Personal Algorithm</li>
+              </ul>
+              <p>
+                Tomorrow’s stylist might not be a person, but an AI trained
+                exclusively on your lifestyle. <br />
+                It will know your climate, schedule, travels, and even emotional
+                rhythms — curating looks before you realize what you need .<br />
+                A morning flight to Zurich? The system prepares a
+                thermoregulating suit and discreet luggage recommendations. A
+                gala in Dubai? It syncs with your wardrobe database and suggests
+                what harmonizes with the desert light.
+              </p>
+              <p>
+                This is not surveillance — it’s symbiosis. Technology learns
+                taste; it doesn’t dictate it. The ultimate luxury is
+                anticipation — being understood before asking.
+              </p>
+              <ul class="list">
+                <li>7. Craftsmanship Meets Code</li>
+              </ul>
+              <p>
+                True luxury is timeless — and that timelessness depends on
+                craft.<br />
+                Technology does not replace artisanship; it enhances it. 3D
+                scanners preserve ancient tailoring techniques. Robotics assist
+                but never override the human touch. <br />
+                The result is a form of modern couture that unites centuries of
+                savoir-faire with the elegance of digital precision.
+              </p>
+              <p>
+                It’s not about abandoning tradition, but encoding it —
+                preserving beauty for the next era of creators.
+              </p>
+              <ul class="list">
+                <li>8. The Silent Revolution of Lifestyle</li>
+              </ul>
+              <p>
+                Beyond clothing, the technological shift in fashion signals
+                something deeper: the redefinition of lifestyle itself.<br />
+                What we wear, how we travel, how we rest — all are shaped by the
+                same pursuit of intelligent simplicity. <br />
+                Technology gives us time, comfort, and freedom — the new
+                currency of true sophistication.
+              </p>
+              <p>Conclusion: The Age of Intelligent Elegance</p>
+              <p>
+                The future of fashion is not about disruption — it is about
+                harmony. Between data and design, between sustainability and
+                seduction, between the physical and the virtual. It is an age
+                where style becomes consciousness, and where technology, quietly
+                and gracefully, shapes the way we live, move, and express who we
+                are.
+              </p>
+              <p>
+                Luxury is no longer about more — it is about meaning. And
+                meaning, in this century, is written in both fabric and code.
+              </p>
+            </div>
+
+            <div class="infoblock__end">
+              <img src="img/icons/icon-3.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contactpopup">
+        <div class="container">
+          <div class="contactpopup__inner">
+            <button class="contactpopup__close btn-close"></button>
+            <h2 class="contactpopup__title title">Contact us</h2>
+            <form class="contactpopup__form js-auth-form" novalidate>
+              <div class="auth-form__field">
+                <label for="contactpopup-name">Your name</label>
+                <input
+                  type="text"
+                  class="text-only"
+                  id="contactpopup-name"
+                  name="Your name"
+                  required
+                />
+                <small class="auth-form__error">* Required field</small>
+              </div>
+              <div class="auth-form__field">
+                <label for="contactpopup-email">Email</label>
+                <input
+                  type="email"
+                  id="contactpopup-email"
+                  name="Email"
+                  required
+                />
+                <small class="auth-form__error">* Required field</small>
+              </div>
+              <div class="auth-form__field">
+                <label for="contactpopup-number">Phone number</label>
+                <input
+                  type="tel"
+                  id="contactpopup-number"
+                  name="Phone number"
+                  required
+                />
+                <small class="auth-form__error">* Required field</small>
+              </div>
+              <div class="auth-form__field">
+                <label for="contactpopup-message">Message</label>
+                <textarea
+                  class="form-input form-required"
+                  name="message"
+                  id="contactpopup-message"
+                ></textarea>
+                <small class="auth-form__error">* Required field</small>
+              </div>
+              <div class="auth-form__actions">
+                <div class="form-icon">
+                  <img src="img/icons/icon-3.svg" alt="" />
+                </div>
+                <button type="submit" class="auth-form__btn btn-next">
+                  SEND MESSAGE
+                  <svg
+                    width="31"
+                    height="15"
+                    viewBox="0 0 31 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M30.7071 8.07039C31.0976 7.67986 31.0976 7.0467 30.7071 6.65617L24.3431 0.292213C23.9526 -0.0983109 23.3195 -0.0983109 22.9289 0.292213C22.5384 0.682738 22.5384 1.3159 22.9289 1.70643L28.5858 7.36328L22.9289 13.0201C22.5384 13.4107 22.5384 14.0438 22.9289 14.4343C23.3195 14.8249 23.9526 14.8249 24.3431 14.4343L30.7071 8.07039ZM0 7.36328V8.36328H30V7.36328V6.36328H0V7.36328Z"
+                      fill="#C09E63"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="container">
+          <div class="footer__top-inner">
+            <div class="footer__top-logo">
+              <img src="img/icons/icon-3.svg" alt="" />
+            </div>
+            <div class="footer__top-content">
+              <ul class="footer__top-menu">
+                <li>
+                  <a href="health-longevity-family.html">Health & Longevity</a>
+                </li>
+                <li>
+                  <a href="#">Family & Education</a>
+                </li>
+                <li>
+                  <a href="#">TRAVEL</a>
+                </li>
+                <li>
+                  <a href="#">Culture & Philanthropy</a>
+                </li>
+                <li>
+                  <a href="#">Lifestyle</a>
+                </li>
+                <li>
+                  <a href="#">Security</a>
+                </li>
+                <li>
+                  <a href="#">Health & Longevity</a>
+                </li>
+                <li>
+                  <a href="#">Family & Education</a>
+                </li>
+                <li>
+                  <a href="#">TRAVEL</a>
+                </li>
+                <li>
+                  <a href="#">Culture & Philanthropy</a>
+                </li>
+                <li>
+                  <a href="#">Lifestyle</a>
+                </li>
+                <li>
+                  <a href="#">Security</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="footer-line"></span>
+      <div class="footer__end-content footer-mobile">
+        <ul class="footer__menu">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="#">SERVICES</a>
+          </li>
+          <li>
+            <a href="#">Memberships</a>
+          </li>
+        </ul>
+        <ul class="footer__menu">
+          <li>
+            <a href="our-experiences.html">Experiences</a>
+          </li>
+          <li>
+            <a href="#">ABOUT</a>
+          </li>
+          <li>
+            <a href="faq.html">FAQ</a>
+          </li>
+        </ul>
+        <ul class="footer__menu">
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+          <li>
+            <a href="login.html">LoGIN</a>
+          </li>
+        </ul>
+      </div>
+      <div class="container">
+        <div class="footer__inner">
+          <p class="footer__drops">
+            DROP US <br />A LINE <img src="img/icons/icon-8.svg" alt="" />
+          </p>
+          <div class="footer__about">
+            <div class="footer__about-block">
+              <h3 class="footer__about-title">location</h3>
+              <p class="footer__about-descr">
+                Gonzales, 5 <br />The Leventis, Gallery Tower, <br />Floor 13,
+                Flat/Office <br />1097, Barcelona, Spain <br />XXXX LTD
+                <br />HEXXXXX
+              </p>
+            </div>
+            <div class="footer__about-block">
+              <h3 class="footer__about-title">contact</h3>
+              <a class="footer__about-btn btn" href="#"></a>
+              <p class="footer__about-descr">
+                Mon - Sun, 08:00 - 01:00 (UTC+3)
+              </p>
+              <p class="footer__about-descr">Phone number</p>
+              <a class="footer__about-descr" href="tel+340902513326"
+                >+34(090)251-33-26</a
+              >
+              <a class="footer__about-descr" href="#">Telegram</a>
+              <a class="footer__about-descr" href="mailto:support@giftdoo.io"
+                >support@giftdoo.io</a
+              >
+              <button class="footer__about-btn button-wrap contact-open">
+                Contact us
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="footer-line"></span>
+      <div class="footer__bottom">
+        <div class="container">
+          <p class="footer__bottom-descr">
+            We coordinate and organize services provided by licensed third
+            parties. We are not a tour operator, medical provider, or security
+            provider. All bookings are subject to the terms and conditions of
+            our partners and applicable laws.
+          </p>
+        </div>
+        <span class="footer-line footer-line-mobile"></span>
+        <div class="container">
+          <div class="footer__bottom-content">
+            <div class="footer__bottom-icons">
+              <div class="footer__bottom-icon">
+                <img src="img/icons/icon-4.svg" alt="" />
+              </div>
+              <div class="footer__bottom-icon">
+                <img src="img/icons/icon-5.svg" alt="" />
+              </div>
+              <div class="footer__bottom-icon">
+                <img src="img/icons/icon-6.svg" alt="" />
+              </div>
+              <div class="footer__bottom-icon">
+                <img src="img/icons/icon-7.svg" alt="" />
+              </div>
+            </div>
+            <p class="footer__bottom-copy">
+              © 2025 Dominus. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+      <span class="footer-line"></span>
+      <div class="container">
+        <div class="footer__end">
+          <form class="footer__form" action="#">
+            <h3 class="footer__form-title">Get on the list</h3>
+            <div class="footer__form-content">
+              <input
+                class="footer__form-input"
+                type="email"
+                placeholder="Email address"
+                required
+                name="email"
+              />
+              <button class="footer__form-btn" type="submit">
+                subscribe
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="31"
+                  height="15"
+                  viewBox="0 0 31 15"
+                  fill="none"
+                >
+                  <path
+                    d="M30.7071 8.07039C31.0976 7.67986 31.0976 7.0467 30.7071 6.65617L24.3431 0.292213C23.9526 -0.0983109 23.3195 -0.0983109 22.9289 0.292213C22.5384 0.682738 22.5384 1.3159 22.9289 1.70643L28.5858 7.36328L22.9289 13.0201C22.5384 13.4107 22.5384 14.0438 22.9289 14.4343C23.3195 14.8249 23.9526 14.8249 24.3431 14.4343L30.7071 8.07039ZM0 7.36328V8.36328H30V7.36328V6.36328H0V7.36328Z"
+                    fill="#C09E63"
+                  />
+                </svg>
+              </button>
+            </div>
+          </form>
+          <p class="footer__drops footer-mobile">
+            DROP US <br />A LINE <img src="img/icons/icon-1.svg" alt="" />
+          </p>
+          <div class="footer__end-content">
+            <ul class="footer__menu">
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="#">SERVICES</a>
+              </li>
+              <li>
+                <a href="#">Memberships</a>
+              </li>
+            </ul>
+
+            <ul class="footer__menu">
+              <li>
+                <a href="our-experiences.html">Experiences</a>
+              </li>
+              <li>
+                <a href="#">ABOUT</a>
+              </li>
+              <li>
+                <a href="faq">FAQ</a>
+              </li>
+            </ul>
+
+            <ul class="footer__menu">
+              <li>
+                <a href="contact.html">Contact</a>
+              </li>
+              <li>
+                <a href="login.html">LoGIN</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
