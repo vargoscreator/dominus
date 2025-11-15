@@ -1614,3 +1614,22 @@ document.querySelectorAll(".stories__item-btn").forEach((btn) => {
     }
   });
 });
+
+const observerForSeveralBlocks = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const el = entry.target;
+
+      if (el.classList.contains("svg-animated")) {
+        entry.isIntersecting
+          ? el.classList.add("is-visible")
+          : el.classList.remove("is-visible");
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
+
+document
+  .querySelectorAll(".svg-animated")
+  .forEach((svg) => observerForSeveralBlocks.observe(svg));

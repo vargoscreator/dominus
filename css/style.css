@@ -9160,6 +9160,13 @@ a.footer__about-descr:hover{
 }
 /* svg animation code */
 
+.svg-animated {
+	opacity: 0;
+	&.is-visible {
+		opacity: 1;
+	}
+}
+
 @-webkit-keyframes animate-svg-stroke-1 {
   0% {
     stroke-dashoffset: 1197.04736328125px;
@@ -9204,7 +9211,7 @@ a.footer__about-descr:hover{
   }
 }
 
-.svg-elem-1 {
+.svg-animated.is-visible .svg-elem-1 {
   -webkit-animation: animate-svg-stroke-1 2s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both,
                        animate-svg-fill-1 0.7s ease 0.8s both;
           animation: animate-svg-stroke-1 2s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both,
@@ -9235,7 +9242,7 @@ a.footer__about-descr:hover{
   }
 }
 
-.svg-elem-2 {
+.svg-animated.is-visible .svg-elem-2 {
   -webkit-animation: animate-svg-stroke-2 2s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s both,
                        animate-svg-fill-2 0.7s ease 0.9s both;
           animation: animate-svg-stroke-2 2s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s both,
