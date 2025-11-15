@@ -350,7 +350,7 @@ if (heroName) {
 
 
 const mouse = document.querySelector('.mouse-btn-hover');
-const blocks = document.querySelectorAll('.hero, .service');
+const blocks = document.querySelectorAll('.hero, .service, .whowe');
 if (blocks.length > 0 && mouse) {
   let mouseX = 0;
   let mouseY = 0;
