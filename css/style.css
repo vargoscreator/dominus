@@ -194,7 +194,7 @@ p > a:hover{
     position: relative;
     display: flex;
     align-items: center;
-    gap: 2.865vw;
+    gap: 1.302vw;
 }
 .title-icon::before{
     content: '';
@@ -361,9 +361,9 @@ p > a:hover{
     left: 50%;
     transform: translate(-50%, -50%);
     background-image: url('../img/icons/discover-plans.svg');
-    width: 13.417vw;
-    height: 13.417vw;
-    min-width: 13.417vw;
+    width: 11.458vw;
+    height: 11.458vw;
+    min-width: 11.458vw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -1350,6 +1350,9 @@ p > a:hover{
 .hero__image-bottom img{
     width: 100%;
 }
+.hero__image-bottom img{
+    opacity: 0.5;
+}
 .hero__image-top{
     width: 61.51vw;
     top: 10.365vw;
@@ -1450,6 +1453,7 @@ p > a:hover{
   inset: 0;
   z-index: 1;
 }
+
 @media (max-width: 1440px) {
     .hero__inner{
         min-height: 124.653vw;
@@ -2072,7 +2076,7 @@ p > a:hover{
     .wedo__slide-title{
         margin-top: 2.153vw;
         font-size: 1.667vw;
-        max-width: 19.444vw;
+        max-width: 20.444vw;
     }
     .wedo__descr{
         font-size: 0.972vw;
@@ -2975,6 +2979,7 @@ p > a:hover{
     font-size: 0.833vw;
     font-weight: 300;
     line-height: 1.172vw;
+    text-transform: uppercase;
 }
 .stories__item-btn{
     position: absolute;
@@ -3038,7 +3043,7 @@ p > a:hover{
     display: flex;
     flex-direction: column;
     align-items: start;
-    border-bottom: 1px solid #C09E63;
+    border-bottom: 0.026vw solid #C09E63;
 }
 .stories-info-title{
     color: #C09E63;
@@ -3648,6 +3653,7 @@ p > a:hover{
     background-repeat: no-repeat;
 }
 .faq__item-descr{
+    font-weight: 300;
     padding: 0;
     max-height: 0;
     overflow: hidden;
@@ -6779,7 +6785,7 @@ a.footer__about-descr:hover{
     height: 28.646vw;
 }
 .blogs__item-big .blogs__item-content{
-    padding: 2.083vw 2.344vw 1.042vw;
+    padding: 1.042vw 2.344vw 1.042vw;
 }
 .blogs__item-big .blogs__item-title h3{
     color: #C09E63;
@@ -8422,7 +8428,7 @@ a.footer__about-descr:hover{
     width: 100%;
     transform: translateY(-22.917vw);
     margin: 0 auto;
-    padding: 5.052vw 4.688vw 11.979vw;
+    padding: 5.052vw 4.688vw 5.052vw;
     background-color: #fff;
     box-shadow: 1.458vw 0.885vw 1.568vw 0 rgba(0, 0, 0, 0.25);
 }
@@ -8488,7 +8494,7 @@ a.footer__about-descr:hover{
     .infoblock__inner{
         max-width: 93.542vw; 
         transform: translateY(-30.556vw);
-        padding: 6.736vw 6.25vw 15.972vw;
+        padding: 6.736vw 6.25vw 6.736vw;
         box-shadow: 1.944vw 1.181vw 2.09vw 0 rgba(0, 0, 0, 0.25);
     }
     .infoblock__icon{
@@ -8527,7 +8533,7 @@ a.footer__about-descr:hover{
         width: auto;
         transform: translateY(0%);
         margin: 0 -13.312vw;
-        padding: 5.208vw 4.688vw 16.146vw;
+        padding: 5.208vw 4.688vw 5.208vw;
         box-shadow: 3.646vw 2.214vw 3.919vw 0 rgba(0, 0, 0, 0.25);
     }
     .infoblock__icon{
@@ -8601,7 +8607,7 @@ a.footer__about-descr:hover{
     margin: 4.688vw 0;
 }
 .textbanner__inner{
-    padding: 2.188vw;
+    padding: 4vw 2.1vw;
     position: relative;
 }
 .textbanner__inner::after,
