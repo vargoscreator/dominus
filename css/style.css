@@ -263,7 +263,6 @@ p > a:hover{
 .title-underline::after{
     margin-top: 1.198vw;
 }
-
 .button-wrap {
     cursor: pointer;
     display: flex;
@@ -303,35 +302,6 @@ p > a:hover{
 }
 .button-wrap:active{
     transform: scale(0.95);
-}
-.mouse-btn-hover.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-.glass-container {
-    position: absolute;
-    display: flex;
-    font-weight: 600;
-    cursor: pointer;
-    /* background: transparent; */
-    border-radius: 2rem;
-    overflow: hidden;
-    /* box-shadow: 0 0.192vw 0.192vw 0 rgba(0, 0, 0, 0.25); */
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
-    inset: 0;
-}
-.glass-filter {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  backdrop-filter: blur(0vw);
-  filter: url(#lg-dist);
-  isolation: isolate;
-}
-.glass-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
 }
 
 
@@ -545,9 +515,6 @@ p > a:hover{
         height: 72.501px;
         min-width: 72.501px;
     }
-    .mouse-btn-hover{
-        display: none !important;
-    }
     .container{
         padding: 0 4.557vw;
     }
@@ -613,9 +580,6 @@ p > a:hover{
         width: 90px;
         height: 90px;
         min-width: 48.829px;
-    }
-    .mouse-btn-hover{
-        display: none !important;
     }
 
     .container{
@@ -1424,6 +1388,13 @@ p > a:hover{
     z-index: 90;
     transition: opacity 0.3s;
 }
+@supports (-webkit-touch-callout: none) {
+  .mouse-btn-hover {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+}
+
 .mouse-btn-hover.hidden {
     opacity: 0;
     pointer-events: none;
@@ -2703,11 +2674,11 @@ p > a:hover{
     .membership{
         margin-top: 10.417vw;
     }
-    .membership::before{
-        right: -1.563vw;
-        width: 104.167vw;
-        height: 118.099vw;
-    }   
+    .membership::before {
+        right: 18.437vw;
+        width: 54.167vw;
+        height: 78.099vw;
+    }
     .membership__next{
         bottom: 3.089vw;
         left: calc(100% + 4.948vw);
@@ -2801,6 +2772,7 @@ p > a:hover{
         margin-top: 16vw;
     }
     .membership::before{
+        display: none;
         right: -3.201vw;
         width: 213.334vw;
         height: 241.866vw;
@@ -2810,6 +2782,10 @@ p > a:hover{
     }
     .membership__slider{
         margin-top: 17.066vw;
+        margin-left: -2vw;
+        margin-right: -2vw;
+        max-width: none;
+        width: auto;
     }
     .membership__item {
         perspective: 266.666vw;
@@ -4304,13 +4280,16 @@ a.footer__about-descr:hover{
     .footer__about-block{
         padding: 5.859vw 0;
     }
+    .footer__about-block:first-of-type .footer__about-descr{
+        text-transform: none;
+    }
     .footer__about-block:last-of-type{
         padding-left: 9.115vw;
         border-left: 0.13vw solid #fff;
     }
     .footer__about-title{
         margin-bottom: 4.298vw;
-        font-size: 3.906vw;
+        font-size: 3.74vw;
         line-height: 2.198vw;
     }
     .footer__about-descr{
@@ -4424,6 +4403,9 @@ a.footer__about-descr:hover{
     }
 }
 @media (max-width: 480px) {
+    .footer__about{
+        grid-template-columns: 1.3fr 1fr;
+    }
     @keyframes marquee {
         0% {
             transform: translateX(0%);
@@ -4462,7 +4444,11 @@ a.footer__about-descr:hover{
         font-size: 2.666vw;
         font-weight: 400;
         line-height: 4.801vw; /* 180.062% */
+        margin-right: -1vw;
         letter-spacing: 0.187vw;
+    }
+    .footer__menu:last-of-type, .footer__menu{
+        gap: 7.1vw;
     }
     .footer__bottom-content{
         padding: 6.666vw 0;
@@ -5716,6 +5702,12 @@ a.footer__about-descr:hover{
     top: 49.479vw;
     left: 14.323vw;
 }
+.service-culture .service__apply:last-of-type{
+    top: initial;
+    left: initial;
+    bottom: 7.708vw;
+    right: 14.219vw;
+}
 
 
 .service-experiences .service__title{
@@ -6011,7 +6003,9 @@ a.footer__about-descr:hover{
         top: 42.639vw;
         left: 25.417vw;
     }
-
+    .service-culture .service__apply:last-of-type{
+        display: none;
+    }
 
     .service-experiences .service__title{
         top: 10.417vw;
@@ -6308,9 +6302,12 @@ a.footer__about-descr:hover{
         right: 3.385vw;
         max-width: 44.271vw;
     }
-    .service-culture .service__apply{
+    .service-culture .service__apply {
         top: 45.052vw;
         left: 6.51vw;
+        font-size: 2.605vw;
+        max-width: 15vw;
+        line-height: 3vw;
     }
 
     .service-experiences .service__title{
@@ -6569,26 +6566,33 @@ a.footer__about-descr:hover{
     .service-culture .service__descr{
         top: 30.667vw;
         right: 6.933vw;
-        max-width: 46vw;
+        max-width: 40vw;
+        font-size: 2.667vw;
     }
     .service-culture .service__name{
         top: 73.867vw;
         right: 6.933vw;
         max-width: 48vw;
+        font-size: 2.667vw;
     }
     .service-culture .service__info-1{
         bottom: 5.067vw;
         left: 6.133vw;
-        max-width: 40.333vw;    
+        max-width: 32.533vw;   
+        font-size: 2.667vw;
+        text-align: center; 
     }
     .service-culture .service__info-2{
         bottom: 5.067vw;
         right: 6.133vw;
-        max-width: 40.333vw;  
+        max-width: 34.933vw;  
+        font-size: 2.667vw;
+        text-align: center;
     }
     .service-culture .service__apply{
         top: 49.067vw;
         left: 5.867vw;
+        font-size: 12px;
     }
 
     .service-experiences .service__title{
@@ -8840,7 +8844,7 @@ a.footer__about-descr:hover{
 
 .auth-page {
 	display: flex;
-  margin-top: 12vw;
+  margin-top: 7vw;
 	justify-content: center;
 	padding: 2vw 0 18vw;
 }
@@ -9561,7 +9565,7 @@ a.footer__about-descr:hover{
 .transaction {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		padding: 0.6vw 0;
+		padding: 0.6vw 0.7vw     0.6vw 0;
 		border-bottom: 0.05vw solid #C09E63;
 		font-size: 0.9vw;
 }
@@ -9773,17 +9777,27 @@ a.footer__about-descr:hover{
 	gap: 1vw;
 	width: 100%;
 }
+.chat__downloads + .auth-form__btn{
+    margin-bottom: 1.4vw;
+}
 
 .chat__download{
 	display: flex;
 	align-items: center;
 	gap: 0.8vw;
 }
-
+@media (min-width: 769px) {
+    .auth-page.credit-cart .auth-page__container{
+            margin: 0 auto 0 35vw;
+    }
+}
 @media (max-width: 768px) {
 	.auth-page__container {
-		max-width: 100%;
+		max-width: 90%;
 	}
+    .chat__downloads + .auth-form__btn{
+        margin-bottom: -2.6vw;
+    }
 
 	.auth-page {
     margin-top: 22.5vw;
@@ -9900,6 +9914,7 @@ a.footer__about-descr:hover{
 	}
 
 	.cabinet {
+        margin-bottom: 10vw;
 			margin-top: 14.5vw;
 	}
 
@@ -9930,7 +9945,6 @@ a.footer__about-descr:hover{
 		position: relative;
 		left: unset;
 		top: unset;
-		border-bottom: 1.5vw solid #C09E63;
 	}
 
 	.cabinet__info h1 {
@@ -10091,7 +10105,7 @@ a.footer__about-descr:hover{
 
 	.assistant-message{
 		font-size: 2vw;
-		padding: 4.2vw;
+		padding: 4.2vw 7vw;
 	}
 
 	.assistant-section{
@@ -10135,6 +10149,9 @@ a.footer__about-descr:hover{
 		background: transparent;
 		padding: 6.8vw 0vw 10.5vw;
 	}
+    .chat__downloads + .auth-form__btn{
+        margin-bottom: 0;
+    }
 
 	.auth-page {
 			margin-top: 13.5vw;
@@ -10285,6 +10302,7 @@ a.footer__about-descr:hover{
 
 	.cabinet{
 		margin-top: 19.5vw;
+        margin-bottom: 5vw;
 	}
 
 	.cabinet__info h1 {
@@ -10320,9 +10338,16 @@ a.footer__about-descr:hover{
 			font-size: 4.1vw;
 			margin-bottom: 5.5vw;
 	}
+    .period-selector{
+        width: 100%;
+    }
+    .auth-page__row div{
+        width: 100%;
+    }
 	.period-btn {
 			font-size: 4.5vw;
 			padding: 1vw 3vw;
+            width: 100%;
 	}
 
 	.auth-page__row{
@@ -10331,7 +10356,7 @@ a.footer__about-descr:hover{
 
 	.generate-btn{
 		position: absolute;
-		top: 1vw;
+		top: 1.5vw;
 		right: 0;
 		font-size: 3.3vw;
 		font-size: clamp(12px, 3.3vw, 3.3vw);
@@ -10356,7 +10381,7 @@ a.footer__about-descr:hover{
 	}
 
 	.transaction {
-		padding: 3vw 0;
+		padding: 3vw 3vw 3vw 0;
 		font-size: 2.5vw;
 		font-size: clamp(12px, 2.5vw, 2.5vw);
 	}
@@ -10393,7 +10418,7 @@ a.footer__about-descr:hover{
 			max-width: 100%;
 	}
 	.message-content p {
-			font-size: 4.25vw;
+			font-size: 3.73332vw;
             letter-spacing: 0.98px;
 			line-height: 1.2;
 	}
@@ -10405,8 +10430,7 @@ a.footer__about-descr:hover{
 			margin-bottom: 3vw;
 	}
 	.user-message {
-		font-size: 3.4vw;
-		font-size: clamp(12px, 3.4vw, 3.4vw);
+		font-size: clamp(14px, 3.4vw, 3.4vw);
 		line-height: 1.2;
         letter-spacing: 0.98px;
 	}
@@ -10422,13 +10446,12 @@ a.footer__about-descr:hover{
     margin-bottom: 18.7vw;
 	}
 	.assistant-message {
-			font-size: 3.4vw;
-			font-size: clamp(12px, 3.4vw, 3.4vw);
-			padding: 5vw;
+			font-size: clamp(14px, 3.4vw, 3.4vw);
+			padding: 5vw 4vw;
         letter-spacing: 0.98px;
 	}
 	.chat__footer p {
-			font-size: 4.2vw;
+			font-size: 3.734vw;
 			padding-bottom: 2.5vw;
             letter-spacing: 0.98px;
 	}

@@ -1634,3 +1634,10 @@ const observerForSeveralBlocks = new IntersectionObserver(
 document
   .querySelectorAll(".svg-animated")
   .forEach((svg) => observerForSeveralBlocks.observe(svg));
+
+
+
+  if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+    document.querySelector('.mouse-btn-hover').style.backdropFilter = "none";
+    document.querySelector('.mouse-btn-hover').style.webkitBackdropFilter = "none";
+}
